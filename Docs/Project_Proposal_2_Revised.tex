@@ -1,0 +1,56 @@
+\documentclass[11pt]{article}
+\usepackage[letterpaper,margin=0.55in]{geometry}
+\usepackage{times}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{titlesec}
+\usepackage{parskip}
+
+\titleformat{\section}{\bfseries\normalsize}{\thesection.}{0.45em}{}
+\titlespacing*{\section}{0pt}{0.42em}{0.18em}
+\setlength{\parskip}{0.22em}
+\setlength{\parindent}{0pt}
+\setlist{nosep,leftmargin=*}
+\pagestyle{empty}
+
+\begin{document}
+
+\begin{center}
+{\bfseries\large Predicting Loan Defaults and Writing Rejection Letters with RAG}\\
+CS 6140 Machine Learning - Project Proposal
+\end{center}
+
+\section{Authors}
+Yashaswi Aryan \textbar{} Siddharth Agarwal \textbar{} Linda Perez Penaranda, MSDS 2024
+
+\section{Problem Description}
+When a U.S. lender denies a loan application, the Equal Credit Opportunity Act (ECOA) requires them to give the applicant a clear reason based on actual policy. Doing this automatically is harder than it sounds. Modern credit models use dozens of features to produce a score, not an explanation. SHAP can tell us which features mattered most for a given decision, but a SHAP plot is not a rejection letter. A general-purpose language model can write the letter, but it often invents policy text or cites rules that do not exist.
+
+We want to build a system that does both jobs: it predicts default risk for completed accepted loans and drafts adverse-action-style explanations for high-risk or demo applications. The question we want to answer: does pulling in actual policy text through retrieval produce letters that are both more faithful to the model's reasoning and closer to what the regulation actually requires, compared to a plain language model with no retrieval?
+
+\section{Data Summary}
+We use two datasets. The first is the Lending Club loan dataset from Kaggle (wordsforthewise/lendingclub): about 890,000 personal loans from 2007-2018, with roughly 75 features per loan, including FICO score, debt-to-income ratio, income, employment length, loan purpose, and a free-text description written by the borrower. The outcome labels (Fully Paid, Charged Off, Default) give us the target variable after we filter out loans that are still active.
+
+The second is a small set of about 50 regulatory documents we collect ourselves from public U.S. sources: ECOA Regulation B (12 CFR 1002), the CFPB's adverse action guidance and sample model forms, FCRA Section 615, and a few enforcement actions published in the Federal Register. Everything is free and public.
+
+\section{Methods}
+The project has two parts. The first part predicts default risk for completed accepted loans. We train a LightGBM model on the tabular features and combine it with a DistilBERT encoder that we fine-tune on the borrower's free-text description. SHAP tells us which features drove each prediction. We use established credit-scoring evaluation practices from Lessmann et al. (2015), including discrimination and calibration metrics.
+
+The second part writes the rejection letter. We use LangGraph to set up a small pipeline that does three things: searches the regulatory documents for the rules relevant to a given denial, links the top SHAP features to those rules, and drafts the letter. We also fine-tune a smaller DistilBERT model that checks whether the final letter actually matches the SHAP reasons it cites, and we reject any letter that does not pass this check.
+
+The main difficulties we expect: the dataset is imbalanced (only about 15\% of completed loans are charged off), loan behavior shifts across years so a model trained on older loans may not work on recent ones, and "compliance" is hard to measure objectively. We plan to grade letters against a short rubric, and validate that rubric against a handful of letters we score by hand.
+
+\section{Preliminary Results}
+We have downloaded the Lending Club data and done an initial pass to define the target variable and look at class balance. The list of regulatory documents has been identified, and we are now downloading and splitting them into sections for retrieval. The overall pipeline (Section 4) is planned out so the three of us can work on the model, the retrieval, and the letter generation in parallel.
+
+\section{References}
+\small
+Bureau of Consumer Financial Protection. (2024). Regulation B - Equal Credit Opportunity Act, 12 CFR Part 1002. U.S. Federal Register.
+
+Lessmann, S., Baesens, B., Seow, H.-V., \& Thomas, L. C. (2015). Benchmarking state-of-the-art classification algorithms for credit scoring: An update of research. \textit{European Journal of Operational Research}, 247(1), 124-136.
+
+Lewis, P., Perez, E., Piktus, A., Petroni, F., Karpukhin, V., Goyal, N., et al. (2020). Retrieval-augmented generation for knowledge-intensive NLP tasks. \textit{NeurIPS}, 33, 9459-9474.
+
+Lundberg, S. M., \& Lee, S.-I. (2017). A unified approach to interpreting model predictions. \textit{NeurIPS}, 30, 4765-4774.
+
+\end{document}
