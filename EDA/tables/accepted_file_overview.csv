@@ -1,0 +1,2 @@
+dataset,path,size_mb,columns,rows_exact
+accepted_loans,/Users/lindaperez/Documents/NEU/2026SummerML/MachineLearningClass/Final_Project/Final/Data/archive/accepted_2007_to_2018Q4.csv.gz,374.4,151,2260701
