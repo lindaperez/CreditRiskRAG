@@ -1,7 +1,0 @@
-item,recommendation
-source_population,Accepted/originated LendingClub loans only
-target,target_bad on completed loans; exclude unresolved current loans for binary PD
-validation,Use issue-date chronological split; report vintage stability
-leakage,"Drop all payment, recovery, hardship, settlement, last-FICO, and last-credit-pull fields"
-fair_lending,"Review geography, text, employment title, and any proxy-risk variables before production framing"
-starter_feature_count,38
