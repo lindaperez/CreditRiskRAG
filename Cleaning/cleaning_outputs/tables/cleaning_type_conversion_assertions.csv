@@ -1,0 +1,8 @@
+check_name,passed,detail
+expected_derived_fields_present,True,missing=[]
+numeric_fields_are_numeric_dtype,True,non_numeric=[]
+categorical_fields_are_string_dtype,True,non_string=[]
+date_fields_are_datetime_dtype,True,non_datetime=[]
+term_months_values_are_36_or_60,True,invalid_terms=[]
+fico_mean_matches_bounds,True,max_diff=0.0
+credit_history_years_non_negative,True,min=2.9979466119096507
