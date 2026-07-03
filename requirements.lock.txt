@@ -1,0 +1,9 @@
+numpy==1.26.4
+pandas==2.2.2
+matplotlib==3.8.4
+seaborn==0.13.2
+pyarrow==15.0.2
+jupyter==1.0.0
+ipykernel==6.29.4
+nbconvert==7.16.4
+notebook==7.2.1
