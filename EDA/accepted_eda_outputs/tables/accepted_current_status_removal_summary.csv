@@ -1,0 +1,3 @@
+scope,filter_rule,rows_before,current_rows_removed,rows_after,pct_removed
+working_sample,"loan_status != ""Current""",250000,59851,190149,23.9404
+full_dataset_reference,"loan_status != ""Current""",2260701,878317,1382384,38.8515

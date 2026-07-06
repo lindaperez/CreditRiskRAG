@@ -1,0 +1,8 @@
+grade,n_rows,small_group_flag,annual_inc_missing_count,annual_inc_missing_pct,dti_missing_count,dti_missing_pct,fico_mean_missing_count,fico_mean_missing_pct,revol_util_clean_missing_count,revol_util_clean_missing_pct,emp_length_years_missing_count,emp_length_years_missing_pct,mort_acc_missing_count,mort_acc_missing_pct,bc_util_missing_count,bc_util_missing_pct,annual_inc_joint_missing_count,annual_inc_joint_missing_pct,dti_joint_missing_count,dti_joint_missing_pct
+A,35825,ok,0,0.0,3,0.01,0,0.0,6,0.02,2019,5.64,0,0.0,153,0.43,35549,99.23,35549,99.23
+B,54569,ok,0,0.0,7,0.01,0,0.0,16,0.03,3261,5.98,0,0.0,435,0.8,54049,99.05,54049,99.05
+C,53690,ok,0,0.0,12,0.02,0,0.0,31,0.06,3399,6.33,0,0.0,630,1.17,52996,98.71,52996,98.71
+D,26777,ok,0,0.0,14,0.05,0,0.0,25,0.09,1923,7.18,0,0.0,422,1.58,26381,98.52,26381,98.52
+E,13977,ok,0,0.0,3,0.02,0,0.0,13,0.09,811,5.8,0,0.0,247,1.77,13778,98.58,13778,98.58
+F,4198,ok,0,0.0,1,0.02,0,0.0,2,0.05,216,5.15,0,0.0,78,1.86,4129,98.36,4129,98.36
+G,1113,ok,0,0.0,0,0.0,0,0.0,2,0.18,63,5.66,0,0.0,37,3.32,1078,96.86,1078,96.86
