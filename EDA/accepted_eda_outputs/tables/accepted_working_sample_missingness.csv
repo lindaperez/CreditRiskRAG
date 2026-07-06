@@ -32,7 +32,7 @@ bc_util,2002,1.05,float64,188147
 bc_open_to_buy,1883,0.99,float64,188266
 mths_since_recent_bc,1803,0.95,float64,188346
 target_bad,697,0.37,float64,189452
-last_pymnt_d_dt,213,0.11,datetime64[us],189936
+last_pymnt_d_dt,213,0.11,datetime64[ns],189936
 last_pymnt_d,213,0.11,string,189936
 revol_util,95,0.05,float64,190054
 revol_util_clean,95,0.05,float64,190054
@@ -41,10 +41,10 @@ pub_rec_bankruptcies,0,0.0,float64,190149
 int_rate_clean,0,0.0,float64,190149
 term_months,0,0.0,Int16,190149
 fico_mean,0,0.0,float64,190149
-issue_d_dt,0,0.0,datetime64[us],190149
-earliest_cr_line_dt,0,0.0,datetime64[us],190149
+issue_d_dt,0,0.0,datetime64[ns],190149
+earliest_cr_line_dt,0,0.0,datetime64[ns],190149
 issue_month,0,0.0,string,190149
-last_credit_pull_d_dt,3,0.0,datetime64[us],190146
+last_credit_pull_d_dt,3,0.0,datetime64[ns],190146
 issue_year,0,0.0,Int16,190149
 issue_quarter,0,0.0,string,190149
 credit_history_years,0,0.0,float64,190149
@@ -121,4 +121,4 @@ total_rec_prncp,0,0.0,float64,190149
 total_pymnt,0,0.0,float64,190149
 out_prncp,0,0.0,float64,190149
 initial_list_status,0,0.0,string,190149
-target_definition,0,0.0,str,190149
+target_definition,0,0.0,object,190149

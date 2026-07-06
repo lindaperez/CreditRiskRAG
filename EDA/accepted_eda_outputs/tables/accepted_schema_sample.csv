@@ -13,31 +13,31 @@ sec_app_num_rev_accts,float64,0,100.0,0,
 sec_app_open_acc,float64,0,100.0,0,
 sec_app_open_act_il,float64,0,100.0,0,
 sec_app_revol_util,float64,0,100.0,0,
-desc,str,1,99.98,1,"We knew that using our credit cards to finance an adoption would squeeze us, but then medical and other unexpected expenses made the situation almost impossible. We are a stable family in a stable community. We just need to break a cycle of debt that is getting worse."
+desc,object,1,99.98,1,"We knew that using our credit cards to finance an adoption would squeeze us, but then medical and other unexpected expenses made the situation almost impossible. We are a stable family in a stable community. We just need to break a cycle of debt that is getting worse."
 annual_inc_joint,float64,29,99.42,28,71000.0
 dti_joint,float64,29,99.42,28,13.85
-verification_status_joint,str,29,99.42,1,Not Verified
+verification_status_joint,object,29,99.42,1,Not Verified
 orig_projected_additional_accrued_interest,float64,34,99.32,34,442.41
 deferral_term,float64,46,99.08,1,3.0
 hardship_amount,float64,46,99.08,46,47.01
 hardship_dpd,float64,46,99.08,18,26.0
-hardship_end_date,str,46,99.08,13,Dec-2017
+hardship_end_date,object,46,99.08,13,Dec-2017
 hardship_last_payment_amount,float64,46,99.08,46,61.23
 hardship_length,float64,46,99.08,1,3.0
-hardship_loan_status,str,46,99.08,4,Late (16-30 days)
+hardship_loan_status,object,46,99.08,4,Late (16-30 days)
 hardship_payoff_balance_amount,float64,46,99.08,46,3058.14
-hardship_reason,str,46,99.08,8,NATURAL_DISASTER
-hardship_start_date,str,46,99.08,12,Sep-2017
-hardship_status,str,46,99.08,3,BROKEN
-hardship_type,str,46,99.08,1,INTEREST ONLY-3 MONTHS DEFERRAL
-payment_plan_start_date,str,46,99.08,13,Oct-2017
-debt_settlement_flag_date,str,133,97.34,24,Nov-2017
+hardship_reason,object,46,99.08,8,NATURAL_DISASTER
+hardship_start_date,object,46,99.08,12,Sep-2017
+hardship_status,object,46,99.08,3,BROKEN
+hardship_type,object,46,99.08,1,INTEREST ONLY-3 MONTHS DEFERRAL
+payment_plan_start_date,object,46,99.08,13,Oct-2017
+debt_settlement_flag_date,object,133,97.34,24,Nov-2017
 settlement_amount,float64,133,97.34,132,9915.0
-settlement_date,str,133,97.34,26,Sep-2017
+settlement_date,object,133,97.34,26,Sep-2017
 settlement_percentage,float64,133,97.34,31,55.0
-settlement_status,str,133,97.34,3,COMPLETE
+settlement_status,object,133,97.34,3,COMPLETE
 settlement_term,float64,133,97.34,18,1.0
-next_pymnt_d,str,547,89.06,2,Apr-2019
+next_pymnt_d,object,547,89.06,2,Apr-2019
 mths_since_last_record,float64,897,82.06,115,106.0
 mths_since_recent_bc_dlq,float64,1293,74.14,94,69.0
 mths_since_last_major_derog,float64,1503,69.94,95,30.0
@@ -46,54 +46,54 @@ mths_since_last_delinq,float64,2592,48.16,91,30.0
 il_util,float64,4376,12.48,140,36.0
 mths_since_recent_inq,float64,4457,10.86,25,4.0
 num_tl_120dpd_2m,float64,4598,8.04,2,0.0
-emp_title,str,4748,5.04,3113,leadman
-emp_length,str,4751,4.98,11,10+ years
+emp_title,object,4748,5.04,3113,leadman
+emp_length,object,4751,4.98,11,10+ years
 mo_sin_old_il_acct,float64,4882,2.36,298,148.0
 mths_since_rcnt_il,float64,4882,2.36,162,21.0
-title,str,4891,2.18,12,Debt consolidation
+title,object,4891,2.18,12,Debt consolidation
 percent_bc_gt_75,float64,4942,1.16,70,0.0
 bc_util,float64,4944,1.12,1013,37.2
 bc_open_to_buy,float64,4948,1.04,4175,1506.0
 mths_since_recent_bc,float64,4949,1.02,188,4.0
 revol_util,float64,4998,0.04,981,29.7
-last_pymnt_d,str,4999,0.02,39,Jan-2019
+last_pymnt_d,object,4999,0.02,39,Jan-2019
 acc_now_delinq,float64,5000,0.0,2,0.0
 acc_open_past_24mths,float64,5000,0.0,28,4.0
-addr_state,str,5000,0.0,49,PA
+addr_state,object,5000,0.0,49,PA
 all_util,float64,5000,0.0,123,34.0
 annual_inc,float64,5000,0.0,830,55000.0
-application_type,str,5000,0.0,2,Individual
+application_type,object,5000,0.0,2,Individual
 avg_cur_bal,float64,5000,0.0,4490,20701.0
 chargeoff_within_12_mths,float64,5000,0.0,3,0.0
 collection_recovery_fee,float64,5000,0.0,570,0.0
 collections_12_mths_ex_med,float64,5000,0.0,4,0.0
-debt_settlement_flag,str,5000,0.0,2,N
+debt_settlement_flag,object,5000,0.0,2,N
 delinq_2yrs,float64,5000,0.0,14,0.0
 delinq_amnt,float64,5000,0.0,21,0.0
-disbursement_method,str,5000,0.0,1,Cash
+disbursement_method,object,5000,0.0,1,Cash
 dti,float64,5000,0.0,2573,5.91
-earliest_cr_line,str,5000,0.0,453,Aug-2003
+earliest_cr_line,object,5000,0.0,453,Aug-2003
 fico_range_high,float64,5000,0.0,36,679.0
 fico_range_low,float64,5000,0.0,36,675.0
 funded_amnt,float64,5000,0.0,648,3600.0
 funded_amnt_inv,float64,5000,0.0,674,3600.0
-grade,str,5000,0.0,7,C
-hardship_flag,str,5000,0.0,2,N
-home_ownership,str,5000,0.0,3,MORTGAGE
+grade,object,5000,0.0,7,C
+hardship_flag,object,5000,0.0,2,N
+home_ownership,object,5000,0.0,3,MORTGAGE
 id,int64,5000,0.0,5000,68407277
-initial_list_status,str,5000,0.0,2,w
+initial_list_status,object,5000,0.0,2,w
 inq_fi,float64,5000,0.0,16,3.0
 inq_last_12m,float64,5000,0.0,24,4.0
 inq_last_6mths,float64,5000,0.0,6,1.0
 installment,float64,5000,0.0,2159,123.03
 int_rate,float64,5000,0.0,42,13.99
-issue_d,str,5000,0.0,1,Dec-2015
-last_credit_pull_d,str,5000,0.0,40,Mar-2019
+issue_d,object,5000,0.0,1,Dec-2015
+last_credit_pull_d,object,5000,0.0,40,Mar-2019
 last_fico_range_high,float64,5000,0.0,70,564.0
 last_fico_range_low,float64,5000,0.0,69,560.0
 last_pymnt_amnt,float64,5000,0.0,4353,122.67
 loan_amnt,float64,5000,0.0,648,3600.0
-loan_status,str,5000,0.0,6,Fully Paid
+loan_status,object,5000,0.0,6,Fully Paid
 max_bal_bc,float64,5000,0.0,4017,722.0
 mo_sin_old_rev_tl_op,float64,5000,0.0,471,128.0
 mo_sin_rcnt_rev_tl_op,float64,5000,0.0,122,3.0
@@ -125,13 +125,13 @@ pct_tl_nvr_dlq,float64,5000,0.0,251,76.9
 policy_code,float64,5000,0.0,1,1.0
 pub_rec,float64,5000,0.0,10,0.0
 pub_rec_bankruptcies,float64,5000,0.0,7,0.0
-purpose,str,5000,0.0,12,debt_consolidation
-pymnt_plan,str,5000,0.0,1,n
+purpose,object,5000,0.0,12,debt_consolidation
+pymnt_plan,object,5000,0.0,1,n
 recoveries,float64,5000,0.0,568,0.0
 revol_bal,float64,5000,0.0,4628,2765.0
-sub_grade,str,5000,0.0,35,C4
+sub_grade,object,5000,0.0,35,C4
 tax_liens,float64,5000,0.0,9,0.0
-term,str,5000,0.0,2, 36 months
+term,object,5000,0.0,2, 36 months
 tot_coll_amt,float64,5000,0.0,575,722.0
 tot_cur_bal,float64,5000,0.0,4949,144904.0
 tot_hi_cred_lim,float64,5000,0.0,4849,178050.0
@@ -147,6 +147,6 @@ total_rec_int,float64,5000,0.0,4813,821.72
 total_rec_late_fee,float64,5000,0.0,173,0.0
 total_rec_prncp,float64,5000,0.0,1789,3600.0
 total_rev_hi_lim,float64,5000,0.0,1222,9300.0
-url,str,5000,0.0,5000,https://lendingclub.com/browse/loanDetail.action?loan_id=68407277
-verification_status,str,5000,0.0,3,Not Verified
-zip_code,str,5000,0.0,708,190xx
+url,object,5000,0.0,5000,https://lendingclub.com/browse/loanDetail.action?loan_id=68407277
+verification_status,object,5000,0.0,3,Not Verified
+zip_code,object,5000,0.0,708,190xx
