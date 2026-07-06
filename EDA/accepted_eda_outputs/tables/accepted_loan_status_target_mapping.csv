@@ -1,8 +1,0 @@
-loan_status,target_definition,n,pct_sample
-Fully Paid,good_terminal,148646,59.46
-Current,censored_unresolved,59851,23.94
-Charged Off,bad_terminal_or_delinquent,38709,15.48
-Late (31-120 days),bad_terminal_or_delinquent,1752,0.7
-In Grace Period,censored_unresolved,697,0.28
-Late (16-30 days),bad_terminal_or_delinquent,343,0.14
-Default,bad_terminal_or_delinquent,2,0.0
