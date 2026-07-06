@@ -1,7 +1,0 @@
-loan_status,n_rows,small_group_flag,annual_inc_missing_count,annual_inc_missing_pct,dti_missing_count,dti_missing_pct,fico_mean_missing_count,fico_mean_missing_pct,revol_util_clean_missing_count,revol_util_clean_missing_pct,emp_length_years_missing_count,emp_length_years_missing_pct,mort_acc_missing_count,mort_acc_missing_pct,bc_util_missing_count,bc_util_missing_pct,annual_inc_joint_missing_count,annual_inc_joint_missing_pct,dti_joint_missing_count,dti_joint_missing_pct
-Charged Off,38709,ok,0,0.0,10,0.03,0,0.0,24,0.06,3005,7.76,0,0.0,424,1.1,38206,98.7,38206,98.7
-Default,2,unstable_small_n,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,1,50.0,2,100.0,2,100.0
-Fully Paid,148646,ok,0,0.0,28,0.02,0,0.0,70,0.05,8498,5.72,0,0.0,1544,1.04,147228,99.05,147228,99.05
-In Grace Period,697,ok,0,0.0,0,0.0,0,0.0,0,0.0,32,4.59,0,0.0,8,1.15,618,88.67,618,88.67
-Late (16-30 days),343,unstable_small_n,0,0.0,1,0.29,0,0.0,0,0.0,28,8.16,0,0.0,4,1.17,310,90.38,310,90.38
-Late (31-120 days),1752,ok,0,0.0,1,0.06,0,0.0,1,0.06,129,7.36,0,0.0,21,1.2,1596,91.1,1596,91.1

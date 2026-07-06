@@ -1,5 +1,0 @@
-issue_year,n_rows,small_group_flag,annual_inc_missing_count,annual_inc_missing_pct,dti_missing_count,dti_missing_pct,fico_mean_missing_count,fico_mean_missing_pct,revol_util_clean_missing_count,revol_util_clean_missing_pct,emp_length_years_missing_count,emp_length_years_missing_pct,mort_acc_missing_count,mort_acc_missing_pct,bc_util_missing_count,bc_util_missing_pct,annual_inc_joint_missing_count,annual_inc_joint_missing_pct,dti_joint_missing_count,dti_joint_missing_pct
-2015,163399,ok,0,0.0,0,0.0,0,0.0,78,0.05,9697,5.93,0,0.0,1646,1.01,163171,99.86,163171,99.86
-2016,11844,ok,0,0.0,1,0.01,0,0.0,6,0.05,778,6.57,0,0.0,135,1.14,11679,98.61,11679,98.61
-2017,8709,ok,0,0.0,13,0.15,0,0.0,6,0.07,631,7.25,0,0.0,133,1.53,7787,89.41,7787,89.41
-2018,6197,ok,0,0.0,26,0.42,0,0.0,5,0.08,586,9.46,0,0.0,88,1.42,5323,85.9,5323,85.9
