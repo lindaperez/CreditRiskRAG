@@ -1,0 +1,2 @@
+model_family,candidate,params,fit_rows,fit_bad_rate,fit_seconds,roc_auc,pr_auc,best_f1_threshold,best_f1,best_f1_precision,best_f1_recall,target_precision_threshold,target_precision_f1,target_precision,target_precision_recall
+logistic_regression,logistic_regression_07,"{""C"": 0.5, ""class_weight"": ""balanced"", ""l1_ratio"": 0.15, ""penalty"": ""elasticnet""}",962641,0.1883,39.346,0.695407,0.412336,0.471801,0.470644,0.355089,0.697691,0.563511,0.447766,0.4,0.508488

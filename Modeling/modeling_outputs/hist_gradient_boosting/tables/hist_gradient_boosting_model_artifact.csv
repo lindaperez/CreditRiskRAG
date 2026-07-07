@@ -1,0 +1,2 @@
+model_family,candidate,artifact_path
+hist_gradient_boosting,hist_gradient_boosting_04,/Users/lindaperez/Documents/NEU/2026SummerML/MachineLearningClass/Final_Project/Final/CreditRiskRAG/Modeling/modeling_outputs/hist_gradient_boosting/models/hist_gradient_boosting_selected_model.joblib

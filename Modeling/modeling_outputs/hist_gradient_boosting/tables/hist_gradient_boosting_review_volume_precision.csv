@@ -1,0 +1,17 @@
+model_family,model,split,review_pct,review_count,captured_bad,precision,recall,base_bad_rate,lift_over_base_bad_rate
+hist_gradient_boosting,hist_gradient_boosting_04,validation,1.0,1870,1208,0.645989,0.02619,0.246763,2.61785
+hist_gradient_boosting,hist_gradient_boosting_04,validation,2.0,3739,2293,0.613266,0.049713,0.246763,2.485238
+hist_gradient_boosting,hist_gradient_boosting_04,validation,5.0,9346,5171,0.553285,0.112108,0.246763,2.242168
+hist_gradient_boosting,hist_gradient_boosting_04,validation,10.0,18692,9525,0.509576,0.206504,0.246763,2.065041
+hist_gradient_boosting,hist_gradient_boosting_04,validation,15.0,28038,13311,0.474749,0.288585,0.246763,1.923902
+hist_gradient_boosting,hist_gradient_boosting_04,validation,20.0,37384,16752,0.448106,0.363187,0.246763,1.815935
+hist_gradient_boosting,hist_gradient_boosting_04,validation,25.0,46730,19998,0.427948,0.433561,0.246763,1.734244
+hist_gradient_boosting,hist_gradient_boosting_04,validation,30.0,56076,23030,0.410693,0.499295,0.246763,1.664318
+hist_gradient_boosting,hist_gradient_boosting_04,test,1.0,1958,1092,0.557712,0.026525,0.210315,2.65179
+hist_gradient_boosting,hist_gradient_boosting_04,test,2.0,3915,2103,0.537165,0.051082,0.210315,2.554093
+hist_gradient_boosting,hist_gradient_boosting_04,test,5.0,9788,4831,0.493564,0.117346,0.210315,2.34678
+hist_gradient_boosting,hist_gradient_boosting_04,test,10.0,19575,8835,0.451341,0.214603,0.210315,2.146021
+hist_gradient_boosting,hist_gradient_boosting_04,test,15.0,29363,12449,0.423969,0.302388,0.210315,2.015874
+hist_gradient_boosting,hist_gradient_boosting_04,test,20.0,39150,15638,0.399438,0.379849,0.210315,1.899235
+hist_gradient_boosting,hist_gradient_boosting_04,test,25.0,48938,18624,0.380563,0.452379,0.210315,1.809489
+hist_gradient_boosting,hist_gradient_boosting_04,test,30.0,58725,21393,0.364291,0.519639,0.210315,1.73212

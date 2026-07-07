@@ -1,0 +1,25 @@
+model_family,candidate,split,operating_point,threshold,actual_label,actual_class,predicted_label,predicted_class,count,cell
+logistic_regression,logistic_regression_07,train,best_validation_f1,0.471801,0,Fully Paid,0,Fully Paid,471534,TN
+logistic_regression,logistic_regression_07,train,best_validation_f1,0.471801,0,Fully Paid,1,Charged Off,309842,FP
+logistic_regression,logistic_regression_07,train,best_validation_f1,0.471801,1,Charged Off,0,Fully Paid,51923,FN
+logistic_regression,logistic_regression_07,train,best_validation_f1,0.471801,1,Charged Off,1,Charged Off,129342,TP
+logistic_regression,logistic_regression_07,train,target_validation_precision,0.563511,0,Fully Paid,0,Fully Paid,596733,TN
+logistic_regression,logistic_regression_07,train,target_validation_precision,0.563511,0,Fully Paid,1,Charged Off,184643,FP
+logistic_regression,logistic_regression_07,train,target_validation_precision,0.563511,1,Charged Off,0,Fully Paid,83782,FN
+logistic_regression,logistic_regression_07,train,target_validation_precision,0.563511,1,Charged Off,1,Charged Off,97483,TP
+logistic_regression,logistic_regression_07,validation,best_validation_f1,0.471801,0,Fully Paid,0,Fully Paid,82348,TN
+logistic_regression,logistic_regression_07,validation,best_validation_f1,0.471801,0,Fully Paid,1,Charged Off,58447,FP
+logistic_regression,logistic_regression_07,validation,best_validation_f1,0.471801,1,Charged Off,0,Fully Paid,13945,FN
+logistic_regression,logistic_regression_07,validation,best_validation_f1,0.471801,1,Charged Off,1,Charged Off,32180,TP
+logistic_regression,logistic_regression_07,validation,target_validation_precision,0.563511,0,Fully Paid,0,Fully Paid,105615,TN
+logistic_regression,logistic_regression_07,validation,target_validation_precision,0.563511,0,Fully Paid,1,Charged Off,35180,FP
+logistic_regression,logistic_regression_07,validation,target_validation_precision,0.563511,1,Charged Off,0,Fully Paid,22671,FN
+logistic_regression,logistic_regression_07,validation,target_validation_precision,0.563511,1,Charged Off,1,Charged Off,23454,TP
+logistic_regression,logistic_regression_07,test,best_validation_f1,0.471801,0,Fully Paid,0,Fully Paid,89746,TN
+logistic_regression,logistic_regression_07,test,best_validation_f1,0.471801,0,Fully Paid,1,Charged Off,64834,FP
+logistic_regression,logistic_regression_07,test,best_validation_f1,0.471801,1,Charged Off,0,Fully Paid,11967,FN
+logistic_regression,logistic_regression_07,test,best_validation_f1,0.471801,1,Charged Off,1,Charged Off,29202,TP
+logistic_regression,logistic_regression_07,test,target_validation_precision,0.563511,0,Fully Paid,0,Fully Paid,113127,TN
+logistic_regression,logistic_regression_07,test,target_validation_precision,0.563511,0,Fully Paid,1,Charged Off,41453,FP
+logistic_regression,logistic_regression_07,test,target_validation_precision,0.563511,1,Charged Off,0,Fully Paid,19019,FN
+logistic_regression,logistic_regression_07,test,target_validation_precision,0.563511,1,Charged Off,1,Charged Off,22150,TP

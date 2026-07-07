@@ -1,0 +1,13 @@
+model_family,candidate,split,operating_point,threshold,class_label,class_name,precision,recall,f1,support
+logistic_regression,logistic_regression_07,train,best_validation_f1,0.471801,0,Fully Paid,0.900808,0.603466,0.72275,781376
+logistic_regression,logistic_regression_07,train,best_validation_f1,0.471801,1,Charged Off,0.294505,0.713552,0.41693,181265
+logistic_regression,logistic_regression_07,train,target_validation_precision,0.563511,0,Fully Paid,0.876884,0.763695,0.816385,781376
+logistic_regression,logistic_regression_07,train,target_validation_precision,0.563511,1,Charged Off,0.34553,0.537793,0.420738,181265
+logistic_regression,logistic_regression_07,validation,best_validation_f1,0.471801,0,Fully Paid,0.855182,0.584879,0.694662,140795
+logistic_regression,logistic_regression_07,validation,best_validation_f1,0.471801,1,Charged Off,0.355082,0.697669,0.470633,46125
+logistic_regression,logistic_regression_07,validation,target_validation_precision,0.563511,0,Fully Paid,0.823278,0.750133,0.785005,140795
+logistic_regression,logistic_regression_07,validation,target_validation_precision,0.563511,1,Charged Off,0.400007,0.508488,0.447771,46125
+logistic_regression,logistic_regression_07,test,best_validation_f1,0.471801,0,Fully Paid,0.882345,0.58058,0.700339,154580
+logistic_regression,logistic_regression_07,test,best_validation_f1,0.471801,1,Charged Off,0.310541,0.70932,0.431966,41169
+logistic_regression,logistic_regression_07,test,target_validation_precision,0.563511,0,Fully Paid,0.856076,0.731835,0.789095,154580
+logistic_regression,logistic_regression_07,test,target_validation_precision,0.563511,1,Charged Off,0.348254,0.538026,0.422823,41169

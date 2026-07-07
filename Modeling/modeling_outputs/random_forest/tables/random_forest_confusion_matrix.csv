@@ -1,0 +1,25 @@
+model_family,candidate,split,operating_point,threshold,actual_label,actual_class,predicted_label,predicted_class,count,cell
+random_forest,random_forest_03,train,best_validation_f1,0.455266,0,Fully Paid,0,Fully Paid,491364,TN
+random_forest,random_forest_03,train,best_validation_f1,0.455266,0,Fully Paid,1,Charged Off,290012,FP
+random_forest,random_forest_03,train,best_validation_f1,0.455266,1,Charged Off,0,Fully Paid,51251,FN
+random_forest,random_forest_03,train,best_validation_f1,0.455266,1,Charged Off,1,Charged Off,130014,TP
+random_forest,random_forest_03,train,target_validation_precision,0.523016,0,Fully Paid,0,Fully Paid,592863,TN
+random_forest,random_forest_03,train,target_validation_precision,0.523016,0,Fully Paid,1,Charged Off,188513,FP
+random_forest,random_forest_03,train,target_validation_precision,0.523016,1,Charged Off,0,Fully Paid,77154,FN
+random_forest,random_forest_03,train,target_validation_precision,0.523016,1,Charged Off,1,Charged Off,104111,TP
+random_forest,random_forest_03,validation,best_validation_f1,0.455266,0,Fully Paid,0,Fully Paid,85596,TN
+random_forest,random_forest_03,validation,best_validation_f1,0.455266,0,Fully Paid,1,Charged Off,55199,FP
+random_forest,random_forest_03,validation,best_validation_f1,0.455266,1,Charged Off,0,Fully Paid,15140,FN
+random_forest,random_forest_03,validation,best_validation_f1,0.455266,1,Charged Off,1,Charged Off,30985,TP
+random_forest,random_forest_03,validation,target_validation_precision,0.523016,0,Fully Paid,0,Fully Paid,105656,TN
+random_forest,random_forest_03,validation,target_validation_precision,0.523016,0,Fully Paid,1,Charged Off,35139,FP
+random_forest,random_forest_03,validation,target_validation_precision,0.523016,1,Charged Off,0,Fully Paid,22698,FN
+random_forest,random_forest_03,validation,target_validation_precision,0.523016,1,Charged Off,1,Charged Off,23427,TP
+random_forest,random_forest_03,test,best_validation_f1,0.455266,0,Fully Paid,0,Fully Paid,95931,TN
+random_forest,random_forest_03,test,best_validation_f1,0.455266,0,Fully Paid,1,Charged Off,58649,FP
+random_forest,random_forest_03,test,best_validation_f1,0.455266,1,Charged Off,0,Fully Paid,13428,FN
+random_forest,random_forest_03,test,best_validation_f1,0.455266,1,Charged Off,1,Charged Off,27741,TP
+random_forest,random_forest_03,test,target_validation_precision,0.523016,0,Fully Paid,0,Fully Paid,116413,TN
+random_forest,random_forest_03,test,target_validation_precision,0.523016,0,Fully Paid,1,Charged Off,38167,FP
+random_forest,random_forest_03,test,target_validation_precision,0.523016,1,Charged Off,0,Fully Paid,19758,FN
+random_forest,random_forest_03,test,target_validation_precision,0.523016,1,Charged Off,1,Charged Off,21411,TP

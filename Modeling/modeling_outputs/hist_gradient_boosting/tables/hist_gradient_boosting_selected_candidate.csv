@@ -1,0 +1,2 @@
+model_family,candidate,params,fit_rows,fit_bad_rate,fit_seconds,roc_auc,pr_auc,best_f1_threshold,best_f1,best_f1_precision,best_f1_recall,target_precision_threshold,target_precision_f1,target_precision,target_precision_recall
+hist_gradient_boosting,hist_gradient_boosting_04,"{""l2_regularization"": 0.0, ""learning_rate"": 0.06, ""max_iter"": 220, ""max_leaf_nodes"": 45}",300000,0.1883,27.427,0.700829,0.4235,0.472937,0.474259,0.359479,0.696715,0.550043,0.458965,0.4,0.53832

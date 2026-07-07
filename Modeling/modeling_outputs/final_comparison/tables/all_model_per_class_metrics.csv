@@ -1,0 +1,73 @@
+model,split,threshold,rows,bad_rate,source_table,class_label,class_name,precision,recall,f1,support,model_family,model_label,operating_point
+logistic_regression,train,0.471834,962641,0.1883,baseline,0,Fully Paid,0.900809,0.603498,0.722773,781376,,,
+logistic_regression,train,0.471834,962641,0.1883,baseline,1,Charged Off,0.294519,0.713541,0.416942,181265,,,
+logistic_regression,validation,0.471834,186920,0.246763,baseline,0,Fully Paid,0.855182,0.584921,0.694692,140795,,,
+logistic_regression,validation,0.471834,186920,0.246763,baseline,1,Charged Off,0.355098,0.697648,0.470642,46125,,,
+logistic_regression,test,0.471834,195749,0.210315,baseline,0,Fully Paid,0.882344,0.580618,0.700367,154580,,,
+logistic_regression,test,0.471834,195749,0.210315,baseline,1,Charged Off,0.310553,0.709296,0.431974,41169,,,
+hist_gradient_boosting,train,0.475502,962641,0.1883,baseline,0,Fully Paid,0.906156,0.610839,0.729753,781376,,,
+hist_gradient_boosting,train,0.475502,962641,0.1883,baseline,1,Charged Off,0.302432,0.727305,0.427217,181265,,,
+hist_gradient_boosting,validation,0.475502,186920,0.246763,baseline,0,Fully Paid,0.858552,0.584275,0.695344,140795,,,
+hist_gradient_boosting,validation,0.475502,186920,0.246763,baseline,1,Charged Off,0.357525,0.706168,0.47471,46125,,,
+hist_gradient_boosting,test,0.475502,195749,0.210315,baseline,0,Fully Paid,0.884443,0.595892,0.712045,154580,,,
+hist_gradient_boosting,test,0.475502,195749,0.210315,baseline,1,Charged Off,0.318053,0.707668,0.438864,41169,,,
+random_forest,train,0.464443,962641,0.1883,baseline,0,Fully Paid,0.906567,0.596892,0.719837,781376,,,
+random_forest,train,0.464443,962641,0.1883,baseline,1,Charged Off,0.297198,0.734819,0.423223,181265,,,
+random_forest,validation,0.464443,186920,0.246763,baseline,0,Fully Paid,0.85428,0.577109,0.688859,140795,,,
+random_forest,validation,0.464443,186920,0.246763,baseline,1,Charged Off,0.351448,0.699512,0.467843,46125,,,
+random_forest,test,0.464443,195749,0.210315,baseline,0,Fully Paid,0.881176,0.59027,0.706967,154580,,,
+random_forest,test,0.464443,195749,0.210315,baseline,1,Charged Off,0.313066,0.701134,0.432856,41169,,,
+logistic_regression_no_grade_subgrade,train,0.164047,962641,0.1883,no_grade_subgrade,0,Fully Paid,0.904619,0.563334,0.694304,781376,,,
+logistic_regression_no_grade_subgrade,train,0.164047,962641,0.1883,no_grade_subgrade,1,Charged Off,0.283275,0.74396,0.410315,181265,,,
+logistic_regression_no_grade_subgrade,validation,0.164047,186920,0.246763,no_grade_subgrade,0,Fully Paid,0.861321,0.543826,0.666704,140795,,,
+logistic_regression_no_grade_subgrade,validation,0.164047,186920,0.246763,no_grade_subgrade,1,Charged Off,0.344783,0.732726,0.468918,46125,,,
+logistic_regression_no_grade_subgrade,test,0.164047,195749,0.210315,no_grade_subgrade,0,Fully Paid,0.889363,0.533808,0.667171,154580,,,
+logistic_regression_no_grade_subgrade,test,0.164047,195749,0.210315,no_grade_subgrade,1,Charged Off,0.300132,0.750662,0.428814,41169,,,
+hist_gradient_boosting_no_grade_subgrade,train,0.18289,962641,0.1883,no_grade_subgrade,0,Fully Paid,0.901551,0.640567,0.748975,781376,,,
+hist_gradient_boosting_no_grade_subgrade,train,0.18289,962641,0.1883,no_grade_subgrade,1,Charged Off,0.310725,0.698469,0.430109,181265,,,
+hist_gradient_boosting_no_grade_subgrade,validation,0.18289,186920,0.246763,no_grade_subgrade,0,Fully Paid,0.852765,0.615242,0.714788,140795,,,
+hist_gradient_boosting_no_grade_subgrade,validation,0.18289,186920,0.246763,no_grade_subgrade,1,Charged Off,0.365229,0.675751,0.474176,46125,,,
+hist_gradient_boosting_no_grade_subgrade,test,0.18289,195749,0.210315,no_grade_subgrade,0,Fully Paid,0.88069,0.612945,0.72282,154580,,,
+hist_gradient_boosting_no_grade_subgrade,test,0.18289,195749,0.210315,no_grade_subgrade,1,Charged Off,0.321367,0.688212,0.43814,41169,,,
+random_forest_no_grade_subgrade,train,0.443294,962641,0.1883,no_grade_subgrade,0,Fully Paid,0.913353,0.58198,0.71095,781376,,,
+random_forest_no_grade_subgrade,train,0.443294,962641,0.1883,no_grade_subgrade,1,Charged Off,0.297199,0.762006,0.427618,181265,,,
+random_forest_no_grade_subgrade,validation,0.443294,186920,0.246763,no_grade_subgrade,0,Fully Paid,0.858887,0.568685,0.684289,140795,,,
+random_forest_no_grade_subgrade,validation,0.443294,186920,0.246763,no_grade_subgrade,1,Charged Off,0.351879,0.714797,0.4716,46125,,,
+random_forest_no_grade_subgrade,test,0.443294,195749,0.210315,no_grade_subgrade,0,Fully Paid,0.884255,0.581647,0.701717,154580,,,
+random_forest_no_grade_subgrade,test,0.443294,195749,0.210315,no_grade_subgrade,1,Charged Off,0.312537,0.71413,0.434789,41169,,,
+logistic_regression_07,train,0.471801,962641,0.1883,final_comparison,0,Fully Paid,0.900808,0.603466,0.72275,781376,logistic_regression,Logistic Regression,best_validation_f1
+logistic_regression_07,train,0.471801,962641,0.1883,final_comparison,1,Charged Off,0.294505,0.713552,0.41693,181265,logistic_regression,Logistic Regression,best_validation_f1
+logistic_regression_07,train,0.563511,962641,0.1883,final_comparison,0,Fully Paid,0.876884,0.763695,0.816385,781376,logistic_regression,Logistic Regression,target_validation_precision
+logistic_regression_07,train,0.563511,962641,0.1883,final_comparison,1,Charged Off,0.34553,0.537793,0.420738,181265,logistic_regression,Logistic Regression,target_validation_precision
+logistic_regression_07,validation,0.471801,186920,0.246763,final_comparison,0,Fully Paid,0.855182,0.584879,0.694662,140795,logistic_regression,Logistic Regression,best_validation_f1
+logistic_regression_07,validation,0.471801,186920,0.246763,final_comparison,1,Charged Off,0.355082,0.697669,0.470633,46125,logistic_regression,Logistic Regression,best_validation_f1
+logistic_regression_07,validation,0.563511,186920,0.246763,final_comparison,0,Fully Paid,0.823278,0.750133,0.785005,140795,logistic_regression,Logistic Regression,target_validation_precision
+logistic_regression_07,validation,0.563511,186920,0.246763,final_comparison,1,Charged Off,0.400007,0.508488,0.447771,46125,logistic_regression,Logistic Regression,target_validation_precision
+logistic_regression_07,test,0.471801,195749,0.210315,final_comparison,0,Fully Paid,0.882345,0.58058,0.700339,154580,logistic_regression,Logistic Regression,best_validation_f1
+logistic_regression_07,test,0.471801,195749,0.210315,final_comparison,1,Charged Off,0.310541,0.70932,0.431966,41169,logistic_regression,Logistic Regression,best_validation_f1
+logistic_regression_07,test,0.563511,195749,0.210315,final_comparison,0,Fully Paid,0.856076,0.731835,0.789095,154580,logistic_regression,Logistic Regression,target_validation_precision
+logistic_regression_07,test,0.563511,195749,0.210315,final_comparison,1,Charged Off,0.348254,0.538026,0.422823,41169,logistic_regression,Logistic Regression,target_validation_precision
+random_forest_03,train,0.455266,962641,0.1883,final_comparison,0,Fully Paid,0.905548,0.628844,0.742247,781376,random_forest,Random Forest,best_validation_f1
+random_forest_03,train,0.455266,962641,0.1883,final_comparison,1,Charged Off,0.309538,0.717259,0.43245,181265,random_forest,Random Forest,best_validation_f1
+random_forest_03,train,0.523016,962641,0.1883,final_comparison,0,Fully Paid,0.884848,0.758742,0.816957,781376,random_forest,Random Forest,target_validation_precision
+random_forest_03,train,0.523016,962641,0.1883,final_comparison,1,Charged Off,0.355784,0.574358,0.43939,181265,random_forest,Random Forest,target_validation_precision
+random_forest_03,validation,0.455266,186920,0.246763,final_comparison,0,Fully Paid,0.849706,0.607948,0.708779,140795,random_forest,Random Forest,best_validation_f1
+random_forest_03,validation,0.455266,186920,0.246763,final_comparison,1,Charged Off,0.359521,0.671762,0.468373,46125,random_forest,Random Forest,best_validation_f1
+random_forest_03,validation,0.523016,186920,0.246763,final_comparison,0,Fully Paid,0.823161,0.750424,0.785112,140795,random_forest,Random Forest,target_validation_precision
+random_forest_03,validation,0.523016,186920,0.246763,final_comparison,1,Charged Off,0.40001,0.507902,0.447546,46125,random_forest,Random Forest,target_validation_precision
+random_forest_03,test,0.455266,195749,0.210315,final_comparison,0,Fully Paid,0.877212,0.620591,0.726918,154580,random_forest,Random Forest,best_validation_f1
+random_forest_03,test,0.455266,195749,0.210315,final_comparison,1,Charged Off,0.321114,0.673832,0.434952,41169,random_forest,Random Forest,best_validation_f1
+random_forest_03,test,0.523016,195749,0.210315,final_comparison,0,Fully Paid,0.854903,0.753092,0.800775,154580,random_forest,Random Forest,target_validation_precision
+random_forest_03,test,0.523016,195749,0.210315,final_comparison,1,Charged Off,0.359378,0.520076,0.425045,41169,random_forest,Random Forest,target_validation_precision
+hist_gradient_boosting_04,train,0.472937,962641,0.1883,final_comparison,0,Fully Paid,0.905581,0.615451,0.732846,781376,hist_gradient_boosting,HistGradientBoosting,best_validation_f1
+hist_gradient_boosting_04,train,0.472937,962641,0.1883,final_comparison,1,Charged Off,0.30381,0.723388,0.427907,181265,hist_gradient_boosting,HistGradientBoosting,best_validation_f1
+hist_gradient_boosting_04,train,0.550043,962641,0.1883,final_comparison,0,Fully Paid,0.885216,0.746936,0.810218,781376,hist_gradient_boosting,HistGradientBoosting,target_validation_precision
+hist_gradient_boosting_04,train,0.550043,962641,0.1883,final_comparison,1,Charged Off,0.348096,0.582495,0.435775,181265,hist_gradient_boosting,HistGradientBoosting,target_validation_precision
+hist_gradient_boosting_04,validation,0.472937,186920,0.246763,final_comparison,0,Fully Paid,0.856558,0.593309,0.701035,140795,hist_gradient_boosting,HistGradientBoosting,best_validation_f1
+hist_gradient_boosting_04,validation,0.472937,186920,0.246763,final_comparison,1,Charged Off,0.359479,0.696715,0.474259,46125,hist_gradient_boosting,HistGradientBoosting,best_validation_f1
+hist_gradient_boosting_04,validation,0.550043,186920,0.246763,final_comparison,0,Fully Paid,0.82943,0.735474,0.779631,140795,hist_gradient_boosting,HistGradientBoosting,target_validation_precision
+hist_gradient_boosting_04,validation,0.550043,186920,0.246763,final_comparison,1,Charged Off,0.400006,0.53832,0.458969,46125,hist_gradient_boosting,HistGradientBoosting,target_validation_precision
+hist_gradient_boosting_04,test,0.472937,195749,0.210315,final_comparison,0,Fully Paid,0.881368,0.607168,0.719013,154580,hist_gradient_boosting,HistGradientBoosting,best_validation_f1
+hist_gradient_boosting_04,test,0.472937,195749,0.210315,final_comparison,1,Charged Off,0.319695,0.693143,0.437571,41169,hist_gradient_boosting,HistGradientBoosting,best_validation_f1
+hist_gradient_boosting_04,test,0.550043,195749,0.210315,final_comparison,0,Fully Paid,0.858946,0.739772,0.794917,154580,hist_gradient_boosting,HistGradientBoosting,target_validation_precision
+hist_gradient_boosting_04,test,0.550043,195749,0.210315,final_comparison,1,Charged Off,0.357576,0.543856,0.431469,41169,hist_gradient_boosting,HistGradientBoosting,target_validation_precision

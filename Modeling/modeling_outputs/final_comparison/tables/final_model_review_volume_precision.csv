@@ -1,0 +1,49 @@
+model_family,model,split,review_pct,review_count,captured_bad,precision,recall,base_bad_rate,lift_over_base_bad_rate,model_label
+logistic_regression,logistic_regression_07,validation,1.0,1870,1132,0.605348,0.024542,0.246763,2.453151,Logistic Regression
+logistic_regression,logistic_regression_07,validation,2.0,3739,2174,0.581439,0.047133,0.246763,2.356261,Logistic Regression
+logistic_regression,logistic_regression_07,validation,5.0,9346,5073,0.542799,0.109984,0.246763,2.199675,Logistic Regression
+logistic_regression,logistic_regression_07,validation,10.0,18692,9278,0.496362,0.201149,0.246763,2.011491,Logistic Regression
+logistic_regression,logistic_regression_07,validation,15.0,28038,13006,0.46387,0.281973,0.246763,1.879819,Logistic Regression
+logistic_regression,logistic_regression_07,validation,20.0,37384,16488,0.441044,0.357463,0.246763,1.787317,Logistic Regression
+logistic_regression,logistic_regression_07,validation,25.0,46730,19675,0.421036,0.426558,0.246763,1.706233,Logistic Regression
+logistic_regression,logistic_regression_07,validation,30.0,56076,22690,0.404629,0.491924,0.246763,1.639747,Logistic Regression
+logistic_regression,logistic_regression_07,test,1.0,1958,1018,0.519918,0.024727,0.210315,2.47209,Logistic Regression
+logistic_regression,logistic_regression_07,test,2.0,3915,2000,0.510856,0.04858,0.210315,2.429,Logistic Regression
+logistic_regression,logistic_regression_07,test,5.0,9788,4603,0.47027,0.111807,0.210315,2.236023,Logistic Regression
+logistic_regression,logistic_regression_07,test,10.0,19575,8479,0.433155,0.205956,0.210315,2.059549,Logistic Regression
+logistic_regression,logistic_regression_07,test,15.0,29363,11950,0.406975,0.290267,0.210315,1.93507,Logistic Regression
+logistic_regression,logistic_regression_07,test,20.0,39150,15132,0.386513,0.367558,0.210315,1.837781,Logistic Regression
+logistic_regression,logistic_regression_07,test,25.0,48938,18054,0.368916,0.438534,0.210315,1.754109,Logistic Regression
+logistic_regression,logistic_regression_07,test,30.0,58725,20837,0.354823,0.506133,0.210315,1.687102,Logistic Regression
+random_forest,random_forest_03,validation,1.0,1870,1169,0.625134,0.025344,0.246763,2.533333,Random Forest
+random_forest,random_forest_03,validation,2.0,3739,2237,0.598288,0.048499,0.246763,2.424543,Random Forest
+random_forest,random_forest_03,validation,5.0,9346,5094,0.545046,0.110439,0.246763,2.20878,Random Forest
+random_forest,random_forest_03,validation,10.0,18692,9368,0.501177,0.2031,0.246763,2.031003,Random Forest
+random_forest,random_forest_03,validation,15.0,28038,13025,0.464548,0.282385,0.246763,1.882565,Random Forest
+random_forest,random_forest_03,validation,20.0,37384,16491,0.441125,0.357528,0.246763,1.787642,Random Forest
+random_forest,random_forest_03,validation,25.0,46730,19729,0.422191,0.427729,0.246763,1.710916,Random Forest
+random_forest,random_forest_03,validation,30.0,56076,22658,0.404059,0.49123,0.246763,1.637435,Random Forest
+random_forest,random_forest_03,test,1.0,1958,1088,0.555669,0.026428,0.210315,2.642077,Random Forest
+random_forest,random_forest_03,test,2.0,3915,2073,0.529502,0.050353,0.210315,2.517658,Random Forest
+random_forest,random_forest_03,test,5.0,9788,4747,0.484982,0.115305,0.210315,2.305975,Random Forest
+random_forest,random_forest_03,test,10.0,19575,8695,0.444189,0.211203,0.210315,2.112015,Random Forest
+random_forest,random_forest_03,test,15.0,29363,12126,0.412969,0.294542,0.210315,1.96357,Random Forest
+random_forest,random_forest_03,test,20.0,39150,15339,0.391801,0.372586,0.210315,1.862921,Random Forest
+random_forest,random_forest_03,test,25.0,48938,18338,0.374719,0.445432,0.210315,1.781702,Random Forest
+random_forest,random_forest_03,test,30.0,58725,21179,0.360647,0.51444,0.210315,1.714793,Random Forest
+hist_gradient_boosting,hist_gradient_boosting_04,validation,1.0,1870,1208,0.645989,0.02619,0.246763,2.61785,HistGradientBoosting
+hist_gradient_boosting,hist_gradient_boosting_04,validation,2.0,3739,2293,0.613266,0.049713,0.246763,2.485238,HistGradientBoosting
+hist_gradient_boosting,hist_gradient_boosting_04,validation,5.0,9346,5171,0.553285,0.112108,0.246763,2.242168,HistGradientBoosting
+hist_gradient_boosting,hist_gradient_boosting_04,validation,10.0,18692,9525,0.509576,0.206504,0.246763,2.065041,HistGradientBoosting
+hist_gradient_boosting,hist_gradient_boosting_04,validation,15.0,28038,13311,0.474749,0.288585,0.246763,1.923902,HistGradientBoosting
+hist_gradient_boosting,hist_gradient_boosting_04,validation,20.0,37384,16752,0.448106,0.363187,0.246763,1.815935,HistGradientBoosting
+hist_gradient_boosting,hist_gradient_boosting_04,validation,25.0,46730,19998,0.427948,0.433561,0.246763,1.734244,HistGradientBoosting
+hist_gradient_boosting,hist_gradient_boosting_04,validation,30.0,56076,23030,0.410693,0.499295,0.246763,1.664318,HistGradientBoosting
+hist_gradient_boosting,hist_gradient_boosting_04,test,1.0,1958,1092,0.557712,0.026525,0.210315,2.65179,HistGradientBoosting
+hist_gradient_boosting,hist_gradient_boosting_04,test,2.0,3915,2103,0.537165,0.051082,0.210315,2.554093,HistGradientBoosting
+hist_gradient_boosting,hist_gradient_boosting_04,test,5.0,9788,4831,0.493564,0.117346,0.210315,2.34678,HistGradientBoosting
+hist_gradient_boosting,hist_gradient_boosting_04,test,10.0,19575,8835,0.451341,0.214603,0.210315,2.146021,HistGradientBoosting
+hist_gradient_boosting,hist_gradient_boosting_04,test,15.0,29363,12449,0.423969,0.302388,0.210315,2.015874,HistGradientBoosting
+hist_gradient_boosting,hist_gradient_boosting_04,test,20.0,39150,15638,0.399438,0.379849,0.210315,1.899235,HistGradientBoosting
+hist_gradient_boosting,hist_gradient_boosting_04,test,25.0,48938,18624,0.380563,0.452379,0.210315,1.809489,HistGradientBoosting
+hist_gradient_boosting,hist_gradient_boosting_04,test,30.0,58725,21393,0.364291,0.519639,0.210315,1.73212,HistGradientBoosting

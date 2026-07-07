@@ -1,0 +1,17 @@
+model_family,model,split,review_pct,review_count,captured_bad,precision,recall,base_bad_rate,lift_over_base_bad_rate
+logistic_regression,logistic_regression_07,validation,1.0,1870,1132,0.605348,0.024542,0.246763,2.453151
+logistic_regression,logistic_regression_07,validation,2.0,3739,2174,0.581439,0.047133,0.246763,2.356261
+logistic_regression,logistic_regression_07,validation,5.0,9346,5073,0.542799,0.109984,0.246763,2.199675
+logistic_regression,logistic_regression_07,validation,10.0,18692,9278,0.496362,0.201149,0.246763,2.011491
+logistic_regression,logistic_regression_07,validation,15.0,28038,13006,0.46387,0.281973,0.246763,1.879819
+logistic_regression,logistic_regression_07,validation,20.0,37384,16488,0.441044,0.357463,0.246763,1.787317
+logistic_regression,logistic_regression_07,validation,25.0,46730,19675,0.421036,0.426558,0.246763,1.706233
+logistic_regression,logistic_regression_07,validation,30.0,56076,22690,0.404629,0.491924,0.246763,1.639747
+logistic_regression,logistic_regression_07,test,1.0,1958,1018,0.519918,0.024727,0.210315,2.47209
+logistic_regression,logistic_regression_07,test,2.0,3915,2000,0.510856,0.04858,0.210315,2.429
+logistic_regression,logistic_regression_07,test,5.0,9788,4603,0.47027,0.111807,0.210315,2.236023
+logistic_regression,logistic_regression_07,test,10.0,19575,8479,0.433155,0.205956,0.210315,2.059549
+logistic_regression,logistic_regression_07,test,15.0,29363,11950,0.406975,0.290267,0.210315,1.93507
+logistic_regression,logistic_regression_07,test,20.0,39150,15132,0.386513,0.367558,0.210315,1.837781
+logistic_regression,logistic_regression_07,test,25.0,48938,18054,0.368916,0.438534,0.210315,1.754109
+logistic_regression,logistic_regression_07,test,30.0,58725,20837,0.354823,0.506133,0.210315,1.687102

@@ -1,0 +1,25 @@
+model_family,candidate,split,operating_point,threshold,actual_label,actual_class,predicted_label,predicted_class,count,cell
+hist_gradient_boosting,hist_gradient_boosting_04,train,best_validation_f1,0.472937,0,Fully Paid,0,Fully Paid,480899,TN
+hist_gradient_boosting,hist_gradient_boosting_04,train,best_validation_f1,0.472937,0,Fully Paid,1,Charged Off,300477,FP
+hist_gradient_boosting,hist_gradient_boosting_04,train,best_validation_f1,0.472937,1,Charged Off,0,Fully Paid,50140,FN
+hist_gradient_boosting,hist_gradient_boosting_04,train,best_validation_f1,0.472937,1,Charged Off,1,Charged Off,131125,TP
+hist_gradient_boosting,hist_gradient_boosting_04,train,target_validation_precision,0.550043,0,Fully Paid,0,Fully Paid,583638,TN
+hist_gradient_boosting,hist_gradient_boosting_04,train,target_validation_precision,0.550043,0,Fully Paid,1,Charged Off,197738,FP
+hist_gradient_boosting,hist_gradient_boosting_04,train,target_validation_precision,0.550043,1,Charged Off,0,Fully Paid,75679,FN
+hist_gradient_boosting,hist_gradient_boosting_04,train,target_validation_precision,0.550043,1,Charged Off,1,Charged Off,105586,TP
+hist_gradient_boosting,hist_gradient_boosting_04,validation,best_validation_f1,0.472937,0,Fully Paid,0,Fully Paid,83535,TN
+hist_gradient_boosting,hist_gradient_boosting_04,validation,best_validation_f1,0.472937,0,Fully Paid,1,Charged Off,57260,FP
+hist_gradient_boosting,hist_gradient_boosting_04,validation,best_validation_f1,0.472937,1,Charged Off,0,Fully Paid,13989,FN
+hist_gradient_boosting,hist_gradient_boosting_04,validation,best_validation_f1,0.472937,1,Charged Off,1,Charged Off,32136,TP
+hist_gradient_boosting,hist_gradient_boosting_04,validation,target_validation_precision,0.550043,0,Fully Paid,0,Fully Paid,103551,TN
+hist_gradient_boosting,hist_gradient_boosting_04,validation,target_validation_precision,0.550043,0,Fully Paid,1,Charged Off,37244,FP
+hist_gradient_boosting,hist_gradient_boosting_04,validation,target_validation_precision,0.550043,1,Charged Off,0,Fully Paid,21295,FN
+hist_gradient_boosting,hist_gradient_boosting_04,validation,target_validation_precision,0.550043,1,Charged Off,1,Charged Off,24830,TP
+hist_gradient_boosting,hist_gradient_boosting_04,test,best_validation_f1,0.472937,0,Fully Paid,0,Fully Paid,93856,TN
+hist_gradient_boosting,hist_gradient_boosting_04,test,best_validation_f1,0.472937,0,Fully Paid,1,Charged Off,60724,FP
+hist_gradient_boosting,hist_gradient_boosting_04,test,best_validation_f1,0.472937,1,Charged Off,0,Fully Paid,12633,FN
+hist_gradient_boosting,hist_gradient_boosting_04,test,best_validation_f1,0.472937,1,Charged Off,1,Charged Off,28536,TP
+hist_gradient_boosting,hist_gradient_boosting_04,test,target_validation_precision,0.550043,0,Fully Paid,0,Fully Paid,114354,TN
+hist_gradient_boosting,hist_gradient_boosting_04,test,target_validation_precision,0.550043,0,Fully Paid,1,Charged Off,40226,FP
+hist_gradient_boosting,hist_gradient_boosting_04,test,target_validation_precision,0.550043,1,Charged Off,0,Fully Paid,18779,FN
+hist_gradient_boosting,hist_gradient_boosting_04,test,target_validation_precision,0.550043,1,Charged Off,1,Charged Off,22390,TP

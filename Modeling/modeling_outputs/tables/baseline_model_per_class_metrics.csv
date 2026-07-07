@@ -1,0 +1,19 @@
+model,split,threshold,rows,bad_rate,source_table,class_label,class_name,precision,recall,f1,support
+logistic_regression,train,0.471834,962641,0.1883,baseline,0,Fully Paid,0.900809,0.603498,0.722773,781376
+logistic_regression,train,0.471834,962641,0.1883,baseline,1,Charged Off,0.294519,0.713541,0.416942,181265
+logistic_regression,validation,0.471834,186920,0.246763,baseline,0,Fully Paid,0.855182,0.584921,0.694692,140795
+logistic_regression,validation,0.471834,186920,0.246763,baseline,1,Charged Off,0.355098,0.697648,0.470642,46125
+logistic_regression,test,0.471834,195749,0.210315,baseline,0,Fully Paid,0.882344,0.580618,0.700367,154580
+logistic_regression,test,0.471834,195749,0.210315,baseline,1,Charged Off,0.310553,0.709296,0.431974,41169
+hist_gradient_boosting,train,0.475502,962641,0.1883,baseline,0,Fully Paid,0.906156,0.610839,0.729753,781376
+hist_gradient_boosting,train,0.475502,962641,0.1883,baseline,1,Charged Off,0.302432,0.727305,0.427217,181265
+hist_gradient_boosting,validation,0.475502,186920,0.246763,baseline,0,Fully Paid,0.858552,0.584275,0.695344,140795
+hist_gradient_boosting,validation,0.475502,186920,0.246763,baseline,1,Charged Off,0.357525,0.706168,0.47471,46125
+hist_gradient_boosting,test,0.475502,195749,0.210315,baseline,0,Fully Paid,0.884443,0.595892,0.712045,154580
+hist_gradient_boosting,test,0.475502,195749,0.210315,baseline,1,Charged Off,0.318053,0.707668,0.438864,41169
+random_forest,train,0.464443,962641,0.1883,baseline,0,Fully Paid,0.906567,0.596892,0.719837,781376
+random_forest,train,0.464443,962641,0.1883,baseline,1,Charged Off,0.297198,0.734819,0.423223,181265
+random_forest,validation,0.464443,186920,0.246763,baseline,0,Fully Paid,0.85428,0.577109,0.688859,140795
+random_forest,validation,0.464443,186920,0.246763,baseline,1,Charged Off,0.351448,0.699512,0.467843,46125
+random_forest,test,0.464443,195749,0.210315,baseline,0,Fully Paid,0.881176,0.59027,0.706967,154580
+random_forest,test,0.464443,195749,0.210315,baseline,1,Charged Off,0.313066,0.701134,0.432856,41169

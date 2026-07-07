@@ -1,0 +1,13 @@
+model_family,model_label,model,split,feature_set,roc_auc,pr_auc,brier_score,precision,recall,f1,threshold
+logistic_regression,Logistic Regression,logistic_regression_07,validation,baseline_with_grade_subgrade,0.695407,0.412336,0.224051,0.355082,0.697669,0.470633,0.471801
+logistic_regression,Logistic Regression,logistic_regression_07,test,baseline_with_grade_subgrade,0.700061,0.361509,0.225017,0.310541,0.70932,0.431966,0.471801
+random_forest,Random Forest,random_forest_03,validation,baseline_with_grade_subgrade,0.694572,0.415081,0.207616,0.359521,0.671762,0.468373,0.455266
+random_forest,Random Forest,random_forest_03,test,baseline_with_grade_subgrade,0.703753,0.371073,0.200271,0.321114,0.673832,0.434952,0.455266
+hist_gradient_boosting,HistGradientBoosting,hist_gradient_boosting_04,validation,baseline_with_grade_subgrade,0.700829,0.4235,0.217717,0.359479,0.696715,0.474259,0.472937
+hist_gradient_boosting,HistGradientBoosting,hist_gradient_boosting_04,test,baseline_with_grade_subgrade,0.708493,0.377185,0.212358,0.319695,0.693143,0.437571,0.472937
+logistic_regression,Logistic Regression,logistic_regression_no_grade_subgrade,validation,baseline_no_grade_subgrade,0.692454,0.408532,0.172715,0.344783,0.732726,0.468918,0.164047
+logistic_regression,Logistic Regression,logistic_regression_no_grade_subgrade,test,baseline_no_grade_subgrade,0.697573,0.355817,0.155394,0.300132,0.750662,0.428814,0.164047
+hist_gradient_boosting,HistGradientBoosting,hist_gradient_boosting_no_grade_subgrade,validation,baseline_no_grade_subgrade,0.701741,0.425647,0.170437,0.365229,0.675751,0.474176,0.18289
+hist_gradient_boosting,HistGradientBoosting,hist_gradient_boosting_no_grade_subgrade,test,baseline_no_grade_subgrade,0.709575,0.380035,0.151336,0.321367,0.688212,0.43814,0.18289
+random_forest,Random Forest,random_forest_no_grade_subgrade,validation,baseline_no_grade_subgrade,0.696983,0.416275,0.209809,0.351879,0.714797,0.4716,0.443294
+random_forest,Random Forest,random_forest_no_grade_subgrade,test,baseline_no_grade_subgrade,0.704153,0.370329,0.203629,0.312537,0.71413,0.434789,0.443294

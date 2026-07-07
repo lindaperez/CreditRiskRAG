@@ -1,0 +1,13 @@
+model_family,candidate,split,operating_point,threshold,class_label,class_name,precision,recall,f1,support
+hist_gradient_boosting,hist_gradient_boosting_04,train,best_validation_f1,0.472937,0,Fully Paid,0.905581,0.615451,0.732846,781376
+hist_gradient_boosting,hist_gradient_boosting_04,train,best_validation_f1,0.472937,1,Charged Off,0.30381,0.723388,0.427907,181265
+hist_gradient_boosting,hist_gradient_boosting_04,train,target_validation_precision,0.550043,0,Fully Paid,0.885216,0.746936,0.810218,781376
+hist_gradient_boosting,hist_gradient_boosting_04,train,target_validation_precision,0.550043,1,Charged Off,0.348096,0.582495,0.435775,181265
+hist_gradient_boosting,hist_gradient_boosting_04,validation,best_validation_f1,0.472937,0,Fully Paid,0.856558,0.593309,0.701035,140795
+hist_gradient_boosting,hist_gradient_boosting_04,validation,best_validation_f1,0.472937,1,Charged Off,0.359479,0.696715,0.474259,46125
+hist_gradient_boosting,hist_gradient_boosting_04,validation,target_validation_precision,0.550043,0,Fully Paid,0.82943,0.735474,0.779631,140795
+hist_gradient_boosting,hist_gradient_boosting_04,validation,target_validation_precision,0.550043,1,Charged Off,0.400006,0.53832,0.458969,46125
+hist_gradient_boosting,hist_gradient_boosting_04,test,best_validation_f1,0.472937,0,Fully Paid,0.881368,0.607168,0.719013,154580
+hist_gradient_boosting,hist_gradient_boosting_04,test,best_validation_f1,0.472937,1,Charged Off,0.319695,0.693143,0.437571,41169
+hist_gradient_boosting,hist_gradient_boosting_04,test,target_validation_precision,0.550043,0,Fully Paid,0.858946,0.739772,0.794917,154580
+hist_gradient_boosting,hist_gradient_boosting_04,test,target_validation_precision,0.550043,1,Charged Off,0.357576,0.543856,0.431469,41169

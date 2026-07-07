@@ -1,0 +1,5 @@
+model_family,candidate,split,operating_point,threshold,predicted_label,predicted_class,predicted_count,predicted_share
+hist_gradient_boosting,hist_gradient_boosting_04,validation,best_validation_f1,0.472937,0,Fully Paid,97524,0.521742
+hist_gradient_boosting,hist_gradient_boosting_04,validation,best_validation_f1,0.472937,1,Charged Off,89396,0.478258
+hist_gradient_boosting,hist_gradient_boosting_04,test,best_validation_f1,0.472937,0,Fully Paid,106489,0.544008
+hist_gradient_boosting,hist_gradient_boosting_04,test,best_validation_f1,0.472937,1,Charged Off,89260,0.455992
