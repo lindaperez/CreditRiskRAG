@@ -1,0 +1,64 @@
+column,exclusion_group,decision,reason,helper_feature,present_in_completed_frame,present_in_X_starter
+id,excluded_identifier,exclude_from_model_matrix,Identifier or lookup field; keep only for traceability when needed.,,True,False
+member_id,excluded_identifier,exclude_from_model_matrix,Identifier or lookup field; keep only for traceability when needed.,,True,False
+url,excluded_identifier,exclude_from_model_matrix,Identifier or lookup field; keep only for traceability when needed.,,True,False
+collection_recovery_fee,excluded_leakage,exclude_from_model_matrix,"Post-origination servicing, payment, recovery, hardship, settlement, or credit-update field.",,True,False
+debt_settlement_flag,excluded_leakage,exclude_from_model_matrix,"Post-origination servicing, payment, recovery, hardship, settlement, or credit-update field.",,True,False
+debt_settlement_flag_date,excluded_leakage,exclude_from_model_matrix,"Post-origination servicing, payment, recovery, hardship, settlement, or credit-update field.",,False,False
+deferral_term,excluded_leakage,exclude_from_model_matrix,"Post-origination servicing, payment, recovery, hardship, settlement, or credit-update field.",,False,False
+hardship_amount,excluded_leakage,exclude_from_model_matrix,"Post-origination servicing, payment, recovery, hardship, settlement, or credit-update field.",,False,False
+hardship_dpd,excluded_leakage,exclude_from_model_matrix,"Post-origination servicing, payment, recovery, hardship, settlement, or credit-update field.",,False,False
+hardship_end_date,excluded_leakage,exclude_from_model_matrix,"Post-origination servicing, payment, recovery, hardship, settlement, or credit-update field.",,False,False
+hardship_flag,excluded_leakage,exclude_from_model_matrix,"Post-origination servicing, payment, recovery, hardship, settlement, or credit-update field.",,True,False
+hardship_last_payment_amount,excluded_leakage,exclude_from_model_matrix,"Post-origination servicing, payment, recovery, hardship, settlement, or credit-update field.",,False,False
+hardship_length,excluded_leakage,exclude_from_model_matrix,"Post-origination servicing, payment, recovery, hardship, settlement, or credit-update field.",,False,False
+hardship_loan_status,excluded_leakage,exclude_from_model_matrix,"Post-origination servicing, payment, recovery, hardship, settlement, or credit-update field.",,False,False
+hardship_payoff_balance_amount,excluded_leakage,exclude_from_model_matrix,"Post-origination servicing, payment, recovery, hardship, settlement, or credit-update field.",,False,False
+hardship_reason,excluded_leakage,exclude_from_model_matrix,"Post-origination servicing, payment, recovery, hardship, settlement, or credit-update field.",,False,False
+hardship_start_date,excluded_leakage,exclude_from_model_matrix,"Post-origination servicing, payment, recovery, hardship, settlement, or credit-update field.",,False,False
+hardship_status,excluded_leakage,exclude_from_model_matrix,"Post-origination servicing, payment, recovery, hardship, settlement, or credit-update field.",,False,False
+hardship_type,excluded_leakage,exclude_from_model_matrix,"Post-origination servicing, payment, recovery, hardship, settlement, or credit-update field.",,False,False
+last_credit_pull_d,excluded_leakage,exclude_from_model_matrix,"Post-origination servicing, payment, recovery, hardship, settlement, or credit-update field.",,True,False
+last_fico_range_high,excluded_leakage,exclude_from_model_matrix,"Post-origination servicing, payment, recovery, hardship, settlement, or credit-update field.",,True,False
+last_fico_range_low,excluded_leakage,exclude_from_model_matrix,"Post-origination servicing, payment, recovery, hardship, settlement, or credit-update field.",,True,False
+last_pymnt_amnt,excluded_leakage,exclude_from_model_matrix,"Post-origination servicing, payment, recovery, hardship, settlement, or credit-update field.",,True,False
+last_pymnt_d,excluded_leakage,exclude_from_model_matrix,"Post-origination servicing, payment, recovery, hardship, settlement, or credit-update field.",,True,False
+next_pymnt_d,excluded_leakage,exclude_from_model_matrix,"Post-origination servicing, payment, recovery, hardship, settlement, or credit-update field.",,False,False
+orig_projected_additional_accrued_interest,excluded_leakage,exclude_from_model_matrix,"Post-origination servicing, payment, recovery, hardship, settlement, or credit-update field.",,False,False
+out_prncp,excluded_leakage,exclude_from_model_matrix,"Post-origination servicing, payment, recovery, hardship, settlement, or credit-update field.",,True,False
+out_prncp_inv,excluded_leakage,exclude_from_model_matrix,"Post-origination servicing, payment, recovery, hardship, settlement, or credit-update field.",,False,False
+payment_plan_start_date,excluded_leakage,exclude_from_model_matrix,"Post-origination servicing, payment, recovery, hardship, settlement, or credit-update field.",,False,False
+pymnt_plan,excluded_leakage,exclude_from_model_matrix,"Post-origination servicing, payment, recovery, hardship, settlement, or credit-update field.",,False,False
+recoveries,excluded_leakage,exclude_from_model_matrix,"Post-origination servicing, payment, recovery, hardship, settlement, or credit-update field.",,True,False
+settlement_amount,excluded_leakage,exclude_from_model_matrix,"Post-origination servicing, payment, recovery, hardship, settlement, or credit-update field.",,False,False
+settlement_date,excluded_leakage,exclude_from_model_matrix,"Post-origination servicing, payment, recovery, hardship, settlement, or credit-update field.",,False,False
+settlement_percentage,excluded_leakage,exclude_from_model_matrix,"Post-origination servicing, payment, recovery, hardship, settlement, or credit-update field.",,False,False
+settlement_status,excluded_leakage,exclude_from_model_matrix,"Post-origination servicing, payment, recovery, hardship, settlement, or credit-update field.",,False,False
+settlement_term,excluded_leakage,exclude_from_model_matrix,"Post-origination servicing, payment, recovery, hardship, settlement, or credit-update field.",,False,False
+total_pymnt,excluded_leakage,exclude_from_model_matrix,"Post-origination servicing, payment, recovery, hardship, settlement, or credit-update field.",,True,False
+total_pymnt_inv,excluded_leakage,exclude_from_model_matrix,"Post-origination servicing, payment, recovery, hardship, settlement, or credit-update field.",,False,False
+total_rec_int,excluded_leakage,exclude_from_model_matrix,"Post-origination servicing, payment, recovery, hardship, settlement, or credit-update field.",,True,False
+total_rec_late_fee,excluded_leakage,exclude_from_model_matrix,"Post-origination servicing, payment, recovery, hardship, settlement, or credit-update field.",,False,False
+total_rec_prncp,excluded_leakage,exclude_from_model_matrix,"Post-origination servicing, payment, recovery, hardship, settlement, or credit-update field.",,True,False
+loan_status,excluded_target,exclude_from_model_matrix,"Target, target-definition, or outcome field.",,True,False
+target_bad,excluded_target,exclude_from_model_matrix,"Target, target-definition, or outcome field.",,True,False
+target_definition,excluded_target,exclude_from_model_matrix,"Target, target-definition, or outcome field.",,True,False
+earliest_cr_line,raw_replaced_by_helper,replace_with_clean_helper,Raw field is preserved for audit but replaced by a cleaner derived feature for modeling.,earliest_cr_line_dt / credit_history_years,True,False
+emp_length,raw_replaced_by_helper,replace_with_clean_helper,Raw field is preserved for audit but replaced by a cleaner derived feature for modeling.,emp_length_years,True,False
+fico_range_high,raw_replaced_by_helper,replace_with_clean_helper,Raw field is preserved for audit but replaced by a cleaner derived feature for modeling.,fico_mean,True,False
+fico_range_low,raw_replaced_by_helper,replace_with_clean_helper,Raw field is preserved for audit but replaced by a cleaner derived feature for modeling.,fico_mean,True,False
+int_rate,raw_replaced_by_helper,replace_with_clean_helper,Raw field is preserved for audit but replaced by a cleaner derived feature for modeling.,int_rate_clean,True,False
+issue_d,raw_replaced_by_helper,replace_with_clean_helper,Raw field is preserved for audit but replaced by a cleaner derived feature for modeling.,issue_d_dt / issue_year / issue_quarter / issue_month,True,False
+revol_util,raw_replaced_by_helper,replace_with_clean_helper,Raw field is preserved for audit but replaced by a cleaner derived feature for modeling.,revol_util_clean,True,False
+term,raw_replaced_by_helper,replace_with_clean_helper,Raw field is preserved for audit but replaced by a cleaner derived feature for modeling.,term_months,True,False
+addr_state,review_required_not_in_starter,exclude_from_baseline_pending_review,"Requires timing, business meaning, proxy-risk, text/privacy, or compliance review before modeling.",,True,False
+desc,review_required_not_in_starter,exclude_from_baseline_pending_review,"Requires timing, business meaning, proxy-risk, text/privacy, or compliance review before modeling.",,False,False
+disbursement_method,review_required_not_in_starter,exclude_from_baseline_pending_review,"Requires timing, business meaning, proxy-risk, text/privacy, or compliance review before modeling.",,True,False
+emp_title,review_required_not_in_starter,exclude_from_baseline_pending_review,"Requires timing, business meaning, proxy-risk, text/privacy, or compliance review before modeling.",,False,False
+funded_amnt,review_required_not_in_starter,exclude_from_baseline_pending_review,"Requires timing, business meaning, proxy-risk, text/privacy, or compliance review before modeling.",,False,False
+funded_amnt_inv,review_required_not_in_starter,exclude_from_baseline_pending_review,"Requires timing, business meaning, proxy-risk, text/privacy, or compliance review before modeling.",,False,False
+initial_list_status,review_required_not_in_starter,exclude_from_baseline_pending_review,"Requires timing, business meaning, proxy-risk, text/privacy, or compliance review before modeling.",,True,False
+policy_code,review_required_not_in_starter,exclude_from_baseline_pending_review,"Requires timing, business meaning, proxy-risk, text/privacy, or compliance review before modeling.",,True,False
+title,review_required_not_in_starter,exclude_from_baseline_pending_review,"Requires timing, business meaning, proxy-risk, text/privacy, or compliance review before modeling.",,False,False
+url,review_required_not_in_starter,exclude_from_baseline_pending_review,"Requires timing, business meaning, proxy-risk, text/privacy, or compliance review before modeling.",,True,False
+zip_code,review_required_not_in_starter,exclude_from_baseline_pending_review,"Requires timing, business meaning, proxy-risk, text/privacy, or compliance review before modeling.",,True,False
