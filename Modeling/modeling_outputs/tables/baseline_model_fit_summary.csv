@@ -1,0 +1,4 @@
+model,fit_rows,fit_columns,fit_bad_rate,fit_seconds,validation_selected_threshold,validation_best_f1
+logistic_regression,962641,100,0.1883,27.107,0.471834,0.470642
+hist_gradient_boosting,962641,100,0.1883,18.311,0.475502,0.47471
+random_forest,300000,100,0.1883,8.065,0.464443,0.467843

@@ -1,0 +1,4 @@
+model_family,candidate,params,fit_rows,fit_bad_rate,fit_seconds,roc_auc,pr_auc,best_f1_threshold,best_f1,best_f1_precision,best_f1_recall,target_precision_threshold,target_precision_f1,target_precision,target_precision_recall
+random_forest,random_forest_03,"{""max_depth"": 14, ""max_features"": 0.35, ""min_samples_leaf"": 50, ""n_estimators"": 120}",200000,0.1883,13.496,0.694125,0.414834,0.433702,0.46918,0.349467,0.713648,0.527333,0.447531,0.4,0.507881
+random_forest,random_forest_02,"{""max_depth"": 16, ""max_features"": ""sqrt"", ""min_samples_leaf"": 75, ""n_estimators"": 120}",200000,0.1883,4.956,0.693469,0.413912,0.467271,0.467781,0.354374,0.687935,0.539431,0.447413,0.4,0.507577
+random_forest,random_forest_01,"{""max_depth"": 12, ""max_features"": ""sqrt"", ""min_samples_leaf"": 75, ""n_estimators"": 100}",200000,0.1883,3.72,0.691762,0.41196,0.481328,0.465364,0.353086,0.682341,0.549845,0.441811,0.400004,0.493377

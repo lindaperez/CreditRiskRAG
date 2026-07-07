@@ -1,0 +1,4 @@
+candidate,model_family,path
+hist_gradient_boosting_04,hist_gradient_boosting,/Users/lindaperez/Documents/NEU/2026SummerML/MachineLearningClass/Final_Project/Final/CreditRiskRAG/Modeling/modeling_outputs/tuning/models/hist_gradient_boosting_04.joblib
+logistic_regression_06,logistic_regression,/Users/lindaperez/Documents/NEU/2026SummerML/MachineLearningClass/Final_Project/Final/CreditRiskRAG/Modeling/modeling_outputs/tuning/models/logistic_regression_06.joblib
+random_forest_03,random_forest,/Users/lindaperez/Documents/NEU/2026SummerML/MachineLearningClass/Final_Project/Final/CreditRiskRAG/Modeling/modeling_outputs/tuning/models/random_forest_03.joblib

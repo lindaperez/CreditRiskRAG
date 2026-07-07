@@ -1,0 +1,9 @@
+model_family,candidate,params,fit_rows,fit_bad_rate,fit_seconds,roc_auc,pr_auc,best_f1_threshold,best_f1,best_f1_precision,best_f1_recall,target_precision_threshold,target_precision_f1,target_precision,target_precision_recall
+logistic_regression,logistic_regression_06,"{""C"": 1.0, ""class_weight"": ""balanced""}",962641,0.1883,26.382,0.695409,0.412338,0.471834,0.470642,0.355098,0.697648,0.563545,0.44775,0.4,0.508444
+logistic_regression,logistic_regression_08,"{""C"": 2.0, ""class_weight"": ""balanced""}",962641,0.1883,27.865,0.695403,0.412329,0.471747,0.470619,0.355044,0.697756,0.563485,0.447794,0.400003,0.508553
+logistic_regression,logistic_regression_02,"{""C"": 0.25, ""class_weight"": ""balanced""}",962641,0.1883,27.371,0.695404,0.412331,0.471693,0.470619,0.355021,0.697843,0.563494,0.447783,0.4,0.508531
+logistic_regression,logistic_regression_04,"{""C"": 0.5, ""class_weight"": ""balanced""}",962641,0.1883,26.742,0.695403,0.412328,0.471728,0.470616,0.35504,0.697756,0.563492,0.447777,0.400003,0.508509
+logistic_regression,logistic_regression_07,"{""C"": 2.0, ""class_weight"": null}",962641,0.1883,25.882,0.693012,0.409162,0.168956,0.468977,0.349868,0.711046,0.235486,0.443185,0.4,0.496824
+logistic_regression,logistic_regression_05,"{""C"": 1.0, ""class_weight"": null}",962641,0.1883,26.219,0.693009,0.409159,0.168949,0.468967,0.349857,0.711046,0.23527,0.443513,0.4,0.497648
+logistic_regression,logistic_regression_01,"{""C"": 0.25, ""class_weight"": null}",962641,0.1883,30.543,0.693011,0.409161,0.168959,0.468966,0.349866,0.711003,0.235309,0.443472,0.400003,0.497539
+logistic_regression,logistic_regression_03,"{""C"": 0.5, ""class_weight"": null}",962641,0.1883,28.328,0.69301,0.40916,0.168956,0.468953,0.349846,0.711024,0.235258,0.44353,0.4,0.497691

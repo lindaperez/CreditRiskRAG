@@ -1,0 +1,4 @@
+split,date_rule
+train,issue_d_dt <= 2016-04-01
+validation,2016-04-01 < issue_d_dt <= 2017-02-01
+test,issue_d_dt > 2017-02-01

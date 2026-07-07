@@ -1,3 +1,3 @@
-loan_status,full_rows,proportional_target,sample_target,sample_pct_of_status,sample_share_pct
-Fully Paid,1076751,200093,200094,18.5831,80.0376
-Charged Off,268559,49906,49906,18.5829,19.9624
+loan_status,full_rows,sample_target,sample_pct_of_status,sample_share_pct
+Fully Paid,1076751,1076751,100.0,80.0374
+Charged Off,268559,268559,100.0,19.9626

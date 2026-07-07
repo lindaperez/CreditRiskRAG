@@ -1,0 +1,2 @@
+recommended_candidate_by_validation_f1,validation_f1,validation_precision,validation_recall,threshold,selection_basis
+hist_gradient_boosting_04,0.475601,0.357134,0.711675,0.467086,Highest validation F1 among tuned family winners; review target-precision operating point before final threshold freeze.

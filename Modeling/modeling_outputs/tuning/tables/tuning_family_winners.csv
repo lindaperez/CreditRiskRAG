@@ -1,0 +1,4 @@
+model_family,candidate,params,fit_rows,fit_bad_rate,fit_seconds,roc_auc,pr_auc,best_f1_threshold,best_f1,best_f1_precision,best_f1_recall,target_precision_threshold,target_precision_f1,target_precision,target_precision_recall
+hist_gradient_boosting,hist_gradient_boosting_04,"{""l2_regularization"": 0.0, ""learning_rate"": 0.06, ""max_iter"": 220, ""max_leaf_nodes"": 45}",962641,0.1883,26.855,0.704363,0.427144,0.467086,0.475623,0.357148,0.711718,0.54751,0.463531,0.400003,0.551046
+logistic_regression,logistic_regression_06,"{""C"": 1.0, ""class_weight"": ""balanced""}",962641,0.1883,26.382,0.695409,0.412338,0.471834,0.470642,0.355098,0.697648,0.563545,0.44775,0.4,0.508444
+random_forest,random_forest_03,"{""max_depth"": 14, ""max_features"": 0.35, ""min_samples_leaf"": 50, ""n_estimators"": 120}",200000,0.1883,13.496,0.694125,0.414834,0.433702,0.46918,0.349467,0.713648,0.527333,0.447531,0.4,0.507881
