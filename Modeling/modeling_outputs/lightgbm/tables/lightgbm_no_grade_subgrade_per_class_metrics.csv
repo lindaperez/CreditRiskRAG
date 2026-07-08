@@ -1,0 +1,7 @@
+model_family,candidate,split,operating_point,threshold,class_label,class_name,precision,recall,f1,support
+lightgbm,lightgbm_06_no_grade_subgrade,train,best_validation_f1,0.468473,0,Fully Paid,0.907904,0.612421,0.731448,781376
+lightgbm,lightgbm_06_no_grade_subgrade,train,best_validation_f1,0.468473,1,Charged Off,0.304714,0.73221,0.430339,181265
+lightgbm,lightgbm_06_no_grade_subgrade,validation,best_validation_f1,0.468473,0,Fully Paid,0.858756,0.584566,0.695617,140795
+lightgbm,lightgbm_06_no_grade_subgrade,validation,best_validation_f1,0.468473,1,Charged Off,0.357799,0.706515,0.47503,46125
+lightgbm,lightgbm_06_no_grade_subgrade,test,best_validation_f1,0.468473,0,Fully Paid,0.884441,0.594986,0.711397,154580
+lightgbm,lightgbm_06_no_grade_subgrade,test,best_validation_f1,0.468473,1,Charged Off,0.317702,0.708106,0.438613,41169

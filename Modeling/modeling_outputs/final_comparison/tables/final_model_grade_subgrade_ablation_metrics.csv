@@ -1,13 +1,25 @@
-model_family,model_label,model,split,feature_set,roc_auc,pr_auc,brier_score,precision,recall,f1,threshold
-logistic_regression,Logistic Regression,logistic_regression_07,validation,baseline_with_grade_subgrade,0.695407,0.412336,0.224051,0.355082,0.697669,0.470633,0.471801
-logistic_regression,Logistic Regression,logistic_regression_07,test,baseline_with_grade_subgrade,0.700061,0.361509,0.225017,0.310541,0.70932,0.431966,0.471801
-random_forest,Random Forest,random_forest_03,validation,baseline_with_grade_subgrade,0.694572,0.415081,0.207616,0.359521,0.671762,0.468373,0.455266
-random_forest,Random Forest,random_forest_03,test,baseline_with_grade_subgrade,0.703753,0.371073,0.200271,0.321114,0.673832,0.434952,0.455266
-hist_gradient_boosting,HistGradientBoosting,hist_gradient_boosting_04,validation,baseline_with_grade_subgrade,0.700829,0.4235,0.217717,0.359479,0.696715,0.474259,0.472937
-hist_gradient_boosting,HistGradientBoosting,hist_gradient_boosting_04,test,baseline_with_grade_subgrade,0.708493,0.377185,0.212358,0.319695,0.693143,0.437571,0.472937
-logistic_regression,Logistic Regression,logistic_regression_no_grade_subgrade,validation,baseline_no_grade_subgrade,0.692454,0.408532,0.172715,0.344783,0.732726,0.468918,0.164047
-logistic_regression,Logistic Regression,logistic_regression_no_grade_subgrade,test,baseline_no_grade_subgrade,0.697573,0.355817,0.155394,0.300132,0.750662,0.428814,0.164047
-hist_gradient_boosting,HistGradientBoosting,hist_gradient_boosting_no_grade_subgrade,validation,baseline_no_grade_subgrade,0.701741,0.425647,0.170437,0.365229,0.675751,0.474176,0.18289
-hist_gradient_boosting,HistGradientBoosting,hist_gradient_boosting_no_grade_subgrade,test,baseline_no_grade_subgrade,0.709575,0.380035,0.151336,0.321367,0.688212,0.43814,0.18289
-random_forest,Random Forest,random_forest_no_grade_subgrade,validation,baseline_no_grade_subgrade,0.696983,0.416275,0.209809,0.351879,0.714797,0.4716,0.443294
-random_forest,Random Forest,random_forest_no_grade_subgrade,test,baseline_no_grade_subgrade,0.704153,0.370329,0.203629,0.312537,0.71413,0.434789,0.443294
+model_family,model_label,model,split,feature_set,roc_auc,pr_auc,brier_score,precision,recall,f1,threshold,feature_set_label,model_feature_label
+logistic_regression,Logistic Regression,logistic_regression_07,validation,baseline_with_grade_subgrade,0.695407,0.412336,0.224051,0.355082,0.697669,0.470633,0.471801,with grade/subgrade,Logistic Regression | with grade/subgrade
+logistic_regression,Logistic Regression,logistic_regression_07,test,baseline_with_grade_subgrade,0.700061,0.361509,0.225017,0.310541,0.70932,0.431966,0.471801,with grade/subgrade,Logistic Regression | with grade/subgrade
+random_forest,Random Forest,random_forest_03,validation,baseline_with_grade_subgrade,0.694572,0.415081,0.207616,0.359521,0.671762,0.468373,0.455266,with grade/subgrade,Random Forest | with grade/subgrade
+random_forest,Random Forest,random_forest_03,test,baseline_with_grade_subgrade,0.703753,0.371073,0.200271,0.321114,0.673832,0.434952,0.455266,with grade/subgrade,Random Forest | with grade/subgrade
+hist_gradient_boosting,HistGradientBoosting,hist_gradient_boosting_04,validation,baseline_with_grade_subgrade,0.700829,0.4235,0.217717,0.359479,0.696715,0.474259,0.472937,with grade/subgrade,HistGradientBoosting | with grade/subgrade
+hist_gradient_boosting,HistGradientBoosting,hist_gradient_boosting_04,test,baseline_with_grade_subgrade,0.708493,0.377185,0.212358,0.319695,0.693143,0.437571,0.472937,with grade/subgrade,HistGradientBoosting | with grade/subgrade
+lightgbm,LightGBM,lightgbm_06,validation,baseline_with_grade_subgrade,0.702851,0.42477,0.217414,0.35411,0.723382,0.475468,0.459101,with grade/subgrade,LightGBM | with grade/subgrade
+lightgbm,LightGBM,lightgbm_06,test,baseline_with_grade_subgrade,0.711342,0.380512,0.211718,0.31627,0.718235,0.439159,0.459101,with grade/subgrade,LightGBM | with grade/subgrade
+xgboost,XGBoost,xgboost_05,validation,baseline_with_grade_subgrade,0.701999,0.4254,0.217751,0.357988,0.700748,0.473884,0.470698,with grade/subgrade,XGBoost | with grade/subgrade
+xgboost,XGBoost,xgboost_05,test,baseline_with_grade_subgrade,0.710193,0.37959,0.212441,0.318981,0.701061,0.438462,0.470698,with grade/subgrade,XGBoost | with grade/subgrade
+catboost,CatBoost,catboost_04,validation,baseline_with_grade_subgrade,0.698653,0.420953,0.219899,0.359174,0.689279,0.47226,0.479729,with grade/subgrade,CatBoost | with grade/subgrade
+catboost,CatBoost,catboost_04,test,baseline_with_grade_subgrade,0.705725,0.373955,0.216384,0.31732,0.696641,0.436029,0.479729,with grade/subgrade,CatBoost | with grade/subgrade
+logistic_regression,Logistic Regression,logistic_regression_no_grade_subgrade,validation,baseline_no_grade_subgrade,0.692454,0.408532,0.172715,0.344783,0.732726,0.468918,0.164047,no grade/subgrade,Logistic Regression | no grade/subgrade
+logistic_regression,Logistic Regression,logistic_regression_no_grade_subgrade,test,baseline_no_grade_subgrade,0.697573,0.355817,0.155394,0.300132,0.750662,0.428814,0.164047,no grade/subgrade,Logistic Regression | no grade/subgrade
+hist_gradient_boosting,HistGradientBoosting,hist_gradient_boosting_no_grade_subgrade,validation,baseline_no_grade_subgrade,0.701741,0.425647,0.170437,0.365229,0.675751,0.474176,0.18289,no grade/subgrade,HistGradientBoosting | no grade/subgrade
+hist_gradient_boosting,HistGradientBoosting,hist_gradient_boosting_no_grade_subgrade,test,baseline_no_grade_subgrade,0.709575,0.380035,0.151336,0.321367,0.688212,0.43814,0.18289,no grade/subgrade,HistGradientBoosting | no grade/subgrade
+random_forest,Random Forest,random_forest_no_grade_subgrade,validation,baseline_no_grade_subgrade,0.696983,0.416275,0.209809,0.351879,0.714797,0.4716,0.443294,no grade/subgrade,Random Forest | no grade/subgrade
+random_forest,Random Forest,random_forest_no_grade_subgrade,test,baseline_no_grade_subgrade,0.704153,0.370329,0.203629,0.312537,0.71413,0.434789,0.443294,no grade/subgrade,Random Forest | no grade/subgrade
+lightgbm,LightGBM,lightgbm_06_no_grade_subgrade,validation,baseline_no_grade_subgrade,0.702179,0.424132,0.21914,0.357799,0.706515,0.47503,0.468473,no grade/subgrade,LightGBM | no grade/subgrade
+lightgbm,LightGBM,lightgbm_06_no_grade_subgrade,test,baseline_no_grade_subgrade,0.710277,0.379359,0.215386,0.317702,0.708106,0.438613,0.468473,no grade/subgrade,LightGBM | no grade/subgrade
+xgboost,XGBoost,xgboost_05_no_grade_subgrade,validation,baseline_no_grade_subgrade,0.701651,0.425118,0.219255,0.354651,0.714645,0.474049,0.462322,no grade/subgrade,XGBoost | no grade/subgrade
+xgboost,XGBoost,xgboost_05_no_grade_subgrade,test,baseline_no_grade_subgrade,0.709727,0.379252,0.215267,0.31434,0.718915,0.437421,0.462322,no grade/subgrade,XGBoost | no grade/subgrade
+catboost,CatBoost,catboost_03_no_grade_subgrade,validation,baseline_no_grade_subgrade,0.699047,0.421277,0.220366,0.352698,0.715772,0.472547,0.465666,no grade/subgrade,CatBoost | no grade/subgrade
+catboost,CatBoost,catboost_03_no_grade_subgrade,test,baseline_no_grade_subgrade,0.70599,0.374111,0.218168,0.310243,0.727683,0.435019,0.465666,no grade/subgrade,CatBoost | no grade/subgrade

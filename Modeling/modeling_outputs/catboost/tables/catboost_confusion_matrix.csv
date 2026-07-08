@@ -1,0 +1,25 @@
+model_family,candidate,split,operating_point,threshold,actual_label,actual_class,predicted_label,predicted_class,count,cell
+catboost,catboost_04,train,best_validation_f1,0.479729,0,Fully Paid,0,Fully Paid,478740,TN
+catboost,catboost_04,train,best_validation_f1,0.479729,0,Fully Paid,1,Charged Off,302636,FP
+catboost,catboost_04,train,best_validation_f1,0.479729,1,Charged Off,0,Fully Paid,52004,FN
+catboost,catboost_04,train,best_validation_f1,0.479729,1,Charged Off,1,Charged Off,129261,TP
+catboost,catboost_04,train,target_validation_precision,0.5552,0,Fully Paid,0,Fully Paid,585070,TN
+catboost,catboost_04,train,target_validation_precision,0.5552,0,Fully Paid,1,Charged Off,196306,FP
+catboost,catboost_04,train,target_validation_precision,0.5552,1,Charged Off,0,Fully Paid,78379,FN
+catboost,catboost_04,train,target_validation_precision,0.5552,1,Charged Off,1,Charged Off,102886,TP
+catboost,catboost_04,validation,best_validation_f1,0.479729,0,Fully Paid,0,Fully Paid,84071,TN
+catboost,catboost_04,validation,best_validation_f1,0.479729,0,Fully Paid,1,Charged Off,56724,FP
+catboost,catboost_04,validation,best_validation_f1,0.479729,1,Charged Off,0,Fully Paid,14332,FN
+catboost,catboost_04,validation,best_validation_f1,0.479729,1,Charged Off,1,Charged Off,31793,TP
+catboost,catboost_04,validation,target_validation_precision,0.5552,0,Fully Paid,0,Fully Paid,104491,TN
+catboost,catboost_04,validation,target_validation_precision,0.5552,0,Fully Paid,1,Charged Off,36304,FP
+catboost,catboost_04,validation,target_validation_precision,0.5552,1,Charged Off,0,Fully Paid,21922,FN
+catboost,catboost_04,validation,target_validation_precision,0.5552,1,Charged Off,1,Charged Off,24203,TP
+catboost,catboost_04,test,best_validation_f1,0.479729,0,Fully Paid,0,Fully Paid,92878,TN
+catboost,catboost_04,test,best_validation_f1,0.479729,0,Fully Paid,1,Charged Off,61702,FP
+catboost,catboost_04,test,best_validation_f1,0.479729,1,Charged Off,0,Fully Paid,12489,FN
+catboost,catboost_04,test,best_validation_f1,0.479729,1,Charged Off,1,Charged Off,28680,TP
+catboost,catboost_04,test,target_validation_precision,0.5552,0,Fully Paid,0,Fully Paid,114056,TN
+catboost,catboost_04,test,target_validation_precision,0.5552,0,Fully Paid,1,Charged Off,40524,FP
+catboost,catboost_04,test,target_validation_precision,0.5552,1,Charged Off,0,Fully Paid,18888,FN
+catboost,catboost_04,test,target_validation_precision,0.5552,1,Charged Off,1,Charged Off,22281,TP

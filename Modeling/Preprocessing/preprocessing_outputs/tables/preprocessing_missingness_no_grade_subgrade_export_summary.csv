@@ -1,0 +1,4 @@
+split,source_artifact,export_artifact,rows,original_columns,dropped_columns,export_columns
+train,missingness_challenger_train_X.parquet,missingness_challenger_no_grade_subgrade_train_X.parquet,962641,102,42,60
+validation,missingness_challenger_validation_X.parquet,missingness_challenger_no_grade_subgrade_validation_X.parquet,186920,102,42,60
+test,missingness_challenger_test_X.parquet,missingness_challenger_no_grade_subgrade_test_X.parquet,195749,102,42,60

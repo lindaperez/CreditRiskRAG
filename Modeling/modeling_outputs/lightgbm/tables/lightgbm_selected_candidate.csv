@@ -1,0 +1,2 @@
+model_family,candidate,params,fit_rows,fit_bad_rate,fit_seconds,roc_auc,pr_auc,best_f1_threshold,best_f1,best_f1_precision,best_f1_recall,target_precision_threshold,target_precision_f1,target_precision,target_precision_recall
+lightgbm,lightgbm_06,"{""colsample_bytree"": 0.75, ""learning_rate"": 0.025, ""max_depth"": 12, ""min_child_samples"": 120, ""n_estimators"": 400, ""num_leaves"": 63, ""reg_lambda"": 5.0, ""subsample"": 0.8}",300000,0.1883,8.321,0.702851,0.42477,0.459101,0.475468,0.35411,0.723382,0.547699,0.461747,0.4,0.546038

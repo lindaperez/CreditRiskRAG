@@ -1,0 +1,3 @@
+selection_strategy,recommended_model_feature_label,recommended_candidate,recommended_feature_set,validation_pr_auc,validation_f1,validation_precision,validation_recall,validation_predicted_reject_share,test_pr_auc,test_f1,test_precision,test_recall,test_predicted_reject_share
+F1-selected current final comparison,LightGBM | with grade/subgrade,lightgbm_06,baseline_with_grade_subgrade,0.42477,0.475468,0.35411,0.723382,0.504093,0.380512,0.439159,0.31627,0.718235,0.477617
+PR-AUC-selected advanced experiment,XGBoost | with grade/subgrade,xgboost_pr_auc_05_with_grade_subgrade,baseline_with_grade_subgrade,0.4254,0.473896,0.357995,0.70077,0.483036,0.37959,0.438462,0.318981,0.701061,0.462235

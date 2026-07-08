@@ -1,0 +1,7 @@
+model_family,model,model_dataset_label,calibration_method,split,rows,bad_rate,mean_predicted_probability,brier_score,pr_auc,roc_auc,expected_calibration_error,max_bin_abs_calibration_error
+xgboost,xgboost_05_missingness_challenger,XGBoost | missingness challenger,isotonic,test,195749,0.210315,0.237204,0.151621,0.375923,0.710411,0.026889,0.27972
+xgboost,xgboost_05_missingness_challenger,XGBoost | missingness challenger,isotonic,validation,186920,0.246763,0.246763,0.167857,0.422035,0.70246,0.0,1e-06
+xgboost,xgboost_05_missingness_challenger,XGBoost | missingness challenger,platt_sigmoid,test,195749,0.210315,0.238431,0.151708,0.380189,0.710474,0.028116,0.059208
+xgboost,xgboost_05_missingness_challenger,XGBoost | missingness challenger,platt_sigmoid,validation,186920,0.246763,0.246768,0.168128,0.425707,0.702088,0.008255,0.050351
+xgboost,xgboost_05_missingness_challenger,XGBoost | missingness challenger,raw,test,195749,0.210315,0.447443,0.212454,0.380189,0.710474,0.237127,0.324139
+xgboost,xgboost_05_missingness_challenger,XGBoost | missingness challenger,raw,validation,186920,0.246763,0.463151,0.217997,0.425707,0.702088,0.216388,0.278115

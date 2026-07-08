@@ -1,0 +1,2 @@
+model_family,candidate,artifact_path
+lightgbm,lightgbm_06,/Users/lindaperez/Documents/NEU/2026SummerML/MachineLearningClass/Final_Project/Final/CreditRiskRAG/Modeling/modeling_outputs/lightgbm/models/lightgbm_selected_model.joblib

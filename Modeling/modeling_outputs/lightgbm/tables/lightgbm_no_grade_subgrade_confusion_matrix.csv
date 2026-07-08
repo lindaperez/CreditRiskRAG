@@ -1,0 +1,13 @@
+model_family,candidate,split,operating_point,threshold,actual_label,actual_class,predicted_label,predicted_class,count,cell
+lightgbm,lightgbm_06_no_grade_subgrade,train,best_validation_f1,0.468473,0,Fully Paid,0,Fully Paid,478531,TN
+lightgbm,lightgbm_06_no_grade_subgrade,train,best_validation_f1,0.468473,0,Fully Paid,1,Charged Off,302845,FP
+lightgbm,lightgbm_06_no_grade_subgrade,train,best_validation_f1,0.468473,1,Charged Off,0,Fully Paid,48541,FN
+lightgbm,lightgbm_06_no_grade_subgrade,train,best_validation_f1,0.468473,1,Charged Off,1,Charged Off,132724,TP
+lightgbm,lightgbm_06_no_grade_subgrade,validation,best_validation_f1,0.468473,0,Fully Paid,0,Fully Paid,82304,TN
+lightgbm,lightgbm_06_no_grade_subgrade,validation,best_validation_f1,0.468473,0,Fully Paid,1,Charged Off,58491,FP
+lightgbm,lightgbm_06_no_grade_subgrade,validation,best_validation_f1,0.468473,1,Charged Off,0,Fully Paid,13537,FN
+lightgbm,lightgbm_06_no_grade_subgrade,validation,best_validation_f1,0.468473,1,Charged Off,1,Charged Off,32588,TP
+lightgbm,lightgbm_06_no_grade_subgrade,test,best_validation_f1,0.468473,0,Fully Paid,0,Fully Paid,91973,TN
+lightgbm,lightgbm_06_no_grade_subgrade,test,best_validation_f1,0.468473,0,Fully Paid,1,Charged Off,62607,FP
+lightgbm,lightgbm_06_no_grade_subgrade,test,best_validation_f1,0.468473,1,Charged Off,0,Fully Paid,12017,FN
+lightgbm,lightgbm_06_no_grade_subgrade,test,best_validation_f1,0.468473,1,Charged Off,1,Charged Off,29152,TP

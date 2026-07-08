@@ -1,0 +1,2 @@
+model_family,model,split,operating_point,rows,bad_rate,threshold,roc_auc,pr_auc,brier_score,precision,recall,f1,tn,fp,fn,tp,dataset,dataset_label,model_label,model_dataset_label,predicted_reject_count,predicted_reject_share,false_rejection_share_among_rejects,selection_rank
+xgboost,xgboost_05_missingness_challenger,validation,best_validation_f1,186920,0.246763,0.464113,0.702088,0.425707,0.217997,0.354607,0.714949,0.474077,80776,60019,13148,32977,missingness_challenger,missingness challenger,XGBoost,XGBoost | missingness challenger,92996.0,0.497518,0.645393,1

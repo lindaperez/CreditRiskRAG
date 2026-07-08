@@ -1,0 +1,13 @@
+model_family,candidate,split,operating_point,threshold,class_label,class_name,precision,recall,f1,support
+xgboost,xgboost_05,train,best_validation_f1,0.470698,0,Fully Paid,0.906191,0.612658,0.73106,781376
+xgboost,xgboost_05,train,best_validation_f1,0.470698,1,Charged Off,0.303218,0.726605,0.427878,181265
+xgboost,xgboost_05,train,target_validation_precision,0.546067,0,Fully Paid,0.886035,0.743527,0.80855,781376
+xgboost,xgboost_05,train,target_validation_precision,0.546067,1,Charged Off,0.347097,0.587747,0.436448,181265
+xgboost,xgboost_05,validation,best_validation_f1,0.470698,0,Fully Paid,0.857159,0.588295,0.697722,140795
+xgboost,xgboost_05,validation,best_validation_f1,0.470698,1,Charged Off,0.357988,0.700748,0.473884,46125
+xgboost,xgboost_05,validation,target_validation_precision,0.546067,0,Fully Paid,0.831212,0.731368,0.7781,140795
+xgboost,xgboost_05,validation,target_validation_precision,0.546067,1,Charged Off,0.400003,0.546667,0.461974,46125
+xgboost,xgboost_05,test,best_validation_f1,0.470698,0,Fully Paid,0.883088,0.601371,0.715498,154580
+xgboost,xgboost_05,test,best_validation_f1,0.470698,1,Charged Off,0.318981,0.701061,0.438462,41169
+xgboost,xgboost_05,test,target_validation_precision,0.546067,0,Fully Paid,0.860528,0.733937,0.792207,154580
+xgboost,xgboost_05,test,target_validation_precision,0.546067,1,Charged Off,0.35646,0.553353,0.433602,41169

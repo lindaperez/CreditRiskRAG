@@ -1,0 +1,17 @@
+model_family,model,split,review_pct,review_count,captured_bad,precision,recall,base_bad_rate,lift_over_base_bad_rate
+xgboost,xgboost_05_no_grade_subgrade,validation,1.0,1870,1213,0.648663,0.026298,0.246763,2.628685
+xgboost,xgboost_05_no_grade_subgrade,validation,2.0,3739,2287,0.611661,0.049583,0.246763,2.478735
+xgboost,xgboost_05_no_grade_subgrade,validation,5.0,9346,5226,0.55917,0.113301,0.246763,2.266016
+xgboost,xgboost_05_no_grade_subgrade,validation,10.0,18692,9603,0.513749,0.208195,0.246763,2.081951
+xgboost,xgboost_05_no_grade_subgrade,validation,15.0,28038,13333,0.475533,0.289062,0.246763,1.927082
+xgboost,xgboost_05_no_grade_subgrade,validation,20.0,37384,16778,0.448802,0.363751,0.246763,1.818753
+xgboost,xgboost_05_no_grade_subgrade,validation,25.0,46730,20027,0.428568,0.43419,0.246763,1.736759
+xgboost,xgboost_05_no_grade_subgrade,validation,30.0,56076,23089,0.411745,0.500575,0.246763,1.668582
+xgboost,xgboost_05_no_grade_subgrade,test,1.0,1958,1103,0.56333,0.026792,0.210315,2.678503
+xgboost,xgboost_05_no_grade_subgrade,test,2.0,3915,2147,0.548404,0.052151,0.210315,2.607531
+xgboost,xgboost_05_no_grade_subgrade,test,5.0,9788,4890,0.499591,0.118779,0.210315,2.37544
+xgboost,xgboost_05_no_grade_subgrade,test,10.0,19575,8923,0.455837,0.216741,0.210315,2.167396
+xgboost,xgboost_05_no_grade_subgrade,test,15.0,29363,12443,0.423765,0.302242,0.210315,2.014902
+xgboost,xgboost_05_no_grade_subgrade,test,20.0,39150,15713,0.401354,0.381671,0.210315,1.908344
+xgboost,xgboost_05_no_grade_subgrade,test,25.0,48938,18645,0.380992,0.452889,0.210315,1.811529
+xgboost,xgboost_05_no_grade_subgrade,test,30.0,58725,21430,0.364921,0.520537,0.210315,1.735115

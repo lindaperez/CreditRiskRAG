@@ -1,0 +1,13 @@
+model_family,candidate,split,operating_point,threshold,class_label,class_name,precision,recall,f1,support
+catboost,catboost_04,train,best_validation_f1,0.479729,0,Fully Paid,0.902017,0.612688,0.72972,781376
+catboost,catboost_04,train,best_validation_f1,0.479729,1,Charged Off,0.299287,0.713105,0.421621,181265
+catboost,catboost_04,train,target_validation_precision,0.5552,0,Fully Paid,0.881861,0.748769,0.809884,781376
+catboost,catboost_04,train,target_validation_precision,0.5552,1,Charged Off,0.34388,0.5676,0.428284,181265
+catboost,catboost_04,validation,best_validation_f1,0.479729,0,Fully Paid,0.854354,0.597116,0.702941,140795
+catboost,catboost_04,validation,best_validation_f1,0.479729,1,Charged Off,0.359174,0.689279,0.47226,46125
+catboost,catboost_04,validation,target_validation_precision,0.5552,0,Fully Paid,0.826584,0.74215,0.782095,140795
+catboost,catboost_04,validation,target_validation_precision,0.5552,1,Charged Off,0.400003,0.524726,0.453954,46125
+catboost,catboost_04,test,best_validation_f1,0.479729,0,Fully Paid,0.881471,0.600841,0.714592,154580
+catboost,catboost_04,test,best_validation_f1,0.479729,1,Charged Off,0.31732,0.696641,0.436029,41169
+catboost,catboost_04,test,target_validation_precision,0.5552,0,Fully Paid,0.857925,0.737844,0.793367,154580
+catboost,catboost_04,test,target_validation_precision,0.5552,1,Charged Off,0.354765,0.541208,0.428588,41169
