@@ -1,0 +1,61 @@
+feature,feature_family,draft_reason_code,applicant_facing_review_required,mean_abs_shap
+int_rate_clean,int_rate_clean,Higher priced loan (pricing/risk signal for accepted loans).,False,0.3927640914916992
+term_months,,,False,0.24573132395744324
+acc_open_past_24mths,,,False,0.16422730684280396
+dti,dti,High debt burden relative to income.,False,0.11590966582298279
+fico_mean,fico_mean,Lower credit score range.,False,0.097572922706604
+annual_inc,annual_inc,Lower reported income relative to requested credit.,False,0.08218111842870712
+loan_amnt,loan_amnt,Larger requested loan amount.,False,0.07887484133243561
+avg_cur_bal,,,False,0.06540732085704803
+mort_acc,,,False,0.04649193584918976
+total_acc,,,False,0.043176159262657166
+installment,installment,Larger payment obligation.,False,0.04296436905860901
+home_ownership_RENT,,,True,0.04103026166558266
+emp_length_years_is_missing,,,False,0.04011350870132446
+total_bc_limit,,,False,0.03095969930291176
+inq_last_6mths,,,False,0.03030381165444851
+revol_bal,,,False,0.02660107985138893
+home_ownership_MORTGAGE,,,True,0.02596038207411766
+revol_util_clean,revol_util_clean,High revolving credit utilization.,False,0.02521594613790512
+verification_status_Source Verified,,,False,0.023623565211892128
+total_il_high_credit_limit,,,False,0.020148003473877907
+bc_util,,,False,0.018896522000432014
+mths_since_last_delinq,mths_since_last_delinq,Recent or missing delinquency history signal.,False,0.018720371648669243
+open_acc,,,False,0.017437541857361794
+credit_history_years,credit_history_years,Shorter credit history.,False,0.015606082044541836
+bc_open_to_buy,,,False,0.013764412142336369
+tot_cur_bal,,,False,0.01303025335073471
+verification_status_Verified,,,False,0.011837792582809925
+emp_length_years,,,False,0.011692879721522331
+delinq_2yrs,,,False,0.010163037106394768
+verification_status_Not Verified,,,False,0.009531524032354355
+purpose_small_business,,,False,0.008253424428403378
+mths_since_last_record,,,False,0.00781902577728033
+tot_coll_amt,,,False,0.004953387193381786
+purpose_credit_card,,,False,0.004563297610729933
+total_bal_ex_mort,,,False,0.0035709510557353497
+collections_12_mths_ex_med,,,False,0.002940525533631444
+mths_since_last_record_is_missing,,,False,0.0023868107236921787
+purpose_debt_consolidation,,,False,0.0017693248810246587
+home_ownership_OWN,,,True,0.001665941090323031
+purpose_medical,,,False,0.0011806427501142025
+mths_since_last_delinq_is_missing,mths_since_last_delinq,Recent or missing delinquency history signal.,False,0.0011554211378097534
+pub_rec_bankruptcies,,,False,0.001055349363014102
+pub_rec,,,False,0.0009994353167712688
+purpose_moving,,,False,0.0006767075974494219
+purpose_vacation,,,False,0.0006020303117111325
+purpose_home_improvement,,,False,0.0005741073400713503
+purpose_major_purchase,,,False,0.00043840528815053403
+purpose_other,,,False,0.0003226744302082807
+purpose_wedding,,,False,0.00028048609965480864
+tax_liens,,,False,0.00012427677575033158
+acc_now_delinq,,,False,0.00011930670734727755
+application_type_Individual,,,False,0.0
+purpose_renewable_energy,,,False,0.0
+home_ownership_OTHER,,,True,0.0
+home_ownership_NONE,,,True,0.0
+purpose_house,,,False,0.0
+purpose_educational,,,False,0.0
+home_ownership_ANY,,,True,0.0
+purpose_car,,,False,0.0
+application_type_Joint App,,,False,0.0
