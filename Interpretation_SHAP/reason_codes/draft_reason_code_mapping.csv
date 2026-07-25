@@ -1,12 +1,12 @@
 feature,feature_family,draft_reason_code,applicant_facing_review_required,mean_abs_shap
 int_rate_clean,int_rate_clean,Higher priced loan (pricing/risk signal for accepted loans).,False,0.3927640914916992
-term_months,,,False,0.24573132395744324
-acc_open_past_24mths,,,False,0.16422730684280396
+term_months,term_months,Longer loan repayment term.,False,0.24573132395744324
+acc_open_past_24mths,acc_open_past_24mths,Multiple credit accounts opened in the past 24 months.,False,0.16422730684280396
 dti,dti,High debt burden relative to income.,False,0.11590966582298279
 fico_mean,fico_mean,Lower credit score range.,False,0.097572922706604
 annual_inc,annual_inc,Lower reported income relative to requested credit.,False,0.08218111842870712
 loan_amnt,loan_amnt,Larger requested loan amount.,False,0.07887484133243561
-avg_cur_bal,,,False,0.06540732085704803
+avg_cur_bal,avg_cur_bal,Lower average balance across existing credit accounts.,False,0.06540732085704803
 mort_acc,,,False,0.04649193584918976
 total_acc,,,False,0.043176159262657166
 installment,installment,Larger payment obligation.,False,0.04296436905860901

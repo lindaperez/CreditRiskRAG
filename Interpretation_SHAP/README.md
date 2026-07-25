@@ -105,7 +105,7 @@ Interpretation of the preferred model `xgb_neutral_09_without_grade_subgrade_wit
 | 6 | `annual_inc` | 0.082 | Reported income. |
 | 7 | `loan_amnt` | 0.079 | Requested amount. |
 
-With `grade` and `sub_grade` removed, the model concentrates LendingClub's pricing/risk information into `int_rate_clean`, which carries roughly 45% of the mapped reason-code importance. This is consistent with the grade/interest-rate ablation in the main project README.
+With `grade` and `sub_grade` removed, the model concentrates LendingClub's pricing/risk information into `int_rate_clean`, which is the single largest reason-code contributor. This is consistent with the grade/interest-rate ablation in the main project README.
 
 ### Direction of effects
 
@@ -120,18 +120,25 @@ The driver ranking is effectively identical on the held-out future period: Spear
 
 ### Borrower-level examples
 
+`shap_local_examples.csv` exports 75 high-risk and 75 low-risk accepted-loan examples (raised from an initial 5-and-5 pass) to give the downstream RAG letter-generation evaluation enough borrowers for a meaningful `n`.
+
 - Highest-risk accepted loan: predicted default probability `0.722`; observed outcome was a default. Top risk-increasing drivers were high interest rate, many recent accounts, long term, high DTI, and low FICO.
 - Lowest-risk contrast loan: predicted default probability `0.011`; did not default.
 
 ### Draft reason-code hierarchy
 
+`draft_reason_code_mapping.csv` covers 13 of the top 60 features, including `term_months`, `acc_open_past_24mths`, and `avg_cur_bal` (added after these were flagged as the top three unmapped-but-high-importance features being silently dropped from letter generation, since `select_reasons.py` only selects reasons for mapped features).
+
 | Reason family | Share of mapped SHAP importance |
 | --- | ---: |
-| Higher-priced loan (interest rate) | 45% |
-| High debt burden (DTI) | 13% |
-| Lower credit score | 11% |
-| Lower reported income | 9% |
-| Larger requested loan | 9% |
+| Higher-priced loan (interest rate) | 29% |
+| Longer loan repayment term | 18% |
+| Multiple recently opened credit accounts | 12% |
+| High debt burden (DTI) | 9% |
+| Lower credit score | 7% |
+| Lower reported income | 6% |
+| Larger requested loan | 6% |
+| Lower average balance across existing accounts | 5% |
 | Payment size, utilization, delinquency signal, short credit history | remainder |
 
 ### Interpretation notes and caveats

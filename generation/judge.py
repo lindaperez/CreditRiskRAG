@@ -23,6 +23,8 @@ ITEMS = ["reasons_correct", "fcra_window_correct", "real_agency_named",
 RUBRIC = """You are a compliance auditor grading the STATUTORY ACCURACY of a credit adverse-action letter.
 Do not reward a disclosure merely for being present - grade whether its legal specifics are CORRECT.
 Score each item 1 (correct) or 0 (missing, vague, or wrong). Judge ONLY the letter text.
+Score the 5 items INDEPENDENTLY: a single defect should cost only the item(s) it specifically
+violates, not multiple items at once.
 
 Return ONLY a JSON object, no other text, exactly this shape:
 {"reasons_correct": 0 or 1, "fcra_window_correct": 0 or 1, "real_agency_named": 0 or 1, "ecoa_classes_correct": 0 or 1, "no_legal_errors": 0 or 1, "note": "one short sentence citing the deciding detail"}
@@ -32,7 +34,7 @@ Grade strictly on these specifics:
 - fcra_window_correct: states the applicant's right to a free consumer report within exactly 60 days. Wrong number (30, 90, etc.) or no window = 0.
 - real_agency_named: names a REAL federal enforcement agency (e.g. Consumer Financial Protection Bureau, FTC) as the agency administering compliance. A bracketed blank placeholder like [Agency Name] with no real agency = 0. An invented/wrong agency = 0.
 - ecoa_classes_correct: the ECOA anti-discrimination notice lists the correct protected bases (race, color, religion, national origin, sex, marital status, age; receipt of public assistance; good-faith exercise of Consumer Credit Protection Act rights). Materially wrong or missing list = 0.
-- no_legal_errors: contains no incorrect statutory claims, no fabricated citations, no invented reasons, and does not assert specific numeric values as facts about this applicant. (Empty lender-fill placeholders for score/date are acceptable and NOT errors.)
+- no_legal_errors: contains a legal or factual error OTHER than the ones already scored above (e.g. a fabricated statute/citation, an invented numeric deadline, or an incorrect claim not covered by the four items above). Do NOT mark this 0 just because fcra_window_correct, real_agency_named, ecoa_classes_correct, or reasons_correct already failed for their own reasons - only mark it 0 for a DIFFERENT error not already captured by those four items. If the only problems in the letter are already covered by the other four items, no_legal_errors = 1.
 
 The applicant's principal reasons were:
 <<REASONS>>
