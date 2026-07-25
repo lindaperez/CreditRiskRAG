@@ -10,7 +10,7 @@
 
 <sup>1</sup> Northeastern University - CS 6140 Machine Learning - Final Project · Summer 2026
 
-Linda Perez Penaranda: project lead, credit-risk framing, EDA, cleaning, modeling, policy analysis, reproducibility · Yashaswi Aryan: collaborator, model/retrieval workflow and project development · Siddharth Agarwal: collaborator, model/retrieval workflow and project development
+Linda Perez Penaranda: collaborator, credit-risk framing, EDA, cleaning, modeling, policy analysis, reproducibility · Yashaswi Aryan: collaborator, model/retrieval workflow and project development · Siddharth Agarwal: collaborator, model/retrieval workflow and project development
 
 ![Python](https://img.shields.io/badge/Python-3.11-blue)
 ![pandas](https://img.shields.io/badge/pandas-2.2.2-lightgrey)
@@ -186,6 +186,8 @@ flowchart LR
 | Economic operating policy | Complete | `Modeling/modeling_outputs/final_comparison/tables/final_model_economic_underwriting_recommendation.csv` | Uses capped reject/review policy instead of unconstrained best-F1. |
 | Final model comparison | Complete / active | `Modeling/9_Final_Model_Comparison.ipynb` | Consolidates final metrics, calibration, ablation, and policy recommendation. |
 | SHAP, RAG, and explanation generation | Next phase | Planned regulatory explanation layer | Should start after reason-code mapping and governance review. |
+
+**Collaborator handoff:** The accepted-loan credit-risk pipeline is complete through EDA, cleaning, preprocessing, model training, final model comparison, calibration, grade/subgrade and interest-rate ablation, and capped economic policy analysis. The current recommendation is a project-ready neutral XGBoost risk-ranking model for accepted loans, using `int_rate_clean` while excluding `grade` and `sub_grade`. What remains is the explanation layer: SHAP reason extraction, human-readable reason-code mapping, regulatory corpus retrieval, RAG-grounded adverse-action-style draft generation, and faithfulness/compliance evaluation.
 
 ## Business Credit-Risk Summary
 
