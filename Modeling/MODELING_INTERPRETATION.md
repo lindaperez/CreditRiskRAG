@@ -53,6 +53,8 @@ Feature policy:
 
 This model was preferred because it gives almost the same ranking performance as the strict statistical alternatives while being more defensible for governance. Explicit LendingClub `grade` and `sub_grade` fields are removed, but the continuous interest-rate signal is retained.
 
+LightGBM achieved the strongest validation F1 among the main model families, so it is the best technical F1 benchmark. The final preferred model remains neutral XGBoost without `grade/sub_grade` and with `int_rate_clean`, because it gives nearly equivalent ranking performance while being stronger for governance, calibration, and business-policy explanation.
+
 ## Why This Model Is Defensible
 
 The grade/subgrade and interest-rate ablation showed that `grade`, `sub_grade`, and `int_rate_clean` carry highly overlapping information. Keeping either grade/subgrade or interest rate preserved nearly all predictive performance. Keeping both did not materially improve performance.
@@ -318,6 +320,7 @@ Key limitations:
 
 - It predicts outcomes for accepted LendingClub loans, not all applicants.
 - Rejected applications do not have observed repayment outcomes, so they cannot be used directly to train this default label.
+- Because the training labels exist only after LendingClub accepted and funded a loan, the model estimates default risk conditional on historical approval. It cannot represent the risk distribution of rejected applicants without additional outcome data, reject-inference assumptions, or a separate applicant-population study.
 - `Charged Off` is treated as the default-risk event, but it is a loan-status proxy for default, not a full bank regulatory default definition.
 - Some useful features may encode policy, pricing, or proxy-risk information.
 - The model's precision shows that many loans flagged as risky would still fully repay.
