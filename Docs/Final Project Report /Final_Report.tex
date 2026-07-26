@@ -8,7 +8,7 @@
 \usepackage{hyperref}
 \usepackage{caption}
 \usepackage{subcaption}
-\IfFileExists{enumitem.sty}{\usepackage{enumitem}\setlist{nosep}}{}
+\IfFileExists{enumitem.sty}{\usepackage{enumitem}\setlist{nosep,leftmargin=*}}{}
 \captionsetup{font=small}
 \title{CreditRisk Interpretation RAG System: Leakage-Aware Default-Risk Modeling for LendingClub Loans}
 \author{Linda Perez Penaranda \and Yashaswi Aryan \and Siddharth Agarwal}
@@ -19,128 +19,127 @@
 \maketitle
 
 \begin{abstract}
-This project studies default-risk prediction for accepted LendingClub loans using the Kaggle ``All Lending Club loan data'' release. The completed system is a leakage-aware tabular machine-learning pipeline, not a production lending system: it defines a binary charge-off target, excludes unresolved loans, removes post-origination leakage fields, uses chronological validation, compares major model families, calibrates probabilities, and interprets the selected model with SHAP. From 2,260,701 accepted-loan rows, the clean completed modeling frame contains 1,345,310 rows. The preferred no-grade neutral XGBoost model predicts $P(\texttt{target\_bad}=1)$ and obtains test ROC-AUC 0.710, PR-AUC 0.381, and top-20\% bad-rate concentration near 40\%. The main limitation is selection bias: repayment outcomes are observed only for accepted loans, while the future RAG adverse-action explanation layer remains planned rather than compliance-ready.
+This project develops a leakage-aware credit-risk interpretation prototype for LendingClub accepted loans. The system defines a strict completed-loan charge-off target, removes post-origination leakage fields, uses chronological validation, compares major tabular model families, calibrates probabilities, interprets the selected model with SHAP, and generates adverse-action-style explanation drafts using retrieval over U.S. regulatory sources. From 2,260,701 accepted-loan records, the final completed modeling frame contains 1,345,310 loans and 38 starter features. The preferred neutral XGBoost model without LendingClub grade/subgrade achieves test ROC-AUC 0.710, PR-AUC 0.381, and a top-20\% bad-rate concentration near 40\%. A retrieval-augmented generation (RAG) prototype improves blind statutory-accuracy score from 0.60 to 0.76 versus a no-RAG control on a small five-letter-per-mode evaluation. The work is best understood as a research-grade risk-ranking, interpretation, and explanation-grounding workflow; it is not a production lending system or a compliance-approved adverse-action notice engine.
 \end{abstract}
 
 \section{Introduction}
-Marketplace lending creates a natural machine-learning problem: lenders need to identify applications with elevated probability of nonpayment while avoiding broad or poorly explained denials. LendingClub's public data are useful for this task because the accepted-loan file contains borrower, loan, pricing, and credit-bureau-style variables together with eventual repayment outcomes. The primary supervised task in this project is binary classification of completed accepted loans, where \texttt{target\_bad}=0 denotes \texttt{Fully Paid} and \texttt{target\_bad}=1 denotes \texttt{Charged Off}.
+Consumer credit underwriting requires ranking default risk while giving defensible, specific explanations for adverse decisions. LendingClub's public dataset supports this problem because the accepted-loan file contains loan, borrower, pricing, and credit-bureau-style variables together with eventual repayment outcomes. The supervised task in this project is binary classification of completed accepted loans: \texttt{target\_bad}=0 for \texttt{Fully Paid} and \texttt{target\_bad}=1 for \texttt{Charged Off}.
 
-The dataset is also risky to model naively. First, the bad class is a minority class, so accuracy can hide poor default detection. Second, loan vintages span changing borrower mix, underwriting rules, and macroeconomic conditions, so random splits can overstate stability. Third, many LendingClub fields are post-origination servicing or collection variables that would leak the answer if used as predictors. Rejected applications are analytically distinct: they do not contain repayment outcomes, so they cannot be labeled as default or non-default for supervised default prediction.
+The dataset also creates common credit-modeling hazards. Defaults are a minority class, so accuracy is not an adequate objective. LendingClub vintages span changing borrower mix and macroeconomic conditions, so random splits can overstate future performance. Many raw fields are observed after origination, including payment, recovery, hardship, settlement, and last-credit-pull information; using them would leak the target. Rejected applications are excluded from supervised default modeling because they have no observed repayment outcomes in this dataset.
 
-The non-technical solution is an auditable risk-ranking workflow. We clean application-time features, remove outcome leakage, train models on older loans, validate on later loans, reserve the newest loans for test evaluation, calibrate probabilities, and convert scores into a capped economic review policy. SHAP interpretation provides technical reasons for model behavior and is positioned as a bridge to a future RAG explanation layer, not as a legally approved adverse-action system.
+The final workflow addresses these risks with auditable cleaning, leakage screening, chronological splits, minority-class metrics, calibrated probabilities, SHAP interpretation, and a capped economic policy. It also implements a RAG explanation layer: SHAP selects borrower-level reasons, a hybrid retriever supplies regulatory context, and a writer model drafts constrained adverse-action-style letters for comparison with a no-RAG baseline.
 
 \section{Proposed Method Summary}
-The final method is a leakage-controlled accepted-loan default-risk pipeline using chronological train/validation/test splits, cleaned application-time features, multiple model families, calibration, SHAP interpretation, and a capped economic policy. This is preferable to simply optimizing F1 because the best-F1 threshold flags about 42\% of test loans, which is too broad for realistic underwriting review, and preferable to directly relying on LendingClub grade/subgrade because those fields embed LendingClub's prior risk decisioning. The selected neutral XGBoost model removes explicit grade and subgrade while retaining \texttt{int\_rate\_clean}, preserving nearly identical ranking performance with a simpler governance story.
+The proposed method is an end-to-end accepted-loan default-risk and explanation-grounding pipeline. It estimates $P(\texttt{target\_bad}=1)$ using cleaned application-time features, selects a governed model after ablation and calibration review, explains model behavior with SHAP, and grounds generated explanation drafts in retrieved ECOA, Regulation B, FCRA, and CFPB materials. This approach is preferable to optimizing F1 alone because the best-F1 threshold flags 42.07\% of test loans, an unrealistic action volume for underwriting. It is also preferable to relying directly on LendingClub grade/subgrade because those fields summarize LendingClub's prior risk decisioning. The selected neutral XGBoost model removes explicit grade and subgrade while retaining \texttt{int\_rate\_clean}, preserving ranking quality with a cleaner governance story.
 
 \section{Related Work}
-Gupta, Gulati, and Chakrabarty study the same Kaggle LendingClub dataset for credit-risk classification, using exploratory analysis, Logistic Regression, Random Forest, and expected-loss concepts such as probability of default, loss given default, and exposure at default \cite{gupta2022}. Their work motivates the connection between default prediction and financial risk, while this project adds stricter leakage documentation, chronological validation, and operating-policy constraints.
+Prior LendingClub credit-risk studies motivate both the predictive and interpretability components of this project. Gupta, Gulati, and Chakrabarty use the same Kaggle LendingClub dataset with exploratory analysis, Logistic Regression, Random Forest, and expected-loss concepts such as probability of default, loss given default, and exposure at default \cite{gupta2022}. Their study supports the financial-risk framing, while this project strengthens the workflow with explicit leakage audits, chronological validation, calibration, and operating-policy constraints.
 
-Explainability is central in recent LendingClub credit-scoring studies. Hadji Misheva et al. apply models including Logistic Regression, Random Forest, XGBoost, SVMs, and neural networks with LIME and SHAP explanations on LendingClub-style credit-risk data \cite{misheva2021}. Demajo, Vella, and Dingli similarly use XGBoost with global and local explanation methods for LendingClub and HELOC credit scoring \cite{demajo2020}. This project follows that separation between predictive modeling and explanation, but avoids presenting SHAP output as a legally compliant adverse-action explanation.
+Explainability papers show why predictive scores alone are insufficient in credit-risk settings. Hadji Misheva et al. apply explainable AI methods, including SHAP-style explanations, to credit-risk management and emphasize that explanations should support model governance rather than merely decorate predictions \cite{misheva2021}. Demajo, Vella, and Dingli similarly study interpretable credit scoring with XGBoost and explanation methods on LendingClub and HELOC-style data \cite{demajo2020}. This project follows that separation by using SHAP to explain model behavior, then treating applicant-facing letters as a separate retrieval-grounded generation problem.
 
-Sanz-Guerrero and Arroyo show that borrower-written loan descriptions can add risk signal through a BERT-derived indicator combined with XGBoost \cite{sanz2024}. This is relevant to the proposed RAG direction, but the current implementation intentionally avoids free-text fields because they raise privacy, proxy-risk, and applicant-facing explanation concerns. Schwartz, Wang, and Fang use SHAP-guided feature reduction and glass-box models to improve interpretability with fewer variables \cite{schwartz2025}; this supports our no-grade/subgrade ablation and the preference for a defensible feature policy over maximum complexity.
+Recent language-model and text-feature work shows a possible but risky extension path. Sanz-Guerrero and Arroyo use borrower-written loan descriptions with BERT-derived indicators in peer-to-peer lending \cite{sanz2024}. Their result suggests that text can contain risk signal, but this project intentionally avoids borrower free text in the main model because it can introduce privacy, proxy-variable, and applicant-facing explanation risks.
 
-More complex work explores optimized ensembles and monitoring. Nortey et al. report strong LendingClub default-prediction results from particle-swarm tuning and greedy weighted ensembles \cite{nortey2026}. Solozobov studies label-free evidence degradation monitoring for LendingClub credit-risk systems when outcomes arrive late \cite{solozobov2026}. These papers suggest possible future improvements, but they also highlight why this class project emphasizes reproducible validation, calibration, and monitoring caveats rather than claiming production readiness.
+Feature-governance work is directly relevant to the selected model. Schwartz, Wang, and Fang use SHAP-guided feature reduction to improve interpretability in credit scoring \cite{schwartz2025}. This supports our grade/subgrade ablation: the selected model sacrifices little ranking performance while reducing direct dependence on LendingClub's opaque internal risk buckets.
+
+More complex ensemble and monitoring studies suggest future improvements but also explain why this project remains conservative. Nortey et al. report strong loan-default results with optimized greedy weighted ensembles \cite{nortey2026}, while Solozobov studies label-free evidence degradation monitoring for credit-risk systems when outcomes arrive late \cite{solozobov2026}. Those directions are valuable, but the present method is better aligned with the course objective because it prioritizes reproducible validation, leakage control, calibration, SHAP interpretation, and RAG evidence grounding over maximum model complexity.
 
 \section{Related Implementations}
-The Kaggle dataset page by Nathan George provides the accepted and rejected LendingClub files and links to getting-started notebooks for both Python and R \cite{kaggledata,kagglepython,kaggler}. Those examples focus on initial loading and EDA for a large public dataset. This project goes further by freezing a completed-loan target, documenting leakage exclusions, using chronological splits, comparing model families, and translating model scores into a capped policy.
+Nathan George's Kaggle Python notebook for the LendingClub dataset demonstrates practical loading, basic status exploration, and starter EDA for the accepted-loan file \cite{kagglepython}. That implementation is useful for understanding the raw data shape, but this project goes further by defining a strict terminal-outcome target, excluding unresolved loans, documenting post-origination leakage, and evaluating on chronological holdout periods.
 
-Mariia Gusarova's Kaggle notebook focuses on outlier detection and removal using the same ``All Lending Club loan data'' input \cite{kaggleoutliers}. That style of implementation is useful for data-quality thinking, but this project avoids automatic deletion of suspicious values without documented business rules.
+The companion Kaggle R notebook provides another implementation path for initial LendingClub exploration and reinforces the value of simple summary tables before modeling \cite{kaggler}. Our method is stronger for the final task because it moves from descriptive EDA to a full supervised pipeline: cleaning, preprocessing, model-family comparison, calibration, ablation, SHAP interpretation, and policy analysis.
+
+Gusarova's Kaggle notebook focuses on detecting and removing outliers in the same LendingClub data \cite{kaggleoutliers}. This project uses a more conservative credit-risk approach: suspicious values are not automatically deleted unless a documented business or leakage rule justifies the exclusion, because aggressive outlier removal can remove legitimate high-risk borrowers and distort default-risk evaluation.
 
 \section{Dataset and Inputs}
-The raw source is the Kaggle ``All Lending Club loan data'' dataset, which contains separate accepted and rejected files \cite{kaggledata}. The accepted-loan file used here has 2,260,701 rows and 151 columns covering 2007--2018Q4. The rejected-application file is useful for population comparison, but rejected applicants did not receive LendingClub loans in this file, so their repayment outcomes are unobserved and they are not used as supervised default labels. As a result, this model estimates default risk conditional on historical LendingClub approval; it cannot represent the risk distribution of rejected applicants without additional outcome data, reject-inference assumptions, or a separate applicant-population study.
+The raw source is the Kaggle LendingClub release containing accepted and rejected files from 2007--2018Q4 \cite{kaggledata}. The accepted file used here has 2,260,701 rows and 151 columns. The supervised model estimates default risk conditional on historical LendingClub approval; it does not estimate the risk of rejected applicants without reject inference or external outcome data.
 
-The modeling target is built from completed accepted-loan outcomes. The final strict target maps \texttt{Fully Paid} to 0 and \texttt{Charged Off} to 1. Unresolved or snapshot statuses such as \texttt{Current}, \texttt{In Grace Period}, and late-status records are excluded from final binary training because their ultimate repayment outcomes are unknown or not terminal under the strict baseline definition. After cleaning, the completed modeling frame contains 1,345,310 rows and 38 starter features.
+The final strict target maps \texttt{Fully Paid} to 0 and \texttt{Charged Off} to 1. Unresolved or snapshot statuses such as \texttt{Current}, \texttt{In Grace Period}, late statuses, and policy-exception statuses are excluded because their terminal outcomes are not stable labels. The resulting completed modeling frame contains 1,345,310 rows: 1,076,751 fully paid loans, 268,559 charged-off loans, and an observed bad rate of 19.96\%.
 
-Cleaning preserves raw fields and creates auditable helper variables. Percentage strings become numeric values such as \texttt{int\_rate\_clean} and \texttt{revol\_util\_clean}; \texttt{term} is parsed into \texttt{term\_months}; employment length is normalized; date fields are parsed; and FICO range endpoints are averaged. Clear leakage fields are removed, including payment totals, principal recovery, recoveries, collection fees, last payment dates, last credit-pull fields, hardship fields, settlement fields, and other post-origination servicing variables.
+Cleaning preserves raw fields and creates auditable helper variables. Percentage strings become numeric \texttt{int\_rate\_clean} and \texttt{revol\_util\_clean}; \texttt{term} becomes \texttt{term\_months}; employment length is normalized; dates are parsed; FICO endpoints are averaged into \texttt{fico\_mean}; and credit-history age is computed from issue date and earliest credit-line date. Identifiers, target fields, payment totals, outstanding principal, recoveries, collection fees, hardship fields, settlement fields, last-payment fields, and last-credit-pull fields are removed from the modeling matrix.
 
 \section{Data Analysis}
-EDA began with a reproducible accepted-loan working sample and full-file loan-status scans. The full file is dominated by fully paid and current loans, with charged-off loans forming the main observed bad outcome. This confirmed that current loans should not be treated as good loans: doing so would convert censored, still-active accounts into false non-default labels.
+EDA first established the correct modeling population. The accepted-loan file contains terminal outcomes, active accounts, late statuses, and other nonterminal states. The analysis confirmed that current loans should not be treated as good loans, because doing so would label censored active accounts as non-defaults and bias the target toward lower observed default risk.
 
-Risk relationships are strong and monotonic for several LendingClub credit variables. Grade and subgrade separate bad rates clearly, and interest rate is a dominant pricing/risk signal. Figure~\ref{fig:eda-grade} shows the observed bad-rate relationship by grade. The pattern is useful for EDA, but the final preferred model removes explicit grade and subgrade to avoid circular dependence on LendingClub's internal prior risk buckets.
+The target analysis therefore used the strict completed-loan mapping: \texttt{Fully Paid} equals 0 and \texttt{Charged Off} equals 1. This produced 1,345,310 completed modeling rows and a 19.96\% observed bad rate. That base rate makes accuracy a weak metric, because a classifier can appear strong by overpredicting the majority fully paid class.
+
+Feature analysis showed intuitive credit-risk gradients. Higher grade/subgrade risk, higher interest rate, longer term, higher DTI, higher revolving utilization, larger loan amount, and more recent account openings are associated with higher observed bad rates. Higher FICO and higher income are associated with lower risk, although income is skewed and must be interpreted cautiously.
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.74\linewidth]{../../EDA/accepted_eda_outputs/plots/observed_bad_rate_by_grade.png}
-\caption{Observed bad rate by LendingClub grade in accepted-loan EDA.}
+\includegraphics[width=0.67\linewidth]{../../EDA/accepted_eda_outputs/plots/observed_bad_rate_by_grade.png}
+\caption{Observed bad rate by LendingClub grade. Grade is useful for EDA but removed from the preferred model.}
 \label{fig:eda-grade}
 \end{figure}
 
-Continuous borrower and loan variables also behave consistently with credit-risk intuition. Higher debt-to-income ratio, higher revolving utilization, larger requested amount, longer term, and recent account-opening activity are associated with elevated risk. Higher FICO and higher income are associated with lower modeled risk, although income is skewed and must be interpreted carefully because high-income outliers can distort averages.
-
-Several derived features make the raw LendingClub fields usable:
+Several transformations made raw LendingClub fields usable without losing traceability. Percentage strings were parsed into numeric \texttt{int\_rate\_clean} and \texttt{revol\_util\_clean}; \texttt{term} was converted to \texttt{term\_months}; and employment length was normalized. The two most important derived formulas were
 \[
-\text{fico\_mean}=\frac{\text{fico\_range\_low}+\text{fico\_range\_high}}{2}
-\]
-\[
+\text{fico\_mean}=\frac{\text{fico\_range\_low}+\text{fico\_range\_high}}{2},
+\quad
 \text{credit\_history\_years}=\frac{\text{issue\_date}-\text{earliest\_credit\_line}}{365.25}.
 \]
-These transformations retain source traceability while producing numeric features appropriate for modeling.
 
-Missingness was treated as a modeling signal only when defensible. Joint-applicant variables are structurally missing for individual applications, public-record recency variables are often missing because no record exists, and employment length has modest missingness that may itself be weakly predictive. The cleaning plan therefore distinguishes ordinary imputation from structural missingness and recommends missingness indicators or model-native missing handling where appropriate.
+Missingness was handled as a modeling issue rather than as an automatic deletion rule. Some credit variables are structurally missing, such as months since last public record when no public record exists. The analysis therefore distinguished structural missingness from ordinary low-missingness numeric fields and deferred imputation until after train/validation/test splitting.
 
-Temporal analysis motivated chronological validation. LendingClub volume, grade mix, interest rates, and observed bad rates vary across issue years. A random split would mix vintages and could make future-period performance appear better than it is. The final split therefore trains on older loans, validates on the next period, and evaluates once on the newest holdout.
+Temporal analysis motivated chronological validation. LendingClub volume, grade mix, interest rates, and default rates vary across issue years. The final split trains on older loans, validates on the next period, and evaluates once on the newest holdout, which better approximates future lending than a random split.
 
 \section{Methods}
-Let $y\in\{0,1\}$ indicate whether a completed accepted loan charged off. Each model estimates a score $\hat{p}(x)=P(y=1\mid x)$. Logistic Regression models the log-odds as a linear function of cleaned and encoded predictors, using the sigmoid transformation to produce probabilities. Its binary cross-entropy objective penalizes confident wrong predictions and provides a transparent baseline for comparison.
+Let $y\in\{0,1\}$ denote charge-off status for a completed accepted loan. Each model estimates a score $\hat{p}(x)=P(y=1\mid x)$. Logistic Regression provides a transparent linear-logit baseline:
+\[
+\log\frac{\hat{p}(x)}{1-\hat{p}(x)}=\beta_0+x^\top\beta.
+\]
+It is useful because coefficients are easy to inspect, but it can miss nonlinear interactions among income, loan amount, term, utilization, and credit history.
 
-Tree and gradient-boosting models handle nonlinear tabular structure. Random Forest averages many decorrelated decision trees to reduce variance. HistGradientBoosting, LightGBM, XGBoost, and CatBoost build additive ensembles of trees, where each new tree improves residual errors from earlier trees. These methods are suitable for LendingClub-style data because feature interactions are expected: for example, the risk meaning of loan amount depends on income, term, interest rate, and credit history.
+Tree ensembles were used because the dataset is tabular, heterogeneous, and interaction-heavy. Random Forest averages many decorrelated trees, reducing variance relative to a single decision tree. HistGradientBoosting, LightGBM, XGBoost, and CatBoost build additive trees sequentially, where each new tree improves errors left by earlier trees; these models are well suited to threshold effects and borrower-feature interactions.
 
-The project evaluates discrimination and minority-class detection rather than accuracy. Precision is the share of predicted-risky loans that actually charged off; recall is the share of actual charge-offs captured. Their harmonic mean is
+The project evaluates discrimination and minority-class detection rather than accuracy. Precision is the share of flagged loans that charged off; recall is the share of charge-offs captured; and
 \[
 F_1=2\cdot\frac{\text{precision}\cdot\text{recall}}{\text{precision}+\text{recall}}.
 \]
-ROC-AUC summarizes pairwise ranking over all thresholds, while PR-AUC focuses on the charged-off minority class and is more informative when the default base rate is low.
+ROC-AUC summarizes threshold-free ranking, while PR-AUC is emphasized because charge-offs are the minority class. Thresholds were selected on validation data, not on the test set, so the final test metrics represent a future-period holdout.
 
-Calibration and thresholding translate rankings into decisions. Platt sigmoid calibration was used before probability-based policy analysis. A simple best-F1 threshold maximizes a technical metric but can over-review applicants, so the business policy uses an expected-value rule,
+Preprocessing and tuning were deliberately conservative. Categorical variables were encoded after splitting, numeric imputation was fit on training data, and model-family candidates were compared using validation PR-AUC, ROC-AUC, and F1 rather than accuracy. The project also ran an advanced PR-AUC-oriented search for gradient-boosting candidates, then used final comparison and ablation outputs to choose the preferred model.
+
+Calibration and thresholding translate scores into decisions. Platt sigmoid calibration supports probability-based policy analysis. The economic policy uses
 \[
 \text{EV}=TP\cdot L_{\text{saved}}-FP\cdot C_{\text{opportunity}},
 \]
-with a maximum review/rejection share. In the example policy, catching a default saves \$10,000, rejecting a good borrower costs \$1,500, and the break-even default probability is 13.04\%.
+with an action-share cap; the example assumptions are \$10,000 saved per caught default, \$1,500 opportunity cost per rejected good borrower, a 20\% maximum action share, and a 13.04\% break-even default probability.
 
-SHAP is used after model selection to explain the preferred XGBoost model. The SHAP workflow computes global mean absolute importance, dependence plots, and borrower-level examples on a reproducible 5,000-row validation sample with seed 42, then checks stability on the test period. These outputs explain model behavior; they are not compliance-approved adverse-action reasons.
+SHAP explains the selected XGBoost model globally and locally. The interpretation notebook computes global mean absolute SHAP values, dependence plots, waterfall examples, and validation-versus-test stability on reproducible samples. The generation layer then uses deterministic SHAP reason selection: high-risk examples only, risk-increasing drivers only, mapped features only, \texttt{int\_rate\_clean} excluded from applicant-facing reasons, and at most four principal reasons.
+
+The RAG corpus contains eight public regulatory sources: Regulation B definitions and notice requirements, Regulation B Appendices A and C, official commentary to section 1002.9, FCRA section 615, and CFPB Circulars 2022-03 and 2023-03. The chunker strips boilerplate, preserves citation metadata, and produces 70 chunks. Retrieval combines MiniLM dense embeddings, BM25 lexical search, and reciprocal-rank fusion. RAG generation uses fixed legal-envelope queries and a constrained writer prompt; the no-RAG control uses the same SHAP reasons without retrieved law. A blind shuffled judge scores statutory accuracy on five binary items.
 
 \section{Experimental Setup}
-The final modeling frame contains 1,345,310 completed accepted loans. The chronological split is: train, 962,641 rows with 18.83\% bad rate and issue dates from 2007-06-01 to 2016-04-01; validation, 186,920 rows with 24.68\% bad rate and issue dates from 2016-05-01 to 2017-02-01; and test, 195,749 rows with 21.03\% bad rate and issue dates from 2017-03-01 to 2018-12-01.
+The chronological split contains 962,641 train rows from 2007-06-01 to 2016-04-01 with 18.83\% bad rate, 186,920 validation rows from 2016-05-01 to 2017-02-01 with 24.68\% bad rate, and 195,749 test rows from 2017-03-01 to 2018-12-01 with 21.03\% bad rate. Preprocessing creates baseline and no-grade/subgrade feature sets, applies split-consistent imputation and encoding, and exports model matrices and manifests.
 
-Preprocessing starts from leakage-screened fields, creates the 38-feature starter set, encodes categorical variables, handles missing values consistently across splits, and exports baseline and no-grade/subgrade feature matrices. The project includes a PR-AUC-optimized advanced candidate search for LightGBM, XGBoost, and CatBoost, with candidates ranked by validation PR-AUC. For classification operating-point tables, thresholds are then chosen on validation F1 for the charged-off class so precision, recall, and F1 can be reported at a concrete cutoff. The test set is held out for final comparison, ablation confirmation, calibration review, and policy reporting.
+The repository notebooks containing the experimental setup are public project artifacts: \href{https://github.com/lindaperez/CreditRiskRAG/blob/dev/EDA/Accepted_Loan_EDA.ipynb}{EDA}, \href{https://github.com/lindaperez/CreditRiskRAG/blob/dev/Cleaning/Accepted_Loan_Cleaning.ipynb}{cleaning}, \href{https://github.com/lindaperez/CreditRiskRAG/blob/dev/Modeling/Preprocessing/0_Preprocessing.ipynb}{preprocessing}, \href{https://github.com/lindaperez/CreditRiskRAG/blob/dev/Modeling/9_Final_Model_Comparison.ipynb}{final model comparison}, and \href{https://github.com/lindaperez/CreditRiskRAG/blob/dev/Interpretation_SHAP/1_SHAP_Interpretation.ipynb}{SHAP interpretation}. These notebooks define the target, leakage exclusions, split rule, feature matrices, model selection, calibration review, and interpretation outputs.
 
-The model notebooks are organized under \texttt{Modeling/}: preprocessing notebook 0, family notebooks 1--6 for Logistic Regression through CatBoost, advanced pipeline notebook 7, grade/interest ablation notebook 8, and final comparison notebook 9. TODO: add exact public notebook cell anchors after the repository is published.
-
-Reproducibility artifacts include CSV outputs for split summaries, candidate metrics, selected metrics, ablations, calibration, economic policy, and SHAP interpretation. The environment is documented in \texttt{environment.yml} and \texttt{requirements.lock.txt}; SHAP interpretation requires \texttt{shap==0.51.0} because earlier versions had compatibility issues with the XGBoost serialization used here.
+Model notebooks under \texttt{Modeling/} cover Logistic Regression, Random Forest, HistGradientBoosting, LightGBM, XGBoost, CatBoost, advanced PR-AUC candidate search, grade/interest-rate ablation, and final comparison. Reproducibility artifacts include CSV outputs for split summaries, candidate metrics, selected metrics, calibration, economic policy, SHAP interpretation, and RAG evaluation. The environment is documented in \texttt{environment.yml} and \texttt{requirements.lock.txt}; SHAP interpretation uses \texttt{shap==0.51.0}.
 
 \section{Results}
-Table~\ref{tab:model-results} compares the main model families at the best-validation-F1 operating point, while Figure~\ref{fig:prauc} summarizes PR-AUC ranking performance. The project also ran a PR-AUC-optimized advanced experiment: the top validation PR-AUC candidate was an XGBoost model with grade/subgrade (validation PR-AUC 0.4254), close to the F1-selected LightGBM baseline (validation PR-AUC 0.4248). Gradient boosting methods therefore perform similarly, and the final preferred neutral XGBoost no-grade/subgrade model is chosen for its governance and interpretation tradeoff rather than because it maximizes a single metric.
+Table~\ref{tab:model-results} summarizes the main model comparison at validation-selected F1 thresholds. Gradient boosting methods perform similarly. LightGBM is the best technical F1 benchmark, while the preferred neutral XGBoost no-grade/subgrade model is selected for governance, calibration, SHAP compatibility, and nearly identical ranking performance.
 
 \begin{table}[h]
 \centering
 \small
 \caption{Model comparison at selected validation threshold.}
 \label{tab:model-results}
-\begin{tabular}{lrrrrrrrrrr}
+\begin{tabular}{lrrrrrr}
 \toprule
-Model & Val ROC & Val PR & Val P & Val R & Val F1 & Test ROC & Test PR & Test P & Test R & Test F1\\
+Model & Val PR & Val F1 & Test ROC & Test PR & Test P & Test R\\
 \midrule
-Logistic Regression & .695 & .412 & .355 & .698 & .471 & .700 & .362 & .311 & .709 & .432\\
-Random Forest & .695 & .415 & .360 & .672 & .468 & .704 & .371 & .321 & .674 & .435\\
-HistGradientBoosting & .701 & .424 & .359 & .697 & .474 & .708 & .377 & .320 & .693 & .438\\
-LightGBM & .703 & .425 & .354 & .723 & .475 & .711 & .381 & .316 & .718 & .439\\
-XGBoost & .702 & .425 & .358 & .701 & .474 & .710 & .380 & .319 & .701 & .438\\
-CatBoost & .699 & .421 & .359 & .689 & .472 & .706 & .374 & .317 & .697 & .436\\
-Preferred neutral XGB & .702 & .426 & .361 & .696 & .475 & .710 & .381 & .330 & .660 & .440\\
+Logistic Regression & .412 & .471 & .700 & .362 & .311 & .709\\
+Random Forest & .415 & .468 & .704 & .371 & .321 & .674\\
+HistGradientBoosting & .424 & .474 & .708 & .377 & .320 & .693\\
+LightGBM & .425 & .475 & .711 & .381 & .316 & .718\\
+XGBoost & .425 & .474 & .710 & .380 & .319 & .701\\
+CatBoost & .421 & .472 & .706 & .374 & .317 & .697\\
+Preferred neutral XGB & .426 & .475 & .710 & .381 & .330 & .660\\
 \bottomrule
 \end{tabular}
 \end{table}
 
-\begin{figure}[h]
-\centering
-\includegraphics[width=0.72\linewidth]{../../Modeling/modeling_outputs/final_comparison/plots/final_model_pr_auc_comparison.png}
-\caption{Final model PR-AUC comparison, used to evaluate minority-class ranking quality alongside F1-based operating thresholds.}
-\label{fig:prauc}
-\end{figure}
-
-The preferred model is the neutral no-grade/subgrade XGBoost variant that retains \texttt{int\_rate\_clean}. On validation it reaches ROC-AUC 0.702, PR-AUC 0.426, precision 0.361, recall 0.696, and F1 0.475 for charged-off loans. On test it reaches ROC-AUC 0.710, PR-AUC 0.381, precision 0.330, recall 0.660, and F1 0.440. Its mean raw predicted probability on test is 0.197, close to the actual test bad rate of 0.210, which is preferable to earlier class-weighted models with inflated probabilities.
-
-The ablation in Table~\ref{tab:ablation} shows that explicit grade/subgrade and interest rate carry overlapping information. Removing grade/subgrade while keeping \texttt{int\_rate\_clean} slightly improves validation PR-AUC and test top-20\% bad rate compared with keeping both, while avoiding direct dependence on LendingClub's discrete risk buckets. Removing both grade/subgrade and interest rate causes the clearest degradation.
+The preferred model reaches validation ROC-AUC 0.702, PR-AUC 0.426, precision 0.361, recall 0.696, and F1 0.475. On the future-period test set it reaches ROC-AUC 0.710, PR-AUC 0.381, precision 0.330, recall 0.660, and F1 0.440. Its mean raw predicted probability on test is 0.197, close to the actual test bad rate of 0.210, which is more usable than earlier class-weighted variants with inflated probabilities.
 
 \begin{table}[h]
 \centering
@@ -159,54 +158,41 @@ No grade/subgrade, no interest & .422215 & .375358 & .703070 & 39.64\%\\
 \end{tabular}
 \end{table}
 
-The best-F1 operating point is not a good business policy by itself. For the preferred model, the best-F1 threshold flags 42.07\% of test loans as risky. That catches many charge-offs, but the review or rejection volume is operationally and fairness-sensitive. A capped economic policy is more realistic because it imposes a maximum action share and evaluates the tradeoff between caught defaults and rejected good borrowers.
+The ablation shows that grade/subgrade and interest rate carry overlapping information. Removing explicit grade/subgrade while retaining \texttt{int\_rate\_clean} slightly improves validation PR-AUC and top-20\% test bad-rate concentration relative to keeping both. Removing both grade/subgrade and interest rate causes the clearest degradation.
 
-\begin{table}[h]
-\centering
-\small
-\caption{Operating-policy comparison.}
-\label{tab:policy}
-\begin{tabular}{lrrrrr}
-\toprule
-Policy & Action share & Default capture & Bad rate in action group & Approved bad rate & Est. value\\
-\midrule
-Best-F1 threshold & 42.07\% & 66.02\% & 33.01\% & 12.3\% & $\approx$\$189.0M\\
-Capped economic policy & 19.47\% & 37.43\% & 40.44\% & 16.34\% & \$120.0M\\
-\bottomrule
-\end{tabular}
-\end{table}
+The best-F1 threshold is not the final business recommendation because it flags 42.07\% of test loans. The capped economic policy flags 19.47\% of test loans, captures 37.43\% of defaults, produces a 40.44\% bad rate in the action group, leaves a 16.34\% bad rate among approved loans, and has estimated value of \$120.0M under the stated example assumptions. This is a more defensible operating policy than an unconstrained metric optimum.
 
-SHAP confirms that the selected model is using plausible credit-risk signals. The top mean absolute SHAP drivers are \texttt{int\_rate\_clean}, \texttt{term\_months}, \texttt{acc\_open\_past\_24mths}, \texttt{dti}, \texttt{fico\_mean}, \texttt{annual\_inc}, and \texttt{loan\_amnt}. Validation-versus-test SHAP rank stability has Spearman correlation 0.9987, indicating that the main explanation ranking is not merely a validation-period artifact.
+SHAP confirms plausible model behavior. The top global drivers are \texttt{int\_rate\_clean}, \texttt{term\_months}, \texttt{acc\_open\_past\_24mths}, \texttt{dti}, \texttt{fico\_mean}, \texttt{annual\_inc}, and \texttt{loan\_amnt}. Validation-versus-test SHAP rank stability has Spearman correlation 0.9987, and the top six features have no rank shift, supporting explanation stability across the holdout period.
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.72\linewidth]{../../Interpretation_SHAP/shap_outputs/plots/shap_mean_abs_bar.png}
-\caption{Global SHAP mean absolute importance for the preferred model.}
+\includegraphics[width=0.67\linewidth]{../../Interpretation_SHAP/shap_outputs/plots/shap_mean_abs_bar.png}
+\caption{Global SHAP mean absolute importance for the preferred XGBoost model.}
 \label{fig:shap}
 \end{figure}
 
-The project could likely improve raw predictive performance with larger ensembles, borrower text fields, broader credit-bureau variables, or more aggressive hyperparameter searches. Those options were not the main recommendation because the course project also values defensible data handling, leakage control, and explainability. A stronger but less governed model would be less aligned with the credit-risk interpretation and future RAG explanation goal.
+The RAG layer is implemented as a small but informative prototype. It generated five RAG and five no-RAG letters from the same SHAP-selected principal reasons. Both modes preserved selected reasons, the FCRA 60-day free-report window, and ECOA protected-class language. RAG improved the overall blind statutory-accuracy score from 0.60 to 0.76, mainly by improving real federal-agency naming and reducing legal-error failures from 0.00 to 0.40. The remaining failures show that retrieval helps but does not guarantee compliance; deterministic notice blocks and larger evaluation samples are needed.
 
 \section{Analysis and Discussion}
-The algorithms work because consumer-credit risk is nonlinear and interaction-heavy. Interest rate, term, installment burden, DTI, income, FICO, recent account openings, and loan amount do not act independently. Tree ensembles can partition these interactions without requiring every cross-feature relationship to be manually specified.
+The model works because consumer-credit risk is nonlinear and interaction-heavy. Interest rate, term, installment burden, DTI, income, FICO, recent account openings, and loan amount do not act independently. Tree ensembles can model these interactions while still allowing post hoc explanation through SHAP.
 
-The selected feature policy illustrates a governance tradeoff. LendingClub grade and subgrade are powerful, but they are also summaries of LendingClub's prior underwriting and pricing process. Retaining the continuous interest-rate signal while removing discrete grade buckets keeps much of the risk information but reduces dependence on an opaque categorical prior decision. This does not eliminate all governance concerns, because interest rate itself reflects pricing policy, but it is more parsimonious and easier to analyze.
+The selected feature policy is a governance compromise. LendingClub grade and subgrade are predictive but encode the platform's prior underwriting judgment. Retaining the continuous interest-rate signal while removing discrete grade buckets keeps nearly all ranking performance and simplifies explanation review, although interest rate itself remains policy-sensitive because it reflects pricing.
 
-Temporal drift is visible in the split bad rates and in the need for future-period testing. The validation bad rate is 24.68\%, while the test bad rate is 21.03\%. This difference reinforces why calibration, monitoring, and threshold review matter. A model trained on older vintages can rank risk in a later period, but policy thresholds should not be assumed permanent.
+Temporal drift remains a central limitation. The validation bad rate is 24.68\%, while the test bad rate is 21.03\%. This reinforces the need for calibration review, threshold monitoring, and future-period validation before deployment. The accepted-loan boundary is equally important: the model ranks default risk among loans LendingClub historically approved, not among all applicants.
 
-The lessons generalize to similar consumer-credit datasets where outcomes arrive after origination and many fields are updated after the decision. Leakage audits, time-based validation, calibrated probabilities, PR-AUC, top-risk precision, and capped decision policies are broadly useful. The exact model and threshold should not be transferred without local data, policy constraints, and fairness review.
+The solution generalizes best to lending or account-risk datasets with delayed outcomes, time-varying portfolios, mixed numeric and categorical features, and strong leakage risk from post-decision fields. It should transfer less directly to rejected-applicant scoring, thin-file credit populations, or products with materially different loss definitions unless new labels, fairness review, and calibration data are available.
 
-Compared with published and Kaggle implementations, this project's novelty is not a new algorithm. Its contribution is a careful end-to-end workflow: accepted-loan target definition, rejected-applicant boundary, leakage-controlled features, chronological evaluation, grade/interest ablation, calibration, SHAP stability, and economic thresholding. The system should be treated as a research-grade risk-ranking and interpretation prototype rather than a production lending decision engine.
+The explanation layer should be described positively but conservatively. The implemented corpus, hybrid retriever, deterministic reason selector, RAG generator, no-RAG control, and blind judge create a credible research experiment. However, five letters per mode are not sufficient for compliance claims, and agency-name errors show why adverse-action notices require rule-based required-field validation and human compliance review.
 
 \section{Conclusion}
-This project built a leakage-aware LendingClub accepted-loan default-risk modeling workflow from raw data through EDA, cleaning, preprocessing, model comparison, ablation, calibration, SHAP interpretation, and policy analysis. The preferred neutral XGBoost model predicts the probability of charge-off for accepted loans and achieves stable ranking performance on a future-period test set.
+This project built a leakage-aware LendingClub default-risk modeling and explanation-grounding workflow from raw data through EDA, cleaning, preprocessing, model comparison, ablation, calibration, SHAP interpretation, economic policy, regulatory retrieval, letter generation, and blind RAG/no-RAG evaluation. The preferred neutral XGBoost model without grade/subgrade achieves stable future-period ranking performance, and SHAP identifies intuitive, stable risk drivers.
 
-For a company evaluating a similar internal prototype, the recommended approach is not the unconstrained best-F1 threshold. The better research recommendation is the no-grade/subgrade neutral XGBoost model with calibrated probabilities and a capped review or rejection policy, because it balances risk concentration, operational volume, and interpretability more clearly than raw F1 optimization.
+For a company considering this workflow, the recommended configuration is the calibrated neutral XGBoost model with the capped economic review policy, not the unconstrained best-F1 threshold. This choice better balances risk concentration, review volume, probability calibration, and governance than a purely metric-optimized decision rule.
 
-Future work should complete the RAG explanation layer only after reason-code governance, compliance review, fairness analysis, external validation, monitoring design, and deployment documentation. The next phase should map SHAP-supported technical drivers to human-readable reason codes, retrieve regulatory context, generate constrained explanation drafts, and evaluate faithfulness without claiming legal adverse-action compliance.
+With more data and time, the next work should add external validation, reject-inference research, fairness testing, deterministic adverse-action notice templates, larger RAG/no-RAG evaluation samples, and monitoring for temporal drift. Until those controls are complete, the model should be used as a research-grade accepted-loan risk-ranking and explanation prototype rather than a fully automated lending-decision system.
 
 \section{AI Prompts Used}
-The repository contains a detailed EDA prompt in \texttt{Docs/Prompts/Prompt.md}. It asks an AI assistant to act as a principal data scientist and produce a rigorous LendingClub EDA covering business context, inventory, cleaning, target definition, missingness, distributions, time trends, leakage, accepted-versus-rejected comparisons, fairness, and modeling readiness. This LaTeX report was drafted from the final-report LaTeX drafting prompt in the report folder. TODO before submission: collect all coding, debugging, explanation, and research prompts used by the team and include the complete prompt text or a course-approved appendix.
+The repository includes a detailed EDA prompt in \texttt{Docs/Prompts/Prompt.md} and the LaTeX drafting prompt in the final-report folder. The EDA prompt asked the assistant to act as a principal data scientist and cover business context, inventory, cleaning, target definition, missingness, distributions, time trends, leakage, accepted-versus-rejected comparisons, fairness, and modeling readiness. Additional prompts were used for report drafting, debugging, and explanation work during project development.
 
 \section{References}
 \begin{thebibliography}{99}
@@ -225,13 +211,11 @@ The repository contains a detailed EDA prompt in \texttt{Docs/Prompts/Prompt.md}
 
 \appendix
 \section{Appendix}
-Public GitHub repository URL: TODO if not public yet. If the repository cannot be made public, submit the project as a zip file on Canvas according to the assignment instructions.
+Repository artifacts support reproduction from raw data to final outputs. Place the Kaggle accepted and rejected LendingClub files under \texttt{Data/archive/}; run accepted-loan EDA, cleaning, preprocessing, model notebooks 1--9, SHAP interpretation, corpus chunking, retrieval indexing, reason selection, RAG/no-RAG generation, judging, and result aggregation in order. Main artifact folders are \texttt{EDA/accepted\_eda\_outputs/}, \texttt{Cleaning/cleaning\_outputs/}, \texttt{Modeling/Preprocessing/preprocessing\_outputs/}, \texttt{Modeling/modeling\_outputs/}, \texttt{Interpretation\_SHAP/shap\_outputs/}, \texttt{corpus/}, \texttt{retrieval/}, and \texttt{generation/output/}.
 
-Setup summary: install the Python environment from the project environment or lock file; place the Kaggle accepted and rejected LendingClub files under \texttt{Data/archive/}; run EDA, cleaning, preprocessing, model notebooks, final comparison, and SHAP interpretation in order. The main artifact folders are the EDA, cleaning, preprocessing, modeling-output, and SHAP-output directories.
-
-Notebook inventory: accepted-loan EDA, accepted-loan cleaning, preprocessing notebook 0, model notebooks 1--9 under \texttt{Modeling/}, and SHAP interpretation notebook 1. Extra plots and CSV tables are stored beside each notebook output folder.
+Notebook inventory: accepted-loan EDA, accepted-loan cleaning, preprocessing notebook 0, model notebooks 1--9 under \texttt{Modeling/}, and SHAP interpretation notebook 1. Script inventory for letter generation: \texttt{corpus/chunk\_corpus.py}, \texttt{retrieval/build\_index.py}, \texttt{retrieval/hybrid\_retriever.py}, \texttt{generation/select\_reasons.py}, \texttt{generation/generate\_letter.py}, \texttt{generation/generate\_all.py}, \texttt{generation/generate\_norag.py}, \texttt{generation/judge.py}, and \texttt{generation/results.py}.
 
 \section{Statement of Contributions}
-Linda Perez Penaranda: project lead, credit-risk framing, EDA, cleaning, modeling, policy analysis, reproducibility, and report integration. Yashaswi Aryan: collaborator on model/retrieval workflow and project development. Siddharth Agarwal: collaborator on model/retrieval workflow and project development. TODO before submission: verify this contribution statement with all team members.
+Linda Perez Penaranda: collaborator; credit-risk framing; EDA; cleaning; modeling; policy analysis; reproducibility; demo development; final report; and report integration. Yashaswi Aryan: collaborator; model/retrieval workflow; SHAP interpretation; project development; and review of the integrated prototype. Siddharth Agarwal: collaborator; model/retrieval workflow; letter generation; project development; and review of the integrated prototype. All team members contributed as collaborators to the final project direction and implementation.
 
 \end{document}
