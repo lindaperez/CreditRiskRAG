@@ -33,15 +33,34 @@ The current project is strongest as an end-to-end research prototype: EDA, clean
 
 ## Demo
 
-A self-contained local HTML demo is available here:
+The letter-generation demo is a static GitHub Pages site:
 
-[Open the RAG letter demo](generation/demo/rag_letter_demo.html)
+[Open the GitHub demo](https://lindaperez.github.io/CreditRiskRAG/)
 
-Direct views:
+Direct GitHub views:
 
-- [Overview](generation/demo/rag_letter_demo.html#overview)
-- [Letters](generation/demo/rag_letter_demo.html#letters)
-- [Evaluation](generation/demo/rag_letter_demo.html#evaluation)
+- [Overview](https://lindaperez.github.io/CreditRiskRAG/rag_letter_demo.html#overview)
+- [Letters](https://lindaperez.github.io/CreditRiskRAG/rag_letter_demo.html#letters)
+- [Evaluation](https://lindaperez.github.io/CreditRiskRAG/rag_letter_demo.html#evaluation)
+
+GitHub deploy source:
+
+- [Demo HTML](generation/demo/rag_letter_demo.html)
+- [GitHub Pages workflow](.github/workflows/deploy-demo-pages.yml)
+
+First-time GitHub setup: in the repository settings, set **Pages -> Source** to **GitHub Actions**. After the workflow runs, the demo is served from the GitHub Pages URL above.
+
+Optional local run from the `CreditRiskRAG/` folder:
+
+```bash
+python3 generation/demo/serve_demo.py
+```
+
+Then open:
+
+```text
+http://127.0.0.1:8000/rag_letter_demo.html
+```
 
 The demo does not call Gemini, run retrieval, or require API keys; it renders the completed run from saved artifacts:
 
@@ -838,7 +857,7 @@ Interpretation: RAG improved statutory accuracy while preserving SHAP-selected p
 | Modeling results | Yes | README includes top-20% risk-review results, capped economic policy results, recommended model, grade/subgrade ablation, and supporting plots with interpretations. |
 | SHAP interpretation | Yes | README includes global drivers, reason-code mapping, SHAP plots two per row, and interpretation notes. |
 | Regulatory corpus and retrieval | Yes | README lists regulatory sources, chunk count, embedding model, hybrid retrieval method, and supporting scripts. |
-| Letter generation | Yes | README summarizes RAG vs no-RAG generation, output artifacts, clickable local demo links, and demo screenshots showing overview, letters, and evaluation. |
+| Letter generation | Yes | README summarizes RAG vs no-RAG generation, output artifacts, GitHub Pages demo links, and demo screenshots showing overview, letters, and evaluation. |
 | Letter-generation evaluation | Yes | README explains blind shuffled judging, the five binary rubric items, judge artifacts, and aggregate scores. |
 | Reproducibility and execution order | Yes | README includes data controls, environment setup, notebook order, and pipeline commands. |
 | Documentation | Yes | README links business docs, SHAP docs, corpus docs, generation results, reproducibility, and research notes. |

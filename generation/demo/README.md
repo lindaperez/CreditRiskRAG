@@ -1,6 +1,46 @@
 # RAG Letter Generation Demo
 
-Open `rag_letter_demo.html` in a browser to view the local demo.
+The demo is designed to run directly on GitHub Pages:
+
+```text
+https://lindaperez.github.io/CreditRiskRAG/
+```
+
+Direct GitHub views:
+
+```text
+https://lindaperez.github.io/CreditRiskRAG/rag_letter_demo.html#letters
+https://lindaperez.github.io/CreditRiskRAG/rag_letter_demo.html#evaluation
+```
+
+The GitHub Pages deployment is handled by:
+
+```text
+.github/workflows/deploy-demo-pages.yml
+```
+
+First-time GitHub setup: in the repository settings, set **Pages -> Source** to **GitHub Actions**. After the workflow runs, the demo is served from the GitHub Pages URL above.
+
+Optional local run from the project root:
+
+```bash
+python3 generation/demo/serve_demo.py
+```
+
+Then open:
+
+```text
+http://127.0.0.1:8000/rag_letter_demo.html
+```
+
+Direct views:
+
+```text
+http://127.0.0.1:8000/rag_letter_demo.html#letters
+http://127.0.0.1:8000/rag_letter_demo.html#evaluation
+```
+
+You can also open `rag_letter_demo.html` directly in a browser, but GitHub Pages is the recommended path for reviewers.
 
 The demo summarizes the completed generation run:
 
@@ -31,4 +71,3 @@ RAG overall statutory-accuracy score:    0.76
 ```
 
 The main remaining weakness is federal-agency specificity. Some letters still used placeholders instead of naming a real federal enforcement agency, so the generation layer should be presented as a research prototype rather than a compliance-approved adverse-action system.
-
