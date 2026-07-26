@@ -1,0 +1,16 @@
+feature,mean_abs_shap,mean_signed_shap
+revol_bal,0.02660108,0.007460717
+acc_open_past_24mths,0.1642273,0.006756559
+total_acc,0.04317616,0.0039962754
+credit_history_years,0.015606082,0.0032457702
+verification_status_Source Verified,0.023623565,0.0024910169
+verification_status_Verified,0.011837793,0.0024744563
+bc_util,0.018896522,0.0022457915
+verification_status_Not Verified,0.009531524,0.001949955
+mort_acc,0.046491936,0.0016917341
+mths_since_last_record,0.007819026,0.0014921288
+emp_length_years,0.01169288,0.0011648082
+tot_coll_amt,0.004953387,0.0009426035
+mths_since_last_record_is_missing,0.0023868107,0.0006335749
+total_bal_ex_mort,0.003570951,0.0003995209
+purpose_credit_card,0.0045632976,0.00039595057

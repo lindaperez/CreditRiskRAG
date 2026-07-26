@@ -1,0 +1,128 @@
+[
+  {
+    "example": "baseline_all_pass",
+    "note": "Fully compliant control letter; every item should score 1.",
+    "expected": {
+      "reasons_correct": 1,
+      "fcra_window_correct": 1,
+      "real_agency_named": 1,
+      "ecoa_classes_correct": 1,
+      "no_legal_errors": 1
+    },
+    "actual": {
+      "reasons_correct": 1,
+      "fcra_window_correct": 1,
+      "real_agency_named": 1,
+      "ecoa_classes_correct": 1,
+      "no_legal_errors": 1
+    },
+    "judge_note": "The letter accurately reflects all required disclosure elements and regulatory citations.",
+    "agree": true,
+    "mismatches": {}
+  },
+  {
+    "example": "fail_fcra_window",
+    "note": "60-day FCRA window changed to the wrong number (30 days).",
+    "expected": {
+      "reasons_correct": 1,
+      "fcra_window_correct": 0,
+      "real_agency_named": 1,
+      "ecoa_classes_correct": 1,
+      "no_legal_errors": 1
+    },
+    "actual": {
+      "reasons_correct": 1,
+      "fcra_window_correct": 0,
+      "real_agency_named": 1,
+      "ecoa_classes_correct": 1,
+      "no_legal_errors": 1
+    },
+    "judge_note": "The letter incorrectly states a 30-day window for requesting a free consumer report instead of the statutory 60-day requirement.",
+    "agree": true,
+    "mismatches": {}
+  },
+  {
+    "example": "fail_real_agency_named",
+    "note": "Real agency name/address replaced with a bracket placeholder (the exact failure mode observed in real no-RAG generations).",
+    "expected": {
+      "reasons_correct": 1,
+      "fcra_window_correct": 1,
+      "real_agency_named": 0,
+      "ecoa_classes_correct": 1,
+      "no_legal_errors": 1
+    },
+    "actual": {
+      "reasons_correct": 1,
+      "fcra_window_correct": 1,
+      "real_agency_named": 0,
+      "ecoa_classes_correct": 1,
+      "no_legal_errors": 1
+    },
+    "judge_note": "The letter failed to name a specific federal enforcement agency, providing only a placeholder instead.",
+    "agree": true,
+    "mismatches": {}
+  },
+  {
+    "example": "fail_ecoa_classes",
+    "note": "Correct 8-item ECOA protected-class list replaced with an incomplete list (only 3 of 8 bases, no invented/fake categories) to isolate omission from invention.",
+    "expected": {
+      "reasons_correct": 1,
+      "fcra_window_correct": 1,
+      "real_agency_named": 1,
+      "ecoa_classes_correct": 0,
+      "no_legal_errors": 1
+    },
+    "actual": {
+      "reasons_correct": 1,
+      "fcra_window_correct": 1,
+      "real_agency_named": 1,
+      "ecoa_classes_correct": 0,
+      "no_legal_errors": 1
+    },
+    "judge_note": "The ECOA notice is legally deficient because it omits several protected classes required by the statute.",
+    "agree": true,
+    "mismatches": {}
+  },
+  {
+    "example": "fail_no_legal_errors",
+    "note": "Appends a fabricated statutory citation and an invented numeric deadline.",
+    "expected": {
+      "reasons_correct": 1,
+      "fcra_window_correct": 1,
+      "real_agency_named": 1,
+      "ecoa_classes_correct": 1,
+      "no_legal_errors": 0
+    },
+    "actual": {
+      "reasons_correct": 1,
+      "fcra_window_correct": 1,
+      "real_agency_named": 1,
+      "ecoa_classes_correct": 1,
+      "no_legal_errors": 0
+    },
+    "judge_note": "The postscript cites an incorrect statute regarding the timing and nature of adverse action explanations.",
+    "agree": true,
+    "mismatches": {}
+  },
+  {
+    "example": "fail_reasons_correct",
+    "note": "Adds a reason not present in the applicant's actual reason list (should state exactly the given reasons, no more, no fewer).",
+    "expected": {
+      "reasons_correct": 0,
+      "fcra_window_correct": 1,
+      "real_agency_named": 1,
+      "ecoa_classes_correct": 1,
+      "no_legal_errors": 1
+    },
+    "actual": {
+      "reasons_correct": 0,
+      "fcra_window_correct": 1,
+      "real_agency_named": 1,
+      "ecoa_classes_correct": 1,
+      "no_legal_errors": 1
+    },
+    "judge_note": "The letter included an extra reason (high revolving credit utilization) not listed in the provided principal reasons.",
+    "agree": true,
+    "mismatches": {}
+  }
+]

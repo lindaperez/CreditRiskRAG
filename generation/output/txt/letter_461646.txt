@@ -1,0 +1,35 @@
+[Date]
+
+Dear Applicant:
+
+Thank you for your recent application for credit. After carefully reviewing your request, we regret to inform you that we are unable to approve your application at this time for the following reason(s):
+
+*   High debt burden relative to income.
+*   Lower credit score range.
+*   Larger requested loan amount.
+*   Lower reported income relative to requested credit.
+
+**Disclosure of Use of Information Obtained from an Outside Source**
+Our credit decision was based in whole or in part on information obtained in a report from the consumer reporting agency listed below. You have a right under the Fair Credit Reporting Act to know the information contained in your credit file at the consumer reporting agency. The reporting agency played no part in our decision and is unable to supply specific reasons why we have denied your credit. You also have a right to a free copy of your report from the reporting agency, if you request it no later than 60 days after you receive this notice. In addition, if you find that any information contained in the report you receive is inaccurate or incomplete, you have the right to dispute the matter with the reporting agency.
+
+[Consumer Reporting Agency Name]
+[Address]
+[Telephone Number]
+
+In addition to the information from the consumer reporting agency, we used a credit score in taking this adverse action. A credit score is a number that takes into account information in your consumer report and can change over time to reflect changes in your credit history.
+
+Your credit score: [Insert Score]
+Date: [Insert Date]
+Scores range from a low of [Insert Low Range] to a high of [Insert High Range].
+
+**Equal Credit Opportunity Act Notice**
+The federal Equal Credit Opportunity Act prohibits creditors from discriminating against credit applicants on the basis of race, color, religion, national origin, sex, marital status, age (provided the applicant has the capacity to enter into a binding contract); because all or part of the applicant’s income derives from any public assistance program; or because the applicant has in good faith exercised any right under the Consumer Credit Protection Act. The federal agency that administers compliance with this law concerning this creditor is:
+
+Consumer Financial Protection Bureau
+1700 G Street NW
+Washington, DC 20552
+
+Sincerely,
+
+[Creditor Name]
+[Creditor Address]

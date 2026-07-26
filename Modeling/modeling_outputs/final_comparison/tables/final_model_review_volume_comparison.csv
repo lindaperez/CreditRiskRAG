@@ -1,0 +1,97 @@
+model_family,model,split,review_pct,review_count,captured_bad,precision,recall,base_bad_rate,lift_over_base_bad_rate,model_label
+logistic_regression,logistic_regression_07,validation,1.0,1870,1132,0.605348,0.024542,0.246763,2.453151,Logistic Regression
+logistic_regression,logistic_regression_07,validation,2.0,3739,2174,0.581439,0.047133,0.246763,2.356261,Logistic Regression
+logistic_regression,logistic_regression_07,validation,5.0,9346,5073,0.542799,0.109984,0.246763,2.199675,Logistic Regression
+logistic_regression,logistic_regression_07,validation,10.0,18692,9278,0.496362,0.201149,0.246763,2.011491,Logistic Regression
+logistic_regression,logistic_regression_07,validation,15.0,28038,13006,0.46387,0.281973,0.246763,1.879819,Logistic Regression
+logistic_regression,logistic_regression_07,validation,20.0,37384,16488,0.441044,0.357463,0.246763,1.787317,Logistic Regression
+logistic_regression,logistic_regression_07,validation,25.0,46730,19675,0.421036,0.426558,0.246763,1.706233,Logistic Regression
+logistic_regression,logistic_regression_07,validation,30.0,56076,22690,0.404629,0.491924,0.246763,1.639747,Logistic Regression
+logistic_regression,logistic_regression_07,test,1.0,1958,1018,0.519918,0.024727,0.210315,2.47209,Logistic Regression
+logistic_regression,logistic_regression_07,test,2.0,3915,2000,0.510856,0.04858,0.210315,2.429,Logistic Regression
+logistic_regression,logistic_regression_07,test,5.0,9788,4603,0.47027,0.111807,0.210315,2.236023,Logistic Regression
+logistic_regression,logistic_regression_07,test,10.0,19575,8479,0.433155,0.205956,0.210315,2.059549,Logistic Regression
+logistic_regression,logistic_regression_07,test,15.0,29363,11950,0.406975,0.290267,0.210315,1.93507,Logistic Regression
+logistic_regression,logistic_regression_07,test,20.0,39150,15132,0.386513,0.367558,0.210315,1.837781,Logistic Regression
+logistic_regression,logistic_regression_07,test,25.0,48938,18054,0.368916,0.438534,0.210315,1.754109,Logistic Regression
+logistic_regression,logistic_regression_07,test,30.0,58725,20837,0.354823,0.506133,0.210315,1.687102,Logistic Regression
+random_forest,random_forest_03,validation,1.0,1870,1169,0.625134,0.025344,0.246763,2.533333,Random Forest
+random_forest,random_forest_03,validation,2.0,3739,2237,0.598288,0.048499,0.246763,2.424543,Random Forest
+random_forest,random_forest_03,validation,5.0,9346,5094,0.545046,0.110439,0.246763,2.20878,Random Forest
+random_forest,random_forest_03,validation,10.0,18692,9368,0.501177,0.2031,0.246763,2.031003,Random Forest
+random_forest,random_forest_03,validation,15.0,28038,13025,0.464548,0.282385,0.246763,1.882565,Random Forest
+random_forest,random_forest_03,validation,20.0,37384,16491,0.441125,0.357528,0.246763,1.787642,Random Forest
+random_forest,random_forest_03,validation,25.0,46730,19729,0.422191,0.427729,0.246763,1.710916,Random Forest
+random_forest,random_forest_03,validation,30.0,56076,22658,0.404059,0.49123,0.246763,1.637435,Random Forest
+random_forest,random_forest_03,test,1.0,1958,1088,0.555669,0.026428,0.210315,2.642077,Random Forest
+random_forest,random_forest_03,test,2.0,3915,2073,0.529502,0.050353,0.210315,2.517658,Random Forest
+random_forest,random_forest_03,test,5.0,9788,4747,0.484982,0.115305,0.210315,2.305975,Random Forest
+random_forest,random_forest_03,test,10.0,19575,8695,0.444189,0.211203,0.210315,2.112015,Random Forest
+random_forest,random_forest_03,test,15.0,29363,12126,0.412969,0.294542,0.210315,1.96357,Random Forest
+random_forest,random_forest_03,test,20.0,39150,15339,0.391801,0.372586,0.210315,1.862921,Random Forest
+random_forest,random_forest_03,test,25.0,48938,18338,0.374719,0.445432,0.210315,1.781702,Random Forest
+random_forest,random_forest_03,test,30.0,58725,21179,0.360647,0.51444,0.210315,1.714793,Random Forest
+hist_gradient_boosting,hist_gradient_boosting_04,validation,1.0,1870,1208,0.645989,0.02619,0.246763,2.61785,HistGradientBoosting
+hist_gradient_boosting,hist_gradient_boosting_04,validation,2.0,3739,2293,0.613266,0.049713,0.246763,2.485238,HistGradientBoosting
+hist_gradient_boosting,hist_gradient_boosting_04,validation,5.0,9346,5171,0.553285,0.112108,0.246763,2.242168,HistGradientBoosting
+hist_gradient_boosting,hist_gradient_boosting_04,validation,10.0,18692,9525,0.509576,0.206504,0.246763,2.065041,HistGradientBoosting
+hist_gradient_boosting,hist_gradient_boosting_04,validation,15.0,28038,13311,0.474749,0.288585,0.246763,1.923902,HistGradientBoosting
+hist_gradient_boosting,hist_gradient_boosting_04,validation,20.0,37384,16752,0.448106,0.363187,0.246763,1.815935,HistGradientBoosting
+hist_gradient_boosting,hist_gradient_boosting_04,validation,25.0,46730,19998,0.427948,0.433561,0.246763,1.734244,HistGradientBoosting
+hist_gradient_boosting,hist_gradient_boosting_04,validation,30.0,56076,23030,0.410693,0.499295,0.246763,1.664318,HistGradientBoosting
+hist_gradient_boosting,hist_gradient_boosting_04,test,1.0,1958,1092,0.557712,0.026525,0.210315,2.65179,HistGradientBoosting
+hist_gradient_boosting,hist_gradient_boosting_04,test,2.0,3915,2103,0.537165,0.051082,0.210315,2.554093,HistGradientBoosting
+hist_gradient_boosting,hist_gradient_boosting_04,test,5.0,9788,4831,0.493564,0.117346,0.210315,2.34678,HistGradientBoosting
+hist_gradient_boosting,hist_gradient_boosting_04,test,10.0,19575,8835,0.451341,0.214603,0.210315,2.146021,HistGradientBoosting
+hist_gradient_boosting,hist_gradient_boosting_04,test,15.0,29363,12449,0.423969,0.302388,0.210315,2.015874,HistGradientBoosting
+hist_gradient_boosting,hist_gradient_boosting_04,test,20.0,39150,15638,0.399438,0.379849,0.210315,1.899235,HistGradientBoosting
+hist_gradient_boosting,hist_gradient_boosting_04,test,25.0,48938,18624,0.380563,0.452379,0.210315,1.809489,HistGradientBoosting
+hist_gradient_boosting,hist_gradient_boosting_04,test,30.0,58725,21393,0.364291,0.519639,0.210315,1.73212,HistGradientBoosting
+lightgbm,lightgbm_06,validation,1.0,1870,1178,0.629947,0.025539,0.246763,2.552837,LightGBM
+lightgbm,lightgbm_06,validation,2.0,3739,2263,0.605242,0.049062,0.246763,2.452723,LightGBM
+lightgbm,lightgbm_06,validation,5.0,9346,5197,0.556067,0.112672,0.246763,2.253442,LightGBM
+lightgbm,lightgbm_06,validation,10.0,18692,9603,0.513749,0.208195,0.246763,2.081951,LightGBM
+lightgbm,lightgbm_06,validation,15.0,28038,13369,0.476817,0.289843,0.246763,1.932285,LightGBM
+lightgbm,lightgbm_06,validation,20.0,37384,16851,0.450754,0.365333,0.246763,1.826667,LightGBM
+lightgbm,lightgbm_06,validation,25.0,46730,20050,0.429061,0.434688,0.246763,1.738753,LightGBM
+lightgbm,lightgbm_06,validation,30.0,56076,23163,0.413064,0.502179,0.246763,1.67393,LightGBM
+lightgbm,lightgbm_06,test,1.0,1958,1096,0.559755,0.026622,0.210315,2.661504,LightGBM
+lightgbm,lightgbm_06,test,2.0,3915,2108,0.538442,0.051204,0.210315,2.560166,LightGBM
+lightgbm,lightgbm_06,test,5.0,9788,4879,0.498468,0.118512,0.210315,2.370097,LightGBM
+lightgbm,lightgbm_06,test,10.0,19575,8914,0.455377,0.216522,0.210315,2.16521,LightGBM
+lightgbm,lightgbm_06,test,15.0,29363,12512,0.426114,0.303918,0.210315,2.026075,LightGBM
+lightgbm,lightgbm_06,test,20.0,39150,15769,0.402784,0.383031,0.210315,1.915145,LightGBM
+lightgbm,lightgbm_06,test,25.0,48938,18716,0.382443,0.454614,0.210315,1.818428,LightGBM
+lightgbm,lightgbm_06,test,30.0,58725,21490,0.365943,0.521995,0.210315,1.739973,LightGBM
+xgboost,xgboost_05,validation,1.0,1870,1208,0.645989,0.02619,0.246763,2.61785,XGBoost
+xgboost,xgboost_05,validation,2.0,3739,2297,0.614335,0.049799,0.246763,2.489573,XGBoost
+xgboost,xgboost_05,validation,5.0,9346,5221,0.558635,0.113192,0.246763,2.263848,XGBoost
+xgboost,xgboost_05,validation,10.0,18692,9587,0.512893,0.207848,0.246763,2.078482,XGBoost
+xgboost,xgboost_05,validation,15.0,28038,13331,0.475462,0.289019,0.246763,1.926793,XGBoost
+xgboost,xgboost_05,validation,20.0,37384,16835,0.450326,0.364986,0.246763,1.824932,XGBoost
+xgboost,xgboost_05,validation,25.0,46730,20043,0.428911,0.434537,0.246763,1.738146,XGBoost
+xgboost,xgboost_05,validation,30.0,56076,23057,0.411174,0.499881,0.246763,1.666269,XGBoost
+xgboost,xgboost_05,test,1.0,1958,1125,0.574566,0.027326,0.210315,2.731927,XGBoost
+xgboost,xgboost_05,test,2.0,3915,2123,0.542273,0.051568,0.210315,2.578383,XGBoost
+xgboost,xgboost_05,test,5.0,9788,4898,0.500409,0.118973,0.210315,2.379327,XGBoost
+xgboost,xgboost_05,test,10.0,19575,8888,0.454049,0.215891,0.210315,2.158895,XGBoost
+xgboost,xgboost_05,test,15.0,29363,12437,0.42356,0.302096,0.210315,2.01393,XGBoost
+xgboost,xgboost_05,test,20.0,39150,15702,0.401073,0.381403,0.210315,1.907008,XGBoost
+xgboost,xgboost_05,test,25.0,48938,18655,0.381197,0.453132,0.210315,1.812501,XGBoost
+xgboost,xgboost_05,test,30.0,58725,21445,0.365177,0.520902,0.210315,1.73633,XGBoost
+catboost,catboost_04,validation,1.0,1870,1197,0.640107,0.025951,0.246763,2.594012,CatBoost
+catboost,catboost_04,validation,2.0,3739,2273,0.607917,0.049279,0.246763,2.463561,CatBoost
+catboost,catboost_04,validation,5.0,9346,5175,0.553713,0.112195,0.246763,2.243902,CatBoost
+catboost,catboost_04,validation,10.0,18692,9446,0.50535,0.204791,0.246763,2.047913,CatBoost
+catboost,catboost_04,validation,15.0,28038,13226,0.471717,0.286743,0.246763,1.911617,CatBoost
+catboost,catboost_04,validation,20.0,37384,16716,0.447143,0.362407,0.246763,1.812033,CatBoost
+catboost,catboost_04,validation,25.0,46730,19908,0.426022,0.43161,0.246763,1.726439,CatBoost
+catboost,catboost_04,validation,30.0,56076,22912,0.408588,0.496737,0.246763,1.65579,CatBoost
+catboost,catboost_04,test,1.0,1958,1117,0.57048,0.027132,0.210315,2.7125,CatBoost
+catboost,catboost_04,test,2.0,3915,2117,0.540741,0.051422,0.210315,2.571096,CatBoost
+catboost,catboost_04,test,5.0,9788,4802,0.490601,0.116641,0.210315,2.332692,CatBoost
+catboost,catboost_04,test,10.0,19575,8755,0.447254,0.21266,0.210315,2.126589,CatBoost
+catboost,catboost_04,test,15.0,29363,12253,0.417294,0.297627,0.210315,1.984135,CatBoost
+catboost,catboost_04,test,20.0,39150,15507,0.396092,0.376667,0.210315,1.883325,CatBoost
+catboost,catboost_04,test,25.0,48938,18457,0.377151,0.448323,0.210315,1.793264,CatBoost
+catboost,catboost_04,test,30.0,58725,21224,0.361413,0.515534,0.210315,1.718436,CatBoost

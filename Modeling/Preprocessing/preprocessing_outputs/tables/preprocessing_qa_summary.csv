@@ -1,0 +1,7 @@
+feature_set,split,rows,columns,missing_values,same_columns_as_train
+baseline,train,962641,100,0,True
+baseline,validation,186920,100,0,True
+baseline,test,195749,100,0,True
+missingness_challenger,train,962641,102,0,True
+missingness_challenger,validation,186920,102,0,True
+missingness_challenger,test,195749,102,0,True

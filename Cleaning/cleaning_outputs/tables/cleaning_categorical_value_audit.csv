@@ -1,0 +1,19 @@
+column,missing_pct,unique_before_strip,unique_after_strip,values_changed_by_strip,case_collision_count,sample_values
+term,0.0,2,2,1345310,0,36 months; 60 months
+int_rate,0.0,654,654,0,0,13.99; 11.99; 10.78; 22.45; 13.44
+revol_util,0.0637,1373,1373,0,0,29.7; 19.2; 56.2; 64.5; 68.4
+grade,0.0,7,7,0,0,C; B; F; A; E
+sub_grade,0.0,35,35,0,0,C4; C1; B4; F1; C3
+emp_length,5.8359,11,11,0,0,10+ years; 3 years; 4 years; 6 years; 7 years
+home_ownership,0.0,6,6,0,0,MORTGAGE; RENT; OWN; ANY; NONE
+verification_status,0.0,3,3,0,0,Not Verified; Source Verified; Verified
+loan_status,0.0,2,2,0,0,Fully Paid; Charged Off
+purpose,0.0,14,14,0,0,debt_consolidation; small_business; home_improvement; major_purchase; credit_card
+zip_code,0.0001,943,943,0,0,190xx; 577xx; 605xx; 174xx; 300xx
+addr_state,0.0,51,51,0,0,PA; SD; IL; GA; MN
+initial_list_status,0.0,2,2,0,0,w; f
+application_type,0.0,2,2,0,0,Individual; Joint App
+verification_status_joint,98.0975,3,3,0,0,Not Verified; Verified; Source Verified
+disbursement_method,0.0,2,2,0,0,Cash; DirectPay
+hardship_flag,0.0,1,1,0,0,N
+debt_settlement_flag,0.0,2,2,0,0,N; Y

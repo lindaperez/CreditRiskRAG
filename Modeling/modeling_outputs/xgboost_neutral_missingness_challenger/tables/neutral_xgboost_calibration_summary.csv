@@ -1,0 +1,7 @@
+model_dataset_label,calibration_method,split,rows,bad_rate,mean_predicted_probability,brier_score,pr_auc,roc_auc
+XGBoost neutral | missingness challenger,raw,validation,186920,0.246763,0.197618,0.170756,0.426323,0.702142
+XGBoost neutral | missingness challenger,raw,test,195749,0.210315,0.193062,0.151297,0.380704,0.710495
+XGBoost neutral | missingness challenger,platt_sigmoid,validation,186920,0.246763,0.246795,0.169349,0.426323,0.702142
+XGBoost neutral | missingness challenger,platt_sigmoid,test,195749,0.210315,0.243746,0.153126,0.380704,0.710495
+XGBoost neutral | missingness challenger,isotonic,validation,186920,0.246763,0.246764,0.167804,0.422324,0.702524
+XGBoost neutral | missingness challenger,isotonic,test,195749,0.210315,0.240332,0.151835,0.375915,0.710351

@@ -1,0 +1,7 @@
+model_family,candidate,split,operating_point,threshold,class_label,class_name,precision,recall,f1,support
+catboost,catboost_03_no_grade_subgrade,train,best_validation_f1,0.465666,0,Fully Paid,0.905671,0.585221,0.711008,781376
+catboost,catboost_03_no_grade_subgrade,train,best_validation_f1,0.465666,1,Charged Off,0.291954,0.737252,0.418272,181265
+catboost,catboost_03_no_grade_subgrade,validation,best_validation_f1,0.465666,0,Fully Paid,0.859505,0.569644,0.685179,140795
+catboost,catboost_03_no_grade_subgrade,validation,best_validation_f1,0.465666,1,Charged Off,0.352698,0.715772,0.472547,46125
+catboost,catboost_03_no_grade_subgrade,test,best_validation_f1,0.465666,0,Fully Paid,0.88697,0.569123,0.693355,154580
+catboost,catboost_03_no_grade_subgrade,test,best_validation_f1,0.465666,1,Charged Off,0.310243,0.727683,0.435019,41169

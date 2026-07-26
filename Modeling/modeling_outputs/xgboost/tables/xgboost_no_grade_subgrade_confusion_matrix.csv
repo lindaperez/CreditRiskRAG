@@ -1,0 +1,13 @@
+model_family,candidate,split,operating_point,threshold,actual_label,actual_class,predicted_label,predicted_class,count,cell
+xgboost,xgboost_05_no_grade_subgrade,train,best_validation_f1,0.462322,0,Fully Paid,0,Fully Paid,466525,TN
+xgboost,xgboost_05_no_grade_subgrade,train,best_validation_f1,0.462322,0,Fully Paid,1,Charged Off,314851,FP
+xgboost,xgboost_05_no_grade_subgrade,train,best_validation_f1,0.462322,1,Charged Off,0,Fully Paid,47450,FN
+xgboost,xgboost_05_no_grade_subgrade,train,best_validation_f1,0.462322,1,Charged Off,1,Charged Off,133815,TP
+xgboost,xgboost_05_no_grade_subgrade,validation,best_validation_f1,0.462322,0,Fully Paid,0,Fully Paid,80813,TN
+xgboost,xgboost_05_no_grade_subgrade,validation,best_validation_f1,0.462322,0,Fully Paid,1,Charged Off,59982,FP
+xgboost,xgboost_05_no_grade_subgrade,validation,best_validation_f1,0.462322,1,Charged Off,0,Fully Paid,13162,FN
+xgboost,xgboost_05_no_grade_subgrade,validation,best_validation_f1,0.462322,1,Charged Off,1,Charged Off,32963,TP
+xgboost,xgboost_05_no_grade_subgrade,test,best_validation_f1,0.462322,0,Fully Paid,0,Fully Paid,90021,TN
+xgboost,xgboost_05_no_grade_subgrade,test,best_validation_f1,0.462322,0,Fully Paid,1,Charged Off,64559,FP
+xgboost,xgboost_05_no_grade_subgrade,test,best_validation_f1,0.462322,1,Charged Off,0,Fully Paid,11572,FN
+xgboost,xgboost_05_no_grade_subgrade,test,best_validation_f1,0.462322,1,Charged Off,1,Charged Off,29597,TP

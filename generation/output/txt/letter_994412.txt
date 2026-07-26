@@ -1,0 +1,38 @@
+[Date]
+
+Dear Applicant:
+
+Thank you for your recent application for credit. We have completed our review of your request and regret to inform you that we are unable to approve your application at this time.
+
+Our decision was based on the following principal reason(s):
+
+*   High debt burden relative to income.
+*   Larger requested loan amount.
+*   Larger payment obligation.
+*   Lower credit score range.
+
+**Information About Your Credit Score**
+In evaluating your application, we used a credit score obtained from the consumer reporting agency listed below. A credit score is a number that reflects the information in your consumer report. Your credit score can change, depending on how the information in your consumer report changes.
+
+Your credit score: [Insert Numeric Score]
+Date: [Insert Date]
+Scores range from a low of [Insert Low Range] to a high of [Insert High Range].
+
+**Disclosure of Use of Information Obtained from an Outside Source**
+Our credit decision was based in whole or in part on information obtained in a report from the consumer reporting agency listed below. You have a right under the Fair Credit Reporting Act to know the entire contents of your consumer file at the consumer reporting agency. Each of the consumer reporting agencies is required by law to give you a free copy of your consumer report from that agency if you request it within 60 days after receiving this notice. The reporting agency played no part in our decision and is unable to supply specific reasons why we have denied your request. You also have a right to dispute the accuracy or completeness of any information in the consumer report furnished by the consumer reporting agency.
+
+[Consumer Reporting Agency Name]
+[Address]
+[Telephone Number]
+
+**Notice**
+The federal Equal Credit Opportunity Act prohibits creditors from discriminating against credit applicants on the basis of race, color, religion, national origin, sex, marital status, age (provided the applicant has the capacity to enter into a binding contract); because all or part of the applicant’s income derives from any public assistance program; or because the applicant has in good faith exercised any right under the Consumer Credit Protection Act. The federal agency that administers compliance with this law concerning this creditor is:
+
+[Federal Agency Name]
+[Address]
+[City, State, Zip Code]
+
+Sincerely,
+
+[Creditor Name]
+[Creditor Address]

@@ -1,0 +1,17 @@
+model_family,model,split,review_pct,review_count,captured_bad,precision,recall,base_bad_rate,lift_over_base_bad_rate
+random_forest,random_forest_03,validation,1.0,1870,1169,0.625134,0.025344,0.246763,2.533333
+random_forest,random_forest_03,validation,2.0,3739,2237,0.598288,0.048499,0.246763,2.424543
+random_forest,random_forest_03,validation,5.0,9346,5094,0.545046,0.110439,0.246763,2.20878
+random_forest,random_forest_03,validation,10.0,18692,9368,0.501177,0.2031,0.246763,2.031003
+random_forest,random_forest_03,validation,15.0,28038,13025,0.464548,0.282385,0.246763,1.882565
+random_forest,random_forest_03,validation,20.0,37384,16491,0.441125,0.357528,0.246763,1.787642
+random_forest,random_forest_03,validation,25.0,46730,19729,0.422191,0.427729,0.246763,1.710916
+random_forest,random_forest_03,validation,30.0,56076,22658,0.404059,0.49123,0.246763,1.637435
+random_forest,random_forest_03,test,1.0,1958,1088,0.555669,0.026428,0.210315,2.642077
+random_forest,random_forest_03,test,2.0,3915,2073,0.529502,0.050353,0.210315,2.517658
+random_forest,random_forest_03,test,5.0,9788,4747,0.484982,0.115305,0.210315,2.305975
+random_forest,random_forest_03,test,10.0,19575,8695,0.444189,0.211203,0.210315,2.112015
+random_forest,random_forest_03,test,15.0,29363,12126,0.412969,0.294542,0.210315,1.96357
+random_forest,random_forest_03,test,20.0,39150,15339,0.391801,0.372586,0.210315,1.862921
+random_forest,random_forest_03,test,25.0,48938,18338,0.374719,0.445432,0.210315,1.781702
+random_forest,random_forest_03,test,30.0,58725,21179,0.360647,0.51444,0.210315,1.714793

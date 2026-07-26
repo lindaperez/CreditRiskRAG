@@ -1,0 +1,13 @@
+selection_rank,model_feature_label,model_label,model,feature_set,feature_set_label,split,f1,precision,recall,pr_auc,roc_auc
+1,LightGBM | with grade/subgrade,LightGBM,lightgbm_06,baseline_with_grade_subgrade,with grade/subgrade,validation,0.475468,0.35411,0.723382,0.42477,0.702851
+2,LightGBM | no grade/subgrade,LightGBM,lightgbm_06_no_grade_subgrade,baseline_no_grade_subgrade,no grade/subgrade,validation,0.47503,0.357799,0.706515,0.424132,0.702179
+3,HistGradientBoosting | with grade/subgrade,HistGradientBoosting,hist_gradient_boosting_04,baseline_with_grade_subgrade,with grade/subgrade,validation,0.474259,0.359479,0.696715,0.4235,0.700829
+4,HistGradientBoosting | no grade/subgrade,HistGradientBoosting,hist_gradient_boosting_no_grade_subgrade,baseline_no_grade_subgrade,no grade/subgrade,validation,0.474176,0.365229,0.675751,0.425647,0.701741
+5,XGBoost | no grade/subgrade,XGBoost,xgboost_05_no_grade_subgrade,baseline_no_grade_subgrade,no grade/subgrade,validation,0.474049,0.354651,0.714645,0.425118,0.701651
+6,XGBoost | with grade/subgrade,XGBoost,xgboost_05,baseline_with_grade_subgrade,with grade/subgrade,validation,0.473884,0.357988,0.700748,0.4254,0.701999
+7,CatBoost | no grade/subgrade,CatBoost,catboost_03_no_grade_subgrade,baseline_no_grade_subgrade,no grade/subgrade,validation,0.472547,0.352698,0.715772,0.421277,0.699047
+8,CatBoost | with grade/subgrade,CatBoost,catboost_04,baseline_with_grade_subgrade,with grade/subgrade,validation,0.47226,0.359174,0.689279,0.420953,0.698653
+9,Random Forest | no grade/subgrade,Random Forest,random_forest_no_grade_subgrade,baseline_no_grade_subgrade,no grade/subgrade,validation,0.4716,0.351879,0.714797,0.416275,0.696983
+10,Logistic Regression | with grade/subgrade,Logistic Regression,logistic_regression_07,baseline_with_grade_subgrade,with grade/subgrade,validation,0.470633,0.355082,0.697669,0.412336,0.695407
+11,Logistic Regression | no grade/subgrade,Logistic Regression,logistic_regression_no_grade_subgrade,baseline_no_grade_subgrade,no grade/subgrade,validation,0.468918,0.344783,0.732726,0.408532,0.692454
+12,Random Forest | with grade/subgrade,Random Forest,random_forest_03,baseline_with_grade_subgrade,with grade/subgrade,validation,0.468373,0.359521,0.671762,0.415081,0.694572

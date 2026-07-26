@@ -1,0 +1,4 @@
+model,fit_rows,fit_columns,fit_bad_rate,fit_seconds,validation_selected_threshold
+logistic_regression_no_grade_subgrade,962641,58,0.1883,15.695,0.164047
+hist_gradient_boosting_no_grade_subgrade,962641,58,0.1883,15.556,0.18289
+random_forest_no_grade_subgrade,300000,58,0.1883,8.753,0.443294

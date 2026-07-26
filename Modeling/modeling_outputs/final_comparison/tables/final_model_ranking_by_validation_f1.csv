@@ -1,0 +1,7 @@
+model_family,model,split,operating_point,rows,bad_rate,threshold,roc_auc,pr_auc,brier_score,precision,recall,f1,tn,fp,fn,tp,model_label
+lightgbm,lightgbm_06,validation,best_validation_f1,186920,0.246763,0.459101,0.702851,0.42477,0.217414,0.35411,0.723382,0.475468,79936,60859,12759,33366,LightGBM
+hist_gradient_boosting,hist_gradient_boosting_04,validation,best_validation_f1,186920,0.246763,0.472937,0.700829,0.4235,0.217717,0.359479,0.696715,0.474259,83535,57260,13989,32136,HistGradientBoosting
+xgboost,xgboost_05,validation,best_validation_f1,186920,0.246763,0.470698,0.701999,0.4254,0.217751,0.357988,0.700748,0.473884,82829,57966,13803,32322,XGBoost
+catboost,catboost_04,validation,best_validation_f1,186920,0.246763,0.479729,0.698653,0.420953,0.219899,0.359174,0.689279,0.47226,84071,56724,14332,31793,CatBoost
+logistic_regression,logistic_regression_07,validation,best_validation_f1,186920,0.246763,0.471801,0.695407,0.412336,0.224051,0.355082,0.697669,0.470633,82348,58447,13945,32180,Logistic Regression
+random_forest,random_forest_03,validation,best_validation_f1,186920,0.246763,0.455266,0.694572,0.415081,0.207616,0.359521,0.671762,0.468373,85596,55199,15140,30985,Random Forest

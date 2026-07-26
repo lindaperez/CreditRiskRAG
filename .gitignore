@@ -2,6 +2,7 @@
 __pycache__/
 *.py[codz]
 *$py.class
+.DS_Store
 
 # C extensions
 *.so
@@ -77,6 +78,14 @@ target/
 
 # Jupyter Notebook
 .ipynb_checkpoints
+
+# Generated cleaning datasets
+Cleaning/cleaning_outputs/datasets/
+Preprocessing/preprocessing_outputs/datasets/
+Modeling/Preprocessing/preprocessing_outputs/datasets/
+Modeling/modeling_outputs/models/
+Modeling/modeling_outputs/tuning/models/
+Modeling/modeling_outputs/*/models/
 
 # IPython
 profile_default/
@@ -216,3 +225,6 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Retrieval embedding cache (rebuildable)
+retrieval/index/

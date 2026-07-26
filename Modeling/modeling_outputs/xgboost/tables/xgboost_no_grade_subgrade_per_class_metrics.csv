@@ -1,0 +1,7 @@
+model_family,candidate,split,operating_point,threshold,class_label,class_name,precision,recall,f1,support
+xgboost,xgboost_05_no_grade_subgrade,train,best_validation_f1,0.462322,0,Fully Paid,0.90768,0.597056,0.720307,781376
+xgboost,xgboost_05_no_grade_subgrade,train,best_validation_f1,0.462322,1,Charged Off,0.298251,0.738229,0.424856,181265
+xgboost,xgboost_05_no_grade_subgrade,validation,best_validation_f1,0.462322,0,Fully Paid,0.859941,0.573976,0.688444,140795
+xgboost,xgboost_05_no_grade_subgrade,validation,best_validation_f1,0.462322,1,Charged Off,0.354651,0.714645,0.474049,46125
+xgboost,xgboost_05_no_grade_subgrade,test,best_validation_f1,0.462322,0,Fully Paid,0.886095,0.582359,0.702814,154580
+xgboost,xgboost_05_no_grade_subgrade,test,best_validation_f1,0.462322,1,Charged Off,0.31434,0.718915,0.437421,41169

@@ -1,0 +1,25 @@
+model_family,candidate,split,operating_point,threshold,actual_label,actual_class,predicted_label,predicted_class,count,cell
+lightgbm,lightgbm_06,train,best_validation_f1,0.459101,0,Fully Paid,0,Fully Paid,465704,TN
+lightgbm,lightgbm_06,train,best_validation_f1,0.459101,0,Fully Paid,1,Charged Off,315672,FP
+lightgbm,lightgbm_06,train,best_validation_f1,0.459101,1,Charged Off,0,Fully Paid,45543,FN
+lightgbm,lightgbm_06,train,best_validation_f1,0.459101,1,Charged Off,1,Charged Off,135722,TP
+lightgbm,lightgbm_06,train,target_validation_precision,0.547699,0,Fully Paid,0,Fully Paid,582504,TN
+lightgbm,lightgbm_06,train,target_validation_precision,0.547699,0,Fully Paid,1,Charged Off,198872,FP
+lightgbm,lightgbm_06,train,target_validation_precision,0.547699,1,Charged Off,0,Fully Paid,73878,FN
+lightgbm,lightgbm_06,train,target_validation_precision,0.547699,1,Charged Off,1,Charged Off,107387,TP
+lightgbm,lightgbm_06,validation,best_validation_f1,0.459101,0,Fully Paid,0,Fully Paid,79936,TN
+lightgbm,lightgbm_06,validation,best_validation_f1,0.459101,0,Fully Paid,1,Charged Off,60859,FP
+lightgbm,lightgbm_06,validation,best_validation_f1,0.459101,1,Charged Off,0,Fully Paid,12759,FN
+lightgbm,lightgbm_06,validation,best_validation_f1,0.459101,1,Charged Off,1,Charged Off,33366,TP
+lightgbm,lightgbm_06,validation,target_validation_precision,0.547699,0,Fully Paid,0,Fully Paid,103016,TN
+lightgbm,lightgbm_06,validation,target_validation_precision,0.547699,0,Fully Paid,1,Charged Off,37779,FP
+lightgbm,lightgbm_06,validation,target_validation_precision,0.547699,1,Charged Off,0,Fully Paid,20939,FN
+lightgbm,lightgbm_06,validation,target_validation_precision,0.547699,1,Charged Off,1,Charged Off,25186,TP
+lightgbm,lightgbm_06,test,best_validation_f1,0.459101,0,Fully Paid,0,Fully Paid,90656,TN
+lightgbm,lightgbm_06,test,best_validation_f1,0.459101,0,Fully Paid,1,Charged Off,63924,FP
+lightgbm,lightgbm_06,test,best_validation_f1,0.459101,1,Charged Off,0,Fully Paid,11600,FN
+lightgbm,lightgbm_06,test,best_validation_f1,0.459101,1,Charged Off,1,Charged Off,29569,TP
+lightgbm,lightgbm_06,test,target_validation_precision,0.547699,0,Fully Paid,0,Fully Paid,114148,TN
+lightgbm,lightgbm_06,test,target_validation_precision,0.547699,0,Fully Paid,1,Charged Off,40432,FP
+lightgbm,lightgbm_06,test,target_validation_precision,0.547699,1,Charged Off,0,Fully Paid,18467,FN
+lightgbm,lightgbm_06,test,target_validation_precision,0.547699,1,Charged Off,1,Charged Off,22702,TP

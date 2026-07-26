@@ -1,0 +1,37 @@
+feature_set,model_family,model_label,model,split,threshold,rows,bad_rate,class_label,class_name,precision,recall,f1,support
+baseline_with_grade_subgrade,logistic_regression,Logistic Regression,logistic_regression,train,0.471834,962641,0.1883,0,Fully Paid,0.900809,0.603498,0.722773,781376
+baseline_with_grade_subgrade,logistic_regression,Logistic Regression,logistic_regression,train,0.471834,962641,0.1883,1,Charged Off,0.294519,0.713541,0.416942,181265
+baseline_with_grade_subgrade,logistic_regression,Logistic Regression,logistic_regression,validation,0.471834,186920,0.246763,0,Fully Paid,0.855182,0.584921,0.694692,140795
+baseline_with_grade_subgrade,logistic_regression,Logistic Regression,logistic_regression,validation,0.471834,186920,0.246763,1,Charged Off,0.355098,0.697648,0.470642,46125
+baseline_with_grade_subgrade,logistic_regression,Logistic Regression,logistic_regression,test,0.471834,195749,0.210315,0,Fully Paid,0.882344,0.580618,0.700367,154580
+baseline_with_grade_subgrade,logistic_regression,Logistic Regression,logistic_regression,test,0.471834,195749,0.210315,1,Charged Off,0.310553,0.709296,0.431974,41169
+baseline_with_grade_subgrade,hist_gradient_boosting,HistGradientBoosting,hist_gradient_boosting,train,0.475502,962641,0.1883,0,Fully Paid,0.906156,0.610839,0.729753,781376
+baseline_with_grade_subgrade,hist_gradient_boosting,HistGradientBoosting,hist_gradient_boosting,train,0.475502,962641,0.1883,1,Charged Off,0.302432,0.727305,0.427217,181265
+baseline_with_grade_subgrade,hist_gradient_boosting,HistGradientBoosting,hist_gradient_boosting,validation,0.475502,186920,0.246763,0,Fully Paid,0.858552,0.584275,0.695344,140795
+baseline_with_grade_subgrade,hist_gradient_boosting,HistGradientBoosting,hist_gradient_boosting,validation,0.475502,186920,0.246763,1,Charged Off,0.357525,0.706168,0.47471,46125
+baseline_with_grade_subgrade,hist_gradient_boosting,HistGradientBoosting,hist_gradient_boosting,test,0.475502,195749,0.210315,0,Fully Paid,0.884443,0.595892,0.712045,154580
+baseline_with_grade_subgrade,hist_gradient_boosting,HistGradientBoosting,hist_gradient_boosting,test,0.475502,195749,0.210315,1,Charged Off,0.318053,0.707668,0.438864,41169
+baseline_with_grade_subgrade,random_forest,Random Forest,random_forest,train,0.464443,962641,0.1883,0,Fully Paid,0.906567,0.596892,0.719837,781376
+baseline_with_grade_subgrade,random_forest,Random Forest,random_forest,train,0.464443,962641,0.1883,1,Charged Off,0.297198,0.734819,0.423223,181265
+baseline_with_grade_subgrade,random_forest,Random Forest,random_forest,validation,0.464443,186920,0.246763,0,Fully Paid,0.85428,0.577109,0.688859,140795
+baseline_with_grade_subgrade,random_forest,Random Forest,random_forest,validation,0.464443,186920,0.246763,1,Charged Off,0.351448,0.699512,0.467843,46125
+baseline_with_grade_subgrade,random_forest,Random Forest,random_forest,test,0.464443,195749,0.210315,0,Fully Paid,0.881176,0.59027,0.706967,154580
+baseline_with_grade_subgrade,random_forest,Random Forest,random_forest,test,0.464443,195749,0.210315,1,Charged Off,0.313066,0.701134,0.432856,41169
+baseline_no_grade_subgrade,logistic_regression,Logistic Regression,logistic_regression_no_grade_subgrade,train,0.164047,962641,0.1883,0,Fully Paid,0.904619,0.563334,0.694304,781376
+baseline_no_grade_subgrade,logistic_regression,Logistic Regression,logistic_regression_no_grade_subgrade,train,0.164047,962641,0.1883,1,Charged Off,0.283275,0.74396,0.410315,181265
+baseline_no_grade_subgrade,logistic_regression,Logistic Regression,logistic_regression_no_grade_subgrade,validation,0.164047,186920,0.246763,0,Fully Paid,0.861321,0.543826,0.666704,140795
+baseline_no_grade_subgrade,logistic_regression,Logistic Regression,logistic_regression_no_grade_subgrade,validation,0.164047,186920,0.246763,1,Charged Off,0.344783,0.732726,0.468918,46125
+baseline_no_grade_subgrade,logistic_regression,Logistic Regression,logistic_regression_no_grade_subgrade,test,0.164047,195749,0.210315,0,Fully Paid,0.889363,0.533808,0.667171,154580
+baseline_no_grade_subgrade,logistic_regression,Logistic Regression,logistic_regression_no_grade_subgrade,test,0.164047,195749,0.210315,1,Charged Off,0.300132,0.750662,0.428814,41169
+baseline_no_grade_subgrade,hist_gradient_boosting,HistGradientBoosting,hist_gradient_boosting_no_grade_subgrade,train,0.18289,962641,0.1883,0,Fully Paid,0.901551,0.640567,0.748975,781376
+baseline_no_grade_subgrade,hist_gradient_boosting,HistGradientBoosting,hist_gradient_boosting_no_grade_subgrade,train,0.18289,962641,0.1883,1,Charged Off,0.310725,0.698469,0.430109,181265
+baseline_no_grade_subgrade,hist_gradient_boosting,HistGradientBoosting,hist_gradient_boosting_no_grade_subgrade,validation,0.18289,186920,0.246763,0,Fully Paid,0.852765,0.615242,0.714788,140795
+baseline_no_grade_subgrade,hist_gradient_boosting,HistGradientBoosting,hist_gradient_boosting_no_grade_subgrade,validation,0.18289,186920,0.246763,1,Charged Off,0.365229,0.675751,0.474176,46125
+baseline_no_grade_subgrade,hist_gradient_boosting,HistGradientBoosting,hist_gradient_boosting_no_grade_subgrade,test,0.18289,195749,0.210315,0,Fully Paid,0.88069,0.612945,0.72282,154580
+baseline_no_grade_subgrade,hist_gradient_boosting,HistGradientBoosting,hist_gradient_boosting_no_grade_subgrade,test,0.18289,195749,0.210315,1,Charged Off,0.321367,0.688212,0.43814,41169
+baseline_no_grade_subgrade,random_forest,Random Forest,random_forest_no_grade_subgrade,train,0.443294,962641,0.1883,0,Fully Paid,0.913353,0.58198,0.71095,781376
+baseline_no_grade_subgrade,random_forest,Random Forest,random_forest_no_grade_subgrade,train,0.443294,962641,0.1883,1,Charged Off,0.297199,0.762006,0.427618,181265
+baseline_no_grade_subgrade,random_forest,Random Forest,random_forest_no_grade_subgrade,validation,0.443294,186920,0.246763,0,Fully Paid,0.858887,0.568685,0.684289,140795
+baseline_no_grade_subgrade,random_forest,Random Forest,random_forest_no_grade_subgrade,validation,0.443294,186920,0.246763,1,Charged Off,0.351879,0.714797,0.4716,46125
+baseline_no_grade_subgrade,random_forest,Random Forest,random_forest_no_grade_subgrade,test,0.443294,195749,0.210315,0,Fully Paid,0.884255,0.581647,0.701717,154580
+baseline_no_grade_subgrade,random_forest,Random Forest,random_forest_no_grade_subgrade,test,0.443294,195749,0.210315,1,Charged Off,0.312537,0.71413,0.434789,41169

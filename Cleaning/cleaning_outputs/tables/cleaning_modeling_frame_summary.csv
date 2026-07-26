@@ -1,0 +1,7 @@
+item,value
+raw_cleaning_rows,1345310
+rows_after_duplicate_removal_and_targeting,1345310
+completed_modeling_rows,1345310
+starter_feature_count,38
+missing_starter_features,
+bad_rate,0.199626

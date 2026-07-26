@@ -1,0 +1,7 @@
+model_family,model,split,operating_point,rows,bad_rate,threshold,roc_auc,pr_auc,brier_score,precision,recall,f1,tn,fp,fn,tp
+hist_gradient_boosting,hist_gradient_boosting_04,train,best_validation_f1,962641,0.1883,0.472937,0.734187,0.393537,0.207696,0.30381,0.723388,0.427907,480899,300477,50140,131125
+hist_gradient_boosting,hist_gradient_boosting_04,train,target_validation_precision,962641,0.1883,0.550043,0.734187,0.393537,0.207696,0.348096,0.582495,0.435775,583638,197738,75679,105586
+hist_gradient_boosting,hist_gradient_boosting_04,validation,best_validation_f1,186920,0.246763,0.472937,0.700829,0.4235,0.217717,0.359479,0.696715,0.474259,83535,57260,13989,32136
+hist_gradient_boosting,hist_gradient_boosting_04,validation,target_validation_precision,186920,0.246763,0.550043,0.700829,0.4235,0.217717,0.400006,0.53832,0.458969,103551,37244,21295,24830
+hist_gradient_boosting,hist_gradient_boosting_04,test,best_validation_f1,195749,0.210315,0.472937,0.708493,0.377185,0.212358,0.319695,0.693143,0.437571,93856,60724,12633,28536
+hist_gradient_boosting,hist_gradient_boosting_04,test,target_validation_precision,195749,0.210315,0.550043,0.708493,0.377185,0.212358,0.357576,0.543856,0.431469,114354,40226,18779,22390

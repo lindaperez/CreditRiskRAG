@@ -1,0 +1,25 @@
+model_family,candidate,split,operating_point,threshold,actual_label,actual_class,predicted_label,predicted_class,count,cell
+xgboost,xgboost_05,train,best_validation_f1,0.470698,0,Fully Paid,0,Fully Paid,478716,TN
+xgboost,xgboost_05,train,best_validation_f1,0.470698,0,Fully Paid,1,Charged Off,302660,FP
+xgboost,xgboost_05,train,best_validation_f1,0.470698,1,Charged Off,0,Fully Paid,49557,FN
+xgboost,xgboost_05,train,best_validation_f1,0.470698,1,Charged Off,1,Charged Off,131708,TP
+xgboost,xgboost_05,train,target_validation_precision,0.546067,0,Fully Paid,0,Fully Paid,580974,TN
+xgboost,xgboost_05,train,target_validation_precision,0.546067,0,Fully Paid,1,Charged Off,200402,FP
+xgboost,xgboost_05,train,target_validation_precision,0.546067,1,Charged Off,0,Fully Paid,74727,FN
+xgboost,xgboost_05,train,target_validation_precision,0.546067,1,Charged Off,1,Charged Off,106538,TP
+xgboost,xgboost_05,validation,best_validation_f1,0.470698,0,Fully Paid,0,Fully Paid,82829,TN
+xgboost,xgboost_05,validation,best_validation_f1,0.470698,0,Fully Paid,1,Charged Off,57966,FP
+xgboost,xgboost_05,validation,best_validation_f1,0.470698,1,Charged Off,0,Fully Paid,13803,FN
+xgboost,xgboost_05,validation,best_validation_f1,0.470698,1,Charged Off,1,Charged Off,32322,TP
+xgboost,xgboost_05,validation,target_validation_precision,0.546067,0,Fully Paid,0,Fully Paid,102973,TN
+xgboost,xgboost_05,validation,target_validation_precision,0.546067,0,Fully Paid,1,Charged Off,37822,FP
+xgboost,xgboost_05,validation,target_validation_precision,0.546067,1,Charged Off,0,Fully Paid,20910,FN
+xgboost,xgboost_05,validation,target_validation_precision,0.546067,1,Charged Off,1,Charged Off,25215,TP
+xgboost,xgboost_05,test,best_validation_f1,0.470698,0,Fully Paid,0,Fully Paid,92960,TN
+xgboost,xgboost_05,test,best_validation_f1,0.470698,0,Fully Paid,1,Charged Off,61620,FP
+xgboost,xgboost_05,test,best_validation_f1,0.470698,1,Charged Off,0,Fully Paid,12307,FN
+xgboost,xgboost_05,test,best_validation_f1,0.470698,1,Charged Off,1,Charged Off,28862,TP
+xgboost,xgboost_05,test,target_validation_precision,0.546067,0,Fully Paid,0,Fully Paid,113452,TN
+xgboost,xgboost_05,test,target_validation_precision,0.546067,0,Fully Paid,1,Charged Off,41128,FP
+xgboost,xgboost_05,test,target_validation_precision,0.546067,1,Charged Off,0,Fully Paid,18388,FN
+xgboost,xgboost_05,test,target_validation_precision,0.546067,1,Charged Off,1,Charged Off,22781,TP

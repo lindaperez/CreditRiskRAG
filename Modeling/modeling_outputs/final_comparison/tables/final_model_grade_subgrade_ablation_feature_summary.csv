@@ -1,0 +1,4 @@
+split,source_artifact,export_artifact,rows,original_columns,dropped_columns,export_columns
+train,baseline_train_X.parquet,baseline_no_grade_subgrade_train_X.parquet,962641,100,42,58
+validation,baseline_validation_X.parquet,baseline_no_grade_subgrade_validation_X.parquet,186920,100,42,58
+test,baseline_test_X.parquet,baseline_no_grade_subgrade_test_X.parquet,195749,100,42,58

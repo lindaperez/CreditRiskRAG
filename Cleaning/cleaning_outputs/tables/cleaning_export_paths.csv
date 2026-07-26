@@ -1,0 +1,5 @@
+artifact,path
+cleaned_completed_frame,/Users/lindaperez/Documents/NEU/2026SummerML/MachineLearningClass/Final_Project/Final/CreditRiskRAG/Cleaning/cleaning_outputs/datasets/accepted_cleaned_completed_frame.parquet
+starter_feature_matrix,/Users/lindaperez/Documents/NEU/2026SummerML/MachineLearningClass/Final_Project/Final/CreditRiskRAG/Cleaning/cleaning_outputs/datasets/accepted_X_starter.parquet
+target,/Users/lindaperez/Documents/NEU/2026SummerML/MachineLearningClass/Final_Project/Final/CreditRiskRAG/Cleaning/cleaning_outputs/datasets/accepted_y_target_bad.parquet
+traceability,/Users/lindaperez/Documents/NEU/2026SummerML/MachineLearningClass/Final_Project/Final/CreditRiskRAG/Cleaning/cleaning_outputs/datasets/accepted_traceability.parquet

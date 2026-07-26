@@ -1,0 +1,5 @@
+model_family,candidate,split,operating_point,threshold,predicted_label,predicted_class,predicted_count,predicted_share
+lightgbm,lightgbm_06,validation,best_validation_f1,0.459101,0,Fully Paid,92695,0.495907
+lightgbm,lightgbm_06,validation,best_validation_f1,0.459101,1,Charged Off,94225,0.504093
+lightgbm,lightgbm_06,test,best_validation_f1,0.459101,0,Fully Paid,102256,0.522383
+lightgbm,lightgbm_06,test,best_validation_f1,0.459101,1,Charged Off,93493,0.477617

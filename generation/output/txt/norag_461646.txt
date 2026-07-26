@@ -1,0 +1,43 @@
+[Date]
+
+Dear Applicant:
+
+Thank you for your recent application for credit. We have carefully reviewed your request and regret to inform you that we are unable to approve your application at this time for the following reason(s):
+
+*   High debt burden relative to income.
+*   Lower credit score range.
+*   Larger requested loan amount.
+*   Lower reported income relative to requested credit.
+
+**DISCLOSURE OF USE OF INFORMATION OBTAINED FROM AN OUTSIDE SOURCE**
+Our credit decision was based in whole or in part on information obtained in a report from the consumer reporting agency listed below. You have a right under the Fair Credit Reporting Act to know the entire contents of your file in the possession of the consumer reporting agency. The reporting agency played no part in our decision and is unable to supply specific reasons why we have denied your request. 
+
+You also have a right to a free copy of your report from the reporting agency, if you request it no later than 60 days after you receive this notice. In addition, if you find that any information contained in the report you receive is inaccurate or incomplete, you have the right to dispute the matter with the reporting agency.
+
+[Consumer Reporting Agency Name]
+[Agency Address]
+[Agency Toll-Free Telephone Number]
+
+**INFORMATION ABOUT YOUR CREDIT SCORE**
+In evaluating your application, we used a credit score we received from the consumer reporting agency listed above. A credit score is a number that takes into account information in your credit report and can change over time to reflect changes in your credit history.
+
+Your credit score: [Insert Score]
+Date: [Insert Date]
+Scores range from a low of [Insert Min Score] to a high of [Insert Max Score].
+
+Key factors that adversely affected your credit score:
+[Insert Factor 1]
+[Insert Factor 2]
+[Insert Factor 3]
+[Insert Factor 4]
+
+**EQUAL CREDIT OPPORTUNITY ACT NOTICE**
+The Federal Equal Credit Opportunity Act prohibits creditors from discriminating against credit applicants on the basis of race, color, religion, national origin, sex, marital status, age (provided the applicant has the capacity to enter into a binding contract); because all or part of the applicant’s income derives from any public assistance program; or because the applicant has in good faith exercised any right under the Consumer Credit Protection Act. The Federal agency that administers compliance with this law concerning this creditor is:
+
+[Regulatory Agency Name]
+[Regulatory Agency Address]
+
+Sincerely,
+
+Management
+[Financial Institution Name]

@@ -1,0 +1,4 @@
+model_family,candidates
+logistic_regression,8
+hist_gradient_boosting,6
+random_forest,3

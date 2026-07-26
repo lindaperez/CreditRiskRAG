@@ -1,0 +1,2 @@
+model_family,candidate,params,fit_rows,fit_bad_rate,fit_seconds,roc_auc,pr_auc,best_f1_threshold,best_f1,best_f1_precision,best_f1_recall,target_precision_threshold,target_precision_f1,target_precision,target_precision_recall
+xgboost,xgboost_05,"{""colsample_bytree"": 0.75, ""learning_rate"": 0.025, ""max_depth"": 6, ""min_child_weight"": 16, ""n_estimators"": 350, ""reg_alpha"": 0.2, ""reg_lambda"": 5.0, ""subsample"": 0.8}",300000,0.1883,11.197,0.701999,0.4254,0.470698,0.473896,0.357995,0.70077,0.546067,0.461974,0.400003,0.546667

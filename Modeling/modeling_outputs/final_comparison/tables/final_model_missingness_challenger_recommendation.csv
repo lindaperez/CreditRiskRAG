@@ -1,0 +1,2 @@
+model_family,model,split,operating_point,rows,bad_rate,threshold,roc_auc,pr_auc,brier_score,precision,recall,f1,tn,fp,fn,tp,dataset,dataset_label,model_label,model_dataset_label,predicted_reject_count,predicted_reject_share,false_rejection_share_among_rejects,selection_rank
+lightgbm,lightgbm_06,validation,best_validation_f1,186920,0.246763,0.459101,0.702851,0.42477,0.217414,0.35411,0.723382,0.475468,79936,60859,12759,33366,baseline_with_grade_subgrade,baseline with grade/subgrade,LightGBM,LightGBM | baseline with grade/subgrade,,0.5040926599614809,0.6458901565401963,1

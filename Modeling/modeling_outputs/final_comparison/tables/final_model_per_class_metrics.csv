@@ -1,0 +1,73 @@
+model_family,candidate,split,operating_point,threshold,class_label,class_name,precision,recall,f1,support,model_label
+logistic_regression,logistic_regression_07,train,best_validation_f1,0.471801,0,Fully Paid,0.900808,0.603466,0.72275,781376,Logistic Regression
+logistic_regression,logistic_regression_07,train,best_validation_f1,0.471801,1,Charged Off,0.294505,0.713552,0.41693,181265,Logistic Regression
+logistic_regression,logistic_regression_07,train,target_validation_precision,0.563511,0,Fully Paid,0.876884,0.763695,0.816385,781376,Logistic Regression
+logistic_regression,logistic_regression_07,train,target_validation_precision,0.563511,1,Charged Off,0.34553,0.537793,0.420738,181265,Logistic Regression
+logistic_regression,logistic_regression_07,validation,best_validation_f1,0.471801,0,Fully Paid,0.855182,0.584879,0.694662,140795,Logistic Regression
+logistic_regression,logistic_regression_07,validation,best_validation_f1,0.471801,1,Charged Off,0.355082,0.697669,0.470633,46125,Logistic Regression
+logistic_regression,logistic_regression_07,validation,target_validation_precision,0.563511,0,Fully Paid,0.823278,0.750133,0.785005,140795,Logistic Regression
+logistic_regression,logistic_regression_07,validation,target_validation_precision,0.563511,1,Charged Off,0.400007,0.508488,0.447771,46125,Logistic Regression
+logistic_regression,logistic_regression_07,test,best_validation_f1,0.471801,0,Fully Paid,0.882345,0.58058,0.700339,154580,Logistic Regression
+logistic_regression,logistic_regression_07,test,best_validation_f1,0.471801,1,Charged Off,0.310541,0.70932,0.431966,41169,Logistic Regression
+logistic_regression,logistic_regression_07,test,target_validation_precision,0.563511,0,Fully Paid,0.856076,0.731835,0.789095,154580,Logistic Regression
+logistic_regression,logistic_regression_07,test,target_validation_precision,0.563511,1,Charged Off,0.348254,0.538026,0.422823,41169,Logistic Regression
+random_forest,random_forest_03,train,best_validation_f1,0.455266,0,Fully Paid,0.905548,0.628844,0.742247,781376,Random Forest
+random_forest,random_forest_03,train,best_validation_f1,0.455266,1,Charged Off,0.309538,0.717259,0.43245,181265,Random Forest
+random_forest,random_forest_03,train,target_validation_precision,0.523016,0,Fully Paid,0.884848,0.758742,0.816957,781376,Random Forest
+random_forest,random_forest_03,train,target_validation_precision,0.523016,1,Charged Off,0.355784,0.574358,0.43939,181265,Random Forest
+random_forest,random_forest_03,validation,best_validation_f1,0.455266,0,Fully Paid,0.849706,0.607948,0.708779,140795,Random Forest
+random_forest,random_forest_03,validation,best_validation_f1,0.455266,1,Charged Off,0.359521,0.671762,0.468373,46125,Random Forest
+random_forest,random_forest_03,validation,target_validation_precision,0.523016,0,Fully Paid,0.823161,0.750424,0.785112,140795,Random Forest
+random_forest,random_forest_03,validation,target_validation_precision,0.523016,1,Charged Off,0.40001,0.507902,0.447546,46125,Random Forest
+random_forest,random_forest_03,test,best_validation_f1,0.455266,0,Fully Paid,0.877212,0.620591,0.726918,154580,Random Forest
+random_forest,random_forest_03,test,best_validation_f1,0.455266,1,Charged Off,0.321114,0.673832,0.434952,41169,Random Forest
+random_forest,random_forest_03,test,target_validation_precision,0.523016,0,Fully Paid,0.854903,0.753092,0.800775,154580,Random Forest
+random_forest,random_forest_03,test,target_validation_precision,0.523016,1,Charged Off,0.359378,0.520076,0.425045,41169,Random Forest
+hist_gradient_boosting,hist_gradient_boosting_04,train,best_validation_f1,0.472937,0,Fully Paid,0.905581,0.615451,0.732846,781376,HistGradientBoosting
+hist_gradient_boosting,hist_gradient_boosting_04,train,best_validation_f1,0.472937,1,Charged Off,0.30381,0.723388,0.427907,181265,HistGradientBoosting
+hist_gradient_boosting,hist_gradient_boosting_04,train,target_validation_precision,0.550043,0,Fully Paid,0.885216,0.746936,0.810218,781376,HistGradientBoosting
+hist_gradient_boosting,hist_gradient_boosting_04,train,target_validation_precision,0.550043,1,Charged Off,0.348096,0.582495,0.435775,181265,HistGradientBoosting
+hist_gradient_boosting,hist_gradient_boosting_04,validation,best_validation_f1,0.472937,0,Fully Paid,0.856558,0.593309,0.701035,140795,HistGradientBoosting
+hist_gradient_boosting,hist_gradient_boosting_04,validation,best_validation_f1,0.472937,1,Charged Off,0.359479,0.696715,0.474259,46125,HistGradientBoosting
+hist_gradient_boosting,hist_gradient_boosting_04,validation,target_validation_precision,0.550043,0,Fully Paid,0.82943,0.735474,0.779631,140795,HistGradientBoosting
+hist_gradient_boosting,hist_gradient_boosting_04,validation,target_validation_precision,0.550043,1,Charged Off,0.400006,0.53832,0.458969,46125,HistGradientBoosting
+hist_gradient_boosting,hist_gradient_boosting_04,test,best_validation_f1,0.472937,0,Fully Paid,0.881368,0.607168,0.719013,154580,HistGradientBoosting
+hist_gradient_boosting,hist_gradient_boosting_04,test,best_validation_f1,0.472937,1,Charged Off,0.319695,0.693143,0.437571,41169,HistGradientBoosting
+hist_gradient_boosting,hist_gradient_boosting_04,test,target_validation_precision,0.550043,0,Fully Paid,0.858946,0.739772,0.794917,154580,HistGradientBoosting
+hist_gradient_boosting,hist_gradient_boosting_04,test,target_validation_precision,0.550043,1,Charged Off,0.357576,0.543856,0.431469,41169,HistGradientBoosting
+lightgbm,lightgbm_06,train,best_validation_f1,0.459101,0,Fully Paid,0.910918,0.596005,0.720557,781376,LightGBM
+lightgbm,lightgbm_06,train,best_validation_f1,0.459101,1,Charged Off,0.300673,0.748749,0.429053,181265,LightGBM
+lightgbm,lightgbm_06,train,target_validation_precision,0.547699,0,Fully Paid,0.887447,0.745485,0.810295,781376,LightGBM
+lightgbm,lightgbm_06,train,target_validation_precision,0.547699,1,Charged Off,0.350641,0.592431,0.44054,181265,LightGBM
+lightgbm,lightgbm_06,validation,best_validation_f1,0.459101,0,Fully Paid,0.862355,0.567747,0.684706,140795,LightGBM
+lightgbm,lightgbm_06,validation,best_validation_f1,0.459101,1,Charged Off,0.35411,0.723382,0.475468,46125,LightGBM
+lightgbm,lightgbm_06,validation,target_validation_precision,0.547699,0,Fully Paid,0.831076,0.731674,0.778213,140795,LightGBM
+lightgbm,lightgbm_06,validation,target_validation_precision,0.547699,1,Charged Off,0.4,0.546038,0.461747,46125,LightGBM
+lightgbm,lightgbm_06,test,best_validation_f1,0.459101,0,Fully Paid,0.886559,0.586467,0.705945,154580,LightGBM
+lightgbm,lightgbm_06,test,best_validation_f1,0.459101,1,Charged Off,0.31627,0.718235,0.439159,41169,LightGBM
+lightgbm,lightgbm_06,test,target_validation_precision,0.547699,0,Fully Paid,0.860747,0.73844,0.794916,154580,LightGBM
+lightgbm,lightgbm_06,test,target_validation_precision,0.547699,1,Charged Off,0.359584,0.551434,0.435309,41169,LightGBM
+xgboost,xgboost_05,train,best_validation_f1,0.470698,0,Fully Paid,0.906191,0.612658,0.73106,781376,XGBoost
+xgboost,xgboost_05,train,best_validation_f1,0.470698,1,Charged Off,0.303218,0.726605,0.427878,181265,XGBoost
+xgboost,xgboost_05,train,target_validation_precision,0.546067,0,Fully Paid,0.886035,0.743527,0.80855,781376,XGBoost
+xgboost,xgboost_05,train,target_validation_precision,0.546067,1,Charged Off,0.347097,0.587747,0.436448,181265,XGBoost
+xgboost,xgboost_05,validation,best_validation_f1,0.470698,0,Fully Paid,0.857159,0.588295,0.697722,140795,XGBoost
+xgboost,xgboost_05,validation,best_validation_f1,0.470698,1,Charged Off,0.357988,0.700748,0.473884,46125,XGBoost
+xgboost,xgboost_05,validation,target_validation_precision,0.546067,0,Fully Paid,0.831212,0.731368,0.7781,140795,XGBoost
+xgboost,xgboost_05,validation,target_validation_precision,0.546067,1,Charged Off,0.400003,0.546667,0.461974,46125,XGBoost
+xgboost,xgboost_05,test,best_validation_f1,0.470698,0,Fully Paid,0.883088,0.601371,0.715498,154580,XGBoost
+xgboost,xgboost_05,test,best_validation_f1,0.470698,1,Charged Off,0.318981,0.701061,0.438462,41169,XGBoost
+xgboost,xgboost_05,test,target_validation_precision,0.546067,0,Fully Paid,0.860528,0.733937,0.792207,154580,XGBoost
+xgboost,xgboost_05,test,target_validation_precision,0.546067,1,Charged Off,0.35646,0.553353,0.433602,41169,XGBoost
+catboost,catboost_04,train,best_validation_f1,0.479729,0,Fully Paid,0.902017,0.612688,0.72972,781376,CatBoost
+catboost,catboost_04,train,best_validation_f1,0.479729,1,Charged Off,0.299287,0.713105,0.421621,181265,CatBoost
+catboost,catboost_04,train,target_validation_precision,0.5552,0,Fully Paid,0.881861,0.748769,0.809884,781376,CatBoost
+catboost,catboost_04,train,target_validation_precision,0.5552,1,Charged Off,0.34388,0.5676,0.428284,181265,CatBoost
+catboost,catboost_04,validation,best_validation_f1,0.479729,0,Fully Paid,0.854354,0.597116,0.702941,140795,CatBoost
+catboost,catboost_04,validation,best_validation_f1,0.479729,1,Charged Off,0.359174,0.689279,0.47226,46125,CatBoost
+catboost,catboost_04,validation,target_validation_precision,0.5552,0,Fully Paid,0.826584,0.74215,0.782095,140795,CatBoost
+catboost,catboost_04,validation,target_validation_precision,0.5552,1,Charged Off,0.400003,0.524726,0.453954,46125,CatBoost
+catboost,catboost_04,test,best_validation_f1,0.479729,0,Fully Paid,0.881471,0.600841,0.714592,154580,CatBoost
+catboost,catboost_04,test,best_validation_f1,0.479729,1,Charged Off,0.31732,0.696641,0.436029,41169,CatBoost
+catboost,catboost_04,test,target_validation_precision,0.5552,0,Fully Paid,0.857925,0.737844,0.793367,154580,CatBoost
+catboost,catboost_04,test,target_validation_precision,0.5552,1,Charged Off,0.354765,0.541208,0.428588,41169,CatBoost

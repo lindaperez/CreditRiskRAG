@@ -1,0 +1,2 @@
+model_family,candidate,params,fit_rows,fit_bad_rate,fit_seconds,roc_auc,pr_auc,best_f1_threshold,best_f1,best_f1_precision,best_f1_recall,target_precision_threshold,target_precision_f1,target_precision,target_precision_recall
+catboost,catboost_04,"{""depth"": 5, ""iterations"": 240, ""l2_leaf_reg"": 6.0, ""learning_rate"": 0.045, ""subsample"": 0.9}",300000,0.1883,14.051,0.698653,0.420953,0.479729,0.472271,0.359181,0.689301,0.5552,0.453954,0.400003,0.524726

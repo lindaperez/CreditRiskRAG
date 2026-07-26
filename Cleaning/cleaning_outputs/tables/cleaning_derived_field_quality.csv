@@ -1,0 +1,6 @@
+field,quality_check,result
+term_months,allowed_values,"[36, 60]"
+emp_length_years,min_max,0.0 to 10.0
+int_rate_clean,min_max,5.31 to 30.99
+revol_util_clean,min_max,0.0 to 892.3
+credit_history_years,min_max,2.9979466119096507 to 83.24982888432581

@@ -1,0 +1,2 @@
+model_family,candidate,feature_set,artifact_path
+catboost,catboost_03_no_grade_subgrade,baseline_no_grade_subgrade,/Users/lindaperez/Documents/NEU/2026SummerML/MachineLearningClass/Final_Project/Final/CreditRiskRAG/Modeling/modeling_outputs/catboost/models/catboost_no_grade_subgrade_selected_model.joblib

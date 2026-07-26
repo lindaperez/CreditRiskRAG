@@ -1,0 +1,4 @@
+split,rows,columns,bad_rate
+train,962641,100,0.1883
+validation,186920,100,0.246763
+test,195749,100,0.210315

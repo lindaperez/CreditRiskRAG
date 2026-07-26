@@ -1,0 +1,24 @@
+{
+  "norag": {
+    "n": 5,
+    "per_item": {
+      "reasons_correct": 1.0,
+      "fcra_window_correct": 1.0,
+      "real_agency_named": 0.0,
+      "ecoa_classes_correct": 1.0,
+      "no_legal_errors": 0.0
+    },
+    "overall": 0.6
+  },
+  "rag": {
+    "n": 5,
+    "per_item": {
+      "reasons_correct": 1.0,
+      "fcra_window_correct": 1.0,
+      "real_agency_named": 0.4,
+      "ecoa_classes_correct": 1.0,
+      "no_legal_errors": 0.4
+    },
+    "overall": 0.76
+  }
+}

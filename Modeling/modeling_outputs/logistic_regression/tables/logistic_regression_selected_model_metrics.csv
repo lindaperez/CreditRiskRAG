@@ -1,0 +1,7 @@
+model_family,model,split,operating_point,rows,bad_rate,threshold,roc_auc,pr_auc,brier_score,precision,recall,f1,tn,fp,fn,tp
+logistic_regression,logistic_regression_07,train,best_validation_f1,962641,0.1883,0.471801,0.719952,0.372912,0.214029,0.294505,0.713552,0.41693,471534,309842,51923,129342
+logistic_regression,logistic_regression_07,train,target_validation_precision,962641,0.1883,0.563511,0.719952,0.372912,0.214029,0.34553,0.537793,0.420738,596733,184643,83782,97483
+logistic_regression,logistic_regression_07,validation,best_validation_f1,186920,0.246763,0.471801,0.695407,0.412336,0.224051,0.355082,0.697669,0.470633,82348,58447,13945,32180
+logistic_regression,logistic_regression_07,validation,target_validation_precision,186920,0.246763,0.563511,0.695407,0.412336,0.224051,0.400007,0.508488,0.447771,105615,35180,22671,23454
+logistic_regression,logistic_regression_07,test,best_validation_f1,195749,0.210315,0.471801,0.700061,0.361509,0.225017,0.310541,0.70932,0.431966,89746,64834,11967,29202
+logistic_regression,logistic_regression_07,test,target_validation_precision,195749,0.210315,0.563511,0.700061,0.361509,0.225017,0.348254,0.538026,0.422823,113127,41453,19019,22150

@@ -1,0 +1,13 @@
+model_family,candidate,split,operating_point,threshold,actual_label,actual_class,predicted_label,predicted_class,count,cell
+catboost,catboost_03_no_grade_subgrade,train,best_validation_f1,0.465666,0,Fully Paid,0,Fully Paid,457278,TN
+catboost,catboost_03_no_grade_subgrade,train,best_validation_f1,0.465666,0,Fully Paid,1,Charged Off,324098,FP
+catboost,catboost_03_no_grade_subgrade,train,best_validation_f1,0.465666,1,Charged Off,0,Fully Paid,47627,FN
+catboost,catboost_03_no_grade_subgrade,train,best_validation_f1,0.465666,1,Charged Off,1,Charged Off,133638,TP
+catboost,catboost_03_no_grade_subgrade,validation,best_validation_f1,0.465666,0,Fully Paid,0,Fully Paid,80203,TN
+catboost,catboost_03_no_grade_subgrade,validation,best_validation_f1,0.465666,0,Fully Paid,1,Charged Off,60592,FP
+catboost,catboost_03_no_grade_subgrade,validation,best_validation_f1,0.465666,1,Charged Off,0,Fully Paid,13110,FN
+catboost,catboost_03_no_grade_subgrade,validation,best_validation_f1,0.465666,1,Charged Off,1,Charged Off,33015,TP
+catboost,catboost_03_no_grade_subgrade,test,best_validation_f1,0.465666,0,Fully Paid,0,Fully Paid,87975,TN
+catboost,catboost_03_no_grade_subgrade,test,best_validation_f1,0.465666,0,Fully Paid,1,Charged Off,66605,FP
+catboost,catboost_03_no_grade_subgrade,test,best_validation_f1,0.465666,1,Charged Off,0,Fully Paid,11211,FN
+catboost,catboost_03_no_grade_subgrade,test,best_validation_f1,0.465666,1,Charged Off,1,Charged Off,29958,TP

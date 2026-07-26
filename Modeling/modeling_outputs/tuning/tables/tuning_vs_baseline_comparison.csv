@@ -1,0 +1,13 @@
+source,model,split,precision,recall,f1,roc_auc,pr_auc,brier_score,threshold
+baseline_notebook,logistic_regression,validation,0.355098,0.697648,0.470642,0.695409,0.412338,0.224055,0.471834
+baseline_notebook,logistic_regression,test,0.310553,0.709296,0.431974,0.700063,0.361512,0.225022,0.471834
+baseline_notebook,hist_gradient_boosting,validation,0.357525,0.706168,0.47471,0.702247,0.424887,0.220547,0.475502
+baseline_notebook,hist_gradient_boosting,test,0.318053,0.707668,0.438864,0.710063,0.378549,0.216326,0.475502
+baseline_notebook,random_forest,validation,0.351448,0.699512,0.467843,0.693471,0.414,0.214906,0.464443
+baseline_notebook,random_forest,test,0.313066,0.701134,0.432856,0.70254,0.36967,0.208234,0.464443
+tuned_best_f1,hist_gradient_boosting_04,validation,0.357134,0.711675,0.475601,0.704363,0.427144,0.21797,0.467086
+tuned_best_f1,hist_gradient_boosting_04,test,0.319206,0.708713,0.440162,0.71197,0.381409,0.212843,0.467086
+tuned_best_f1,logistic_regression_06,validation,0.355091,0.697626,0.470631,0.695409,0.412338,0.224055,0.471834
+tuned_best_f1,logistic_regression_06,test,0.310546,0.709272,0.431962,0.700063,0.361512,0.225022,0.471834
+tuned_best_f1,random_forest_03,validation,0.34946,0.713626,0.46917,0.694125,0.414834,0.209084,0.433702
+tuned_best_f1,random_forest_03,test,0.311255,0.71102,0.432973,0.702726,0.369274,0.202167,0.433702

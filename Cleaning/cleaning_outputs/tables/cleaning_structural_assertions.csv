@@ -1,0 +1,6 @@
+check_name,passed,detail
+no_duplicate_loaded_columns,True,duplicates=[]
+no_missing_required_loaded_columns,True,missing=[]
+no_unexpected_loaded_target_statuses,True,unexpected=[]
+no_space_padded_loaded_columns,True,space_padded=[]
+no_category_case_collisions_in_audited_fields,True,case_collision_columns=[]

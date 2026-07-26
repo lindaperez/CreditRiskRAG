@@ -1,0 +1,3 @@
+calibration_method,calibrator_type,coefficient,intercept
+platt_sigmoid,LogisticRegression,4.2279915262030645,-3.217433682247078
+isotonic,IsotonicRegression,,

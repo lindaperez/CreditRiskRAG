@@ -1,0 +1,13 @@
+feature_family,draft_reason_code,mean_abs_shap,share_of_mapped_importance
+int_rate_clean,Higher priced loan (pricing/risk signal for accepted loans).,0.3927640914916992,0.2917
+term_months,Longer loan repayment term.,0.24573132395744324,0.1825
+acc_open_past_24mths,Multiple credit accounts opened in the past 24 months.,0.16422730684280396,0.122
+dti,High debt burden relative to income.,0.11590966582298279,0.0861
+fico_mean,Lower credit score range.,0.097572922706604,0.0725
+annual_inc,Lower reported income relative to requested credit.,0.08218111842870712,0.061
+loan_amnt,Larger requested loan amount.,0.07887484133243561,0.0586
+avg_cur_bal,Lower average balance across existing credit accounts.,0.06540732085704803,0.0486
+installment,Larger payment obligation.,0.04296436905860901,0.0319
+revol_util_clean,High revolving credit utilization.,0.02521594613790512,0.0187
+mths_since_last_delinq,Recent or missing delinquency history signal.,0.019875792786478996,0.0148
+credit_history_years,Shorter credit history.,0.015606082044541836,0.0116

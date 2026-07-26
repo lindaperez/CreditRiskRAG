@@ -1,0 +1,2 @@
+recommended_model_by_validation_pr_auc,selection_basis,next_steps
+hist_gradient_boosting,"Highest validation PR-AUC, with ROC-AUC/Brier/test stability still requiring review.","Review score-band bad rates, probability calibration, and challenger feature set before final model freeze."

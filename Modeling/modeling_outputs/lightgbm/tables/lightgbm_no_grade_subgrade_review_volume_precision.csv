@@ -1,0 +1,17 @@
+model_family,model,split,review_pct,review_count,captured_bad,precision,recall,base_bad_rate,lift_over_base_bad_rate
+lightgbm,lightgbm_06_no_grade_subgrade,validation,1.0,1870,1186,0.634225,0.025713,0.246763,2.570174
+lightgbm,lightgbm_06_no_grade_subgrade,validation,2.0,3739,2284,0.610859,0.049518,0.246763,2.475483
+lightgbm,lightgbm_06_no_grade_subgrade,validation,5.0,9346,5189,0.555211,0.112499,0.246763,2.249973
+lightgbm,lightgbm_06_no_grade_subgrade,validation,10.0,18692,9558,0.511342,0.20722,0.246763,2.072195
+lightgbm,lightgbm_06_no_grade_subgrade,validation,15.0,28038,13331,0.475462,0.289019,0.246763,1.926793
+lightgbm,lightgbm_06_no_grade_subgrade,validation,20.0,37384,16784,0.448962,0.363881,0.246763,1.819404
+lightgbm,lightgbm_06_no_grade_subgrade,validation,25.0,46730,20023,0.428483,0.434103,0.246763,1.736412
+lightgbm,lightgbm_06_no_grade_subgrade,validation,30.0,56076,23077,0.411531,0.500314,0.246763,1.667715
+lightgbm,lightgbm_06_no_grade_subgrade,test,1.0,1958,1115,0.569459,0.027083,0.210315,2.707643
+lightgbm,lightgbm_06_no_grade_subgrade,test,2.0,3915,2111,0.539208,0.051276,0.210315,2.563809
+lightgbm,lightgbm_06_no_grade_subgrade,test,5.0,9788,4829,0.493359,0.117297,0.210315,2.345808
+lightgbm,lightgbm_06_no_grade_subgrade,test,10.0,19575,8911,0.455223,0.216449,0.210315,2.164482
+lightgbm,lightgbm_06_no_grade_subgrade,test,15.0,29363,12468,0.424616,0.302849,0.210315,2.01895
+lightgbm,lightgbm_06_no_grade_subgrade,test,20.0,39150,15744,0.402146,0.382424,0.210315,1.912109
+lightgbm,lightgbm_06_no_grade_subgrade,test,25.0,48938,18675,0.381605,0.453618,0.210315,1.814444
+lightgbm,lightgbm_06_no_grade_subgrade,test,30.0,58725,21419,0.364734,0.52027,0.210315,1.734225

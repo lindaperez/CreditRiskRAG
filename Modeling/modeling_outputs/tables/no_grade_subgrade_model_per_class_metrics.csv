@@ -1,0 +1,19 @@
+model,split,threshold,rows,bad_rate,source_table,class_label,class_name,precision,recall,f1,support
+logistic_regression_no_grade_subgrade,train,0.164047,962641,0.1883,no_grade_subgrade,0,Fully Paid,0.904619,0.563334,0.694304,781376
+logistic_regression_no_grade_subgrade,train,0.164047,962641,0.1883,no_grade_subgrade,1,Charged Off,0.283275,0.74396,0.410315,181265
+logistic_regression_no_grade_subgrade,validation,0.164047,186920,0.246763,no_grade_subgrade,0,Fully Paid,0.861321,0.543826,0.666704,140795
+logistic_regression_no_grade_subgrade,validation,0.164047,186920,0.246763,no_grade_subgrade,1,Charged Off,0.344783,0.732726,0.468918,46125
+logistic_regression_no_grade_subgrade,test,0.164047,195749,0.210315,no_grade_subgrade,0,Fully Paid,0.889363,0.533808,0.667171,154580
+logistic_regression_no_grade_subgrade,test,0.164047,195749,0.210315,no_grade_subgrade,1,Charged Off,0.300132,0.750662,0.428814,41169
+hist_gradient_boosting_no_grade_subgrade,train,0.18289,962641,0.1883,no_grade_subgrade,0,Fully Paid,0.901551,0.640567,0.748975,781376
+hist_gradient_boosting_no_grade_subgrade,train,0.18289,962641,0.1883,no_grade_subgrade,1,Charged Off,0.310725,0.698469,0.430109,181265
+hist_gradient_boosting_no_grade_subgrade,validation,0.18289,186920,0.246763,no_grade_subgrade,0,Fully Paid,0.852765,0.615242,0.714788,140795
+hist_gradient_boosting_no_grade_subgrade,validation,0.18289,186920,0.246763,no_grade_subgrade,1,Charged Off,0.365229,0.675751,0.474176,46125
+hist_gradient_boosting_no_grade_subgrade,test,0.18289,195749,0.210315,no_grade_subgrade,0,Fully Paid,0.88069,0.612945,0.72282,154580
+hist_gradient_boosting_no_grade_subgrade,test,0.18289,195749,0.210315,no_grade_subgrade,1,Charged Off,0.321367,0.688212,0.43814,41169
+random_forest_no_grade_subgrade,train,0.443294,962641,0.1883,no_grade_subgrade,0,Fully Paid,0.913353,0.58198,0.71095,781376
+random_forest_no_grade_subgrade,train,0.443294,962641,0.1883,no_grade_subgrade,1,Charged Off,0.297199,0.762006,0.427618,181265
+random_forest_no_grade_subgrade,validation,0.443294,186920,0.246763,no_grade_subgrade,0,Fully Paid,0.858887,0.568685,0.684289,140795
+random_forest_no_grade_subgrade,validation,0.443294,186920,0.246763,no_grade_subgrade,1,Charged Off,0.351879,0.714797,0.4716,46125
+random_forest_no_grade_subgrade,test,0.443294,195749,0.210315,no_grade_subgrade,0,Fully Paid,0.884255,0.581647,0.701717,154580
+random_forest_no_grade_subgrade,test,0.443294,195749,0.210315,no_grade_subgrade,1,Charged Off,0.312537,0.71413,0.434789,41169
