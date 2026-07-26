@@ -1,0 +1,793 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RAG Letter Generation Demo</title>
+  <style>
+    :root {
+      --ink: #18202a;
+      --muted: #5b6472;
+      --line: #d9dee6;
+      --panel: #ffffff;
+      --bg: #f5f7fa;
+      --accent: #0f766e;
+      --accent-2: #7c3aed;
+      --warn: #b45309;
+      --good: #0f766e;
+      --bad: #be123c;
+      --soft-good: #e6f4f1;
+      --soft-purple: #f0ebff;
+      --soft-warn: #fff7ed;
+      --shadow: 0 18px 48px rgba(24, 32, 42, 0.09);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--ink);
+      background: var(--bg);
+      line-height: 1.45;
+    }
+
+    button, select {
+      font: inherit;
+    }
+
+    .shell {
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: 280px minmax(0, 1fr);
+    }
+
+    aside {
+      background: #111827;
+      color: #f9fafb;
+      padding: 24px;
+      position: sticky;
+      top: 0;
+      min-height: 100vh;
+    }
+
+    .brand {
+      display: grid;
+      gap: 8px;
+      margin-bottom: 28px;
+    }
+
+    .brand .eyebrow {
+      color: #99f6e4;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0;
+      font-weight: 800;
+    }
+
+    .brand h1 {
+      margin: 0;
+      font-size: 24px;
+      line-height: 1.1;
+    }
+
+    .brand p {
+      margin: 0;
+      color: #cbd5e1;
+      font-size: 14px;
+    }
+
+    nav {
+      display: grid;
+      gap: 8px;
+    }
+
+    .nav-btn {
+      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.04);
+      color: #f9fafb;
+      padding: 10px 12px;
+      border-radius: 8px;
+      text-align: left;
+      cursor: pointer;
+    }
+
+    .nav-btn.active {
+      background: #0f766e;
+      border-color: #14b8a6;
+    }
+
+    main {
+      padding: 28px;
+      display: grid;
+      gap: 20px;
+      align-content: start;
+    }
+
+    .hero {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+      padding: 24px;
+      display: grid;
+      grid-template-columns: minmax(0, 1.25fr) minmax(280px, 0.75fr);
+      gap: 22px;
+      align-items: center;
+    }
+
+    .hero h2 {
+      margin: 0 0 10px;
+      font-size: 30px;
+      line-height: 1.08;
+    }
+
+    .hero p {
+      margin: 0;
+      color: var(--muted);
+      max-width: 760px;
+    }
+
+    .score-panel {
+      display: grid;
+      gap: 10px;
+      padding: 16px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fafafa;
+    }
+
+    .score-row {
+      display: grid;
+      grid-template-columns: 86px 1fr 52px;
+      align-items: center;
+      gap: 10px;
+      font-size: 14px;
+    }
+
+    .bar {
+      height: 10px;
+      background: #e5e7eb;
+      border-radius: 999px;
+      overflow: hidden;
+    }
+
+    .bar span {
+      display: block;
+      height: 100%;
+      background: var(--accent);
+    }
+
+    .bar.norag span {
+      background: var(--accent-2);
+    }
+
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .metric {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 16px;
+    }
+
+    .metric strong {
+      display: block;
+      font-size: 28px;
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+
+    .metric span {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .section {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 20px;
+      display: none;
+    }
+
+    .section.active {
+      display: grid;
+      gap: 18px;
+    }
+
+    .section h3 {
+      margin: 0;
+      font-size: 22px;
+    }
+
+    .pipeline {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .step {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 14px;
+      background: #fbfdff;
+      min-height: 132px;
+    }
+
+    .step b {
+      display: inline-grid;
+      place-items: center;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      color: #fff;
+      background: var(--accent);
+      margin-bottom: 10px;
+    }
+
+    .step h4 {
+      margin: 0 0 6px;
+      font-size: 15px;
+    }
+
+    .step p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .table-wrap {
+      overflow-x: auto;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 720px;
+      background: #fff;
+    }
+
+    th, td {
+      border-bottom: 1px solid var(--line);
+      padding: 11px 12px;
+      text-align: left;
+      font-size: 14px;
+      vertical-align: top;
+    }
+
+    th {
+      background: #f8fafc;
+      font-weight: 800;
+    }
+
+    tr:last-child td {
+      border-bottom: 0;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      min-height: 24px;
+      padding: 3px 8px;
+      border-radius: 999px;
+      background: #eef2ff;
+      color: #3730a3;
+      font-weight: 700;
+      font-size: 12px;
+      white-space: nowrap;
+    }
+
+    .pill.good {
+      background: var(--soft-good);
+      color: var(--good);
+    }
+
+    .pill.warn {
+      background: var(--soft-warn);
+      color: var(--warn);
+    }
+
+    .borrower-controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .borrower-controls select {
+      min-width: 220px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+      padding: 9px 10px;
+      color: var(--ink);
+    }
+
+    .letter-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .letter {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+      background: #fff;
+      display: grid;
+      grid-template-rows: auto 1fr;
+      min-height: 540px;
+    }
+
+    .letter header {
+      padding: 12px 14px;
+      border-bottom: 1px solid var(--line);
+      background: #f8fafc;
+      display: flex;
+      justify-content: space-between;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .letter header h4 {
+      margin: 0;
+      font-size: 16px;
+    }
+
+    .letter pre {
+      margin: 0;
+      padding: 16px;
+      white-space: pre-wrap;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+      font-size: 13px;
+      color: #1f2937;
+      overflow: auto;
+      max-height: 580px;
+    }
+
+    .reasons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .reasons li {
+      background: var(--soft-purple);
+      color: #4c1d95;
+      border-radius: 999px;
+      padding: 6px 10px;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .note {
+      border-left: 4px solid var(--warn);
+      background: #fffbeb;
+      padding: 12px 14px;
+      color: #4b5563;
+      border-radius: 0 8px 8px 0;
+    }
+
+    .sources {
+      display: grid;
+      gap: 8px;
+    }
+
+    .sources code {
+      display: block;
+      padding: 10px;
+      background: #0f172a;
+      color: #e2e8f0;
+      border-radius: 8px;
+      overflow-x: auto;
+      font-size: 13px;
+    }
+
+    @media (max-width: 980px) {
+      .shell {
+        grid-template-columns: 1fr;
+      }
+
+      aside {
+        min-height: auto;
+        position: static;
+      }
+
+      nav {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .hero, .letter-grid, .split {
+        grid-template-columns: 1fr;
+      }
+
+      .metrics, .pipeline {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 620px) {
+      main {
+        padding: 16px;
+      }
+
+      aside {
+        padding: 18px;
+      }
+
+      nav, .metrics, .pipeline {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h2 {
+        font-size: 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <aside>
+      <div class="brand">
+        <div class="eyebrow">CreditRiskRAG Demo</div>
+        <h1>RAG Letter Generation</h1>
+        <p>Evidence view for SHAP reasons, legal retrieval, generated letters, and judge scores.</p>
+      </div>
+      <nav aria-label="Demo sections">
+        <button class="nav-btn active" data-section="overview">Overview</button>
+        <button class="nav-btn" data-section="pipeline">Pipeline</button>
+        <button class="nav-btn" data-section="letters">Letters</button>
+        <button class="nav-btn" data-section="evaluation">Evaluation</button>
+      </nav>
+    </aside>
+
+    <main>
+      <section class="hero" aria-labelledby="demo-title">
+        <div>
+          <h2 id="demo-title">RAG improves the letter-generation control run.</h2>
+          <p>
+            The demo compares letters written with retrieved regulatory context against no-RAG control letters.
+            Both use the same borrower-level SHAP reasons. The measured statutory-accuracy score improves from
+            0.60 to 0.76, with the remaining weakness concentrated in federal-agency specificity.
+          </p>
+        </div>
+        <div class="score-panel" aria-label="Overall score comparison">
+          <div class="score-row">
+            <strong>RAG</strong>
+            <div class="bar"><span style="width:76%"></span></div>
+            <strong>0.76</strong>
+          </div>
+          <div class="score-row">
+            <strong>No-RAG</strong>
+            <div class="bar norag"><span style="width:60%"></span></div>
+            <strong>0.60</strong>
+          </div>
+        </div>
+      </section>
+
+      <div class="metrics" aria-label="Run metrics">
+        <div class="metric"><strong>70</strong><span>regulatory chunks</span></div>
+        <div class="metric"><strong>5 + 5</strong><span>RAG and no-RAG letters</span></div>
+        <div class="metric"><strong>4</strong><span>max SHAP reasons per letter</span></div>
+        <div class="metric"><strong>5</strong><span>judge rubric checks</span></div>
+      </div>
+
+      <section id="overview" class="section active">
+        <h3>Demo Position</h3>
+        <div class="split">
+          <div>
+            <p>
+              The generator is a research prototype for adverse-action-style letters. It uses deterministic SHAP
+              reason selection, then RAG retrieval from Regulation B, FCRA, CFPB circulars, and official appendices.
+            </p>
+            <p>
+              The final output should be described as an explanation bridge, not as a compliance-approved lending notice.
+            </p>
+          </div>
+          <div class="note">
+            The RAG letters improved legal-detail scoring, but two of five still failed to name a real federal agency.
+            A production workflow should make that agency block deterministic.
+          </div>
+        </div>
+      </section>
+
+      <section id="pipeline" class="section">
+        <h3>Pipeline</h3>
+        <div class="pipeline">
+          <div class="step"><b>1</b><h4>Corpus</h4><p>Reg B, FCRA, CFPB circulars, Appendix A, Appendix C, and official commentary are saved and chunked.</p></div>
+          <div class="step"><b>2</b><h4>Retrieval</h4><p>BM25 and MiniLM dense retrieval are fused with Reciprocal Rank Fusion.</p></div>
+          <div class="step"><b>3</b><h4>SHAP Reasons</h4><p>High-risk borrower examples keep mapped risk-increasing features, capped at four reasons.</p></div>
+          <div class="step"><b>4</b><h4>Generation</h4><p>Gemini writes RAG and no-RAG letters using the same borrower reasons.</p></div>
+          <div class="step"><b>5</b><h4>Judging</h4><p>A separate Gemini judge scores statutory accuracy with a fixed 5-item rubric.</p></div>
+        </div>
+        <div class="sources">
+          <code>corpus/chunk_corpus.py -> corpus/chunks.jsonl</code>
+          <code>retrieval/build_index.py -> retrieval/index/embeddings.npy</code>
+          <code>generation/generate_all.py -> generation/output/letters.jsonl</code>
+          <code>generation/judge.py -> generation/output/judged.jsonl</code>
+        </div>
+      </section>
+
+      <section id="letters" class="section">
+        <h3>Borrower Letter Comparison</h3>
+        <div class="borrower-controls">
+          <label for="borrowerSelect"><strong>Borrower row</strong></label>
+          <select id="borrowerSelect" aria-label="Borrower row"></select>
+          <span id="borrowerProb" class="pill warn"></span>
+        </div>
+        <ul id="reasonList" class="reasons" aria-label="Selected SHAP reasons"></ul>
+        <div class="letter-grid">
+          <article class="letter">
+            <header><h4>RAG Letter</h4><span id="ragScore" class="pill good"></span></header>
+            <pre id="ragLetter"></pre>
+          </article>
+          <article class="letter">
+            <header><h4>No-RAG Letter</h4><span id="noragScore" class="pill"></span></header>
+            <pre id="noragLetter"></pre>
+          </article>
+        </div>
+      </section>
+
+      <section id="evaluation" class="section">
+        <h3>Judge Results</h3>
+        <div class="table-wrap">
+          <table aria-label="RAG versus no-RAG judge scores">
+            <thead>
+              <tr><th>Rubric Item</th><th>No-RAG</th><th>RAG</th><th>Decision Meaning</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Reasons correct</td><td>1.00</td><td>1.00</td><td>Uses exactly the selected SHAP reasons.</td></tr>
+              <tr><td>FCRA 60-day window</td><td>1.00</td><td>1.00</td><td>States free-report window correctly.</td></tr>
+              <tr><td>Real agency named</td><td>0.00</td><td>0.40</td><td>Names a real federal agency, not a placeholder.</td></tr>
+              <tr><td>ECOA classes correct</td><td>1.00</td><td>1.00</td><td>Protected-class notice is materially correct.</td></tr>
+              <tr><td>No legal errors</td><td>0.00</td><td>0.40</td><td>No other legal or factual errors.</td></tr>
+              <tr><td><strong>Overall</strong></td><td><strong>0.60</strong></td><td><strong>0.76</strong></td><td>Average across the five rubric checks.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="note">
+          The judge assumes the selected SHAP reason list is the ground truth for each borrower. It evaluates letter
+          faithfulness and statutory detail, not whether the credit decision itself is fair or legally approved.
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    const borrowers = [
+      {
+        row: "443554",
+        probability: 0.722,
+        reasons: ["High debt burden relative to income.", "Lower credit score range.", "Larger requested loan amount.", "Larger payment obligation."],
+        ragScore: "3/5",
+        noragScore: "3/5",
+        ragNote: "Failed agency naming requirement.",
+        noragNote: "Failed agency naming requirement.",
+        ragLetter: `[Date]
+
+Dear Applicant:
+
+Thank you for your recent application for credit. We have completed our review of your request and regret to inform you that we are unable to approve your application at this time for the following reason(s):
+
+* High debt burden relative to income.
+* Lower credit score range.
+* Larger requested loan amount.
+* Larger payment obligation.
+
+The letter includes FCRA and ECOA disclosure language, but this run still used a placeholder for the federal enforcement agency.`,
+        noragLetter: `Dear Applicant,
+
+Thank you for your recent application for credit. We have carefully considered your request and regret to inform you that we are unable to approve your application at this time.
+
+Our credit decision was based, in whole or in part, on the following principal reasons:
+
+* High debt burden relative to income.
+* Lower credit score range.
+* Larger requested loan amount.
+* Larger payment obligation.
+
+The no-RAG letter preserves the reasons but relies on general model knowledge and leaves the federal-agency field unresolved.`
+      },
+      {
+        row: "1197182",
+        probability: 0.7217,
+        reasons: ["High debt burden relative to income.", "Lower credit score range.", "Larger requested loan amount.", "Larger payment obligation."],
+        ragScore: "5/5",
+        noragScore: "3/5",
+        ragNote: "All rubric checks passed.",
+        noragNote: "Failed agency naming requirement.",
+        ragLetter: `[Date]
+
+Dear Applicant:
+
+Thank you for your recent application for credit. We have completed our review of your request and regret to inform you that we are unable to approve your application at this time for the following reason(s):
+
+* High debt burden relative to income.
+* Lower credit score range.
+* Larger requested loan amount.
+* Larger payment obligation.
+
+This RAG letter passed the judge checks for selected reasons, FCRA 60-day window, real federal agency, ECOA protected classes, and no additional legal errors.`,
+        noragLetter: `Dear Applicant,
+
+We are unable to approve your application at this time.
+
+Principal reasons:
+* High debt burden relative to income.
+* Lower credit score range.
+* Larger requested loan amount.
+* Larger payment obligation.
+
+The no-RAG letter included generic required disclosures but failed the real-agency specificity check.`
+      },
+      {
+        row: "994412",
+        probability: 0.7203,
+        reasons: ["High debt burden relative to income.", "Larger requested loan amount.", "Larger payment obligation.", "Lower credit score range."],
+        ragScore: "3/5",
+        noragScore: "3/5",
+        ragNote: "Failed agency naming requirement.",
+        noragNote: "Failed agency naming requirement.",
+        ragLetter: `[Date]
+
+Dear Applicant:
+
+We are unable to approve your application at this time.
+
+Our decision was based on the following principal reason(s):
+
+* High debt burden relative to income.
+* Larger requested loan amount.
+* Larger payment obligation.
+* Lower credit score range.
+
+This RAG letter preserved the SHAP reasons and required timing language, but used a placeholder for the federal enforcement agency.`,
+        noragLetter: `Dear Applicant,
+
+After reviewing your application, we are unable to approve your request.
+
+Reasons:
+* High debt burden relative to income.
+* Larger requested loan amount.
+* Larger payment obligation.
+* Lower credit score range.
+
+The no-RAG version also failed to name a real federal enforcement agency.`
+      },
+      {
+        row: "996955",
+        probability: 0.7146,
+        reasons: ["Lower reported income relative to requested credit.", "High debt burden relative to income.", "Lower credit score range.", "Larger payment obligation."],
+        ragScore: "3/5",
+        noragScore: "3/5",
+        ragNote: "Failed agency naming requirement.",
+        noragNote: "Failed agency naming requirement.",
+        ragLetter: `[Date]
+
+Dear Applicant:
+
+We regret to inform you that we are unable to approve your application at this time for the following principal reason(s):
+
+* Lower reported income relative to requested credit.
+* High debt burden relative to income.
+* Lower credit score range.
+* Larger payment obligation.
+
+The judge marked the RAG letter down because it used a placeholder instead of a specific federal agency name.`,
+        noragLetter: `Dear Applicant,
+
+Your credit application was declined.
+
+Principal reasons:
+* Lower reported income relative to requested credit.
+* High debt burden relative to income.
+* Lower credit score range.
+* Larger payment obligation.
+
+The no-RAG version preserved the reasons but did not satisfy agency-name specificity.`
+      },
+      {
+        row: "461646",
+        probability: 0.7114,
+        reasons: ["High debt burden relative to income.", "Lower credit score range.", "Larger requested loan amount.", "Lower reported income relative to requested credit."],
+        ragScore: "5/5",
+        noragScore: "3/5",
+        ragNote: "All rubric checks passed.",
+        noragNote: "Failed agency naming requirement.",
+        ragLetter: `[Date]
+
+Dear Applicant:
+
+After carefully reviewing your request, we regret to inform you that we are unable to approve your application at this time for the following reason(s):
+
+* High debt burden relative to income.
+* Lower credit score range.
+* Larger requested loan amount.
+* Lower reported income relative to requested credit.
+
+This RAG letter passed the judge checks, including the federal-agency and no-legal-error checks.`,
+        noragLetter: `Dear Applicant,
+
+We are unable to approve your credit application.
+
+Reasons:
+* High debt burden relative to income.
+* Lower credit score range.
+* Larger requested loan amount.
+* Lower reported income relative to requested credit.
+
+The no-RAG letter again relied on generic disclosure text and failed the real-agency requirement.`
+      }
+    ];
+
+    const sectionButtons = document.querySelectorAll(".nav-btn");
+    const sections = document.querySelectorAll(".section");
+    function showSection(sectionId) {
+      const target = document.getElementById(sectionId) ? sectionId : "overview";
+      sectionButtons.forEach((b) => b.classList.toggle("active", b.dataset.section === target));
+      sections.forEach((s) => s.classList.toggle("active", s.id === target));
+    }
+
+    sectionButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        showSection(button.dataset.section);
+        history.replaceState(null, "", `#${button.dataset.section}`);
+      });
+    });
+
+    const select = document.getElementById("borrowerSelect");
+    const reasonList = document.getElementById("reasonList");
+    const borrowerProb = document.getElementById("borrowerProb");
+    const ragScore = document.getElementById("ragScore");
+    const noragScore = document.getElementById("noragScore");
+    const ragLetter = document.getElementById("ragLetter");
+    const noragLetter = document.getElementById("noragLetter");
+
+    borrowers.forEach((borrower) => {
+      const option = document.createElement("option");
+      option.value = borrower.row;
+      option.textContent = `${borrower.row} - p(default) ${borrower.probability.toFixed(4)}`;
+      select.appendChild(option);
+    });
+
+    function renderBorrower(row) {
+      const borrower = borrowers.find((item) => item.row === row) || borrowers[0];
+      borrowerProb.textContent = `Predicted default probability ${borrower.probability.toFixed(4)}`;
+      reasonList.innerHTML = "";
+      borrower.reasons.forEach((reason) => {
+        const li = document.createElement("li");
+        li.textContent = reason;
+        reasonList.appendChild(li);
+      });
+      ragScore.textContent = `Judge ${borrower.ragScore}`;
+      ragScore.title = borrower.ragNote;
+      noragScore.textContent = `Judge ${borrower.noragScore}`;
+      noragScore.title = borrower.noragNote;
+      ragLetter.textContent = borrower.ragLetter;
+      noragLetter.textContent = borrower.noragLetter;
+    }
+
+    select.addEventListener("change", (event) => renderBorrower(event.target.value));
+    renderBorrower(borrowers[0].row);
+    showSection(window.location.hash.replace("#", "") || "overview");
+  </script>
+</body>
+</html>
