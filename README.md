@@ -6,7 +6,7 @@
 
 *Predict default risk from accepted-loan records, compare model families, calibrate probabilities, explain model behavior with SHAP, retrieve regulatory support, and generate auditable adverse-action-style letters as a research prototype.*
 
-**[Linda Perez Penaranda](https://github.com/lindaperez)<sup>1</sup> · Yashaswi Aryan<sup>1</sup> · Siddharth Agarwal<sup>1</sup>**
+**[Linda Perez Penaranda](https://github.com/lindaperez)<sup>1</sup> · Yashaswi Aryan<sup>1</sup> · [Siddharth Agarwal](https://github.com/ag-siddharth) <sup>1</sup>**
 
 <sup>1</sup> Northeastern University - CS 6140 Machine Learning - Final Project · Summer 2026
 
