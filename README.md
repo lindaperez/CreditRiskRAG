@@ -21,7 +21,7 @@ Linda Perez Penaranda: collaborator, credit-risk framing, EDA, cleaning, modelin
 ![Dataset](https://img.shields.io/badge/Data-LendingClub-lightblue)
 ![Status](https://img.shields.io/badge/Status-SHAP%20%2B%20RAG%20prototype%20complete-purple)
 
-[Overview](#overview) · [Demo](#demo) · [Architecture](#architecture) · [Current Progress](#current-progress) · [Artifacts](#artifact-inventory-by-folder) · [Modeling](#modeling-key-decisions) · [SHAP](#shap-interpretation-results) · [Generation](#letter-generation-results) · [Evaluation](#letter-generation-evaluation) · [Data](#data) · [Reproducibility](#reproducibility) · [Documentation](#documentation) · [References](#references)
+[Overview](#overview) · [Demo](#demo) · [Installation](#installation) · [Architecture](#architecture) · [Current Progress](#current-progress) · [Artifacts](#artifact-inventory-by-folder) · [Modeling](#modeling-key-decisions) · [SHAP](#shap-interpretation-results) · [Generation](#letter-generation-results) · [Evaluation](#letter-generation-evaluation) · [Data](#data) · [Reproducibility](#reproducibility) · [Documentation](#documentation) · [References](#references)
 
 </div>
 
@@ -390,14 +390,24 @@ Run a faster development check:
 python scripts/reproducibility_check.py --skip-package-check --skip-hash-check
 ```
 
-## Environment
+## Installation
 
 Use Python 3.11.
+
+Quick start with `venv`:
+
+```bash
+git clone https://github.com/lindaperez/CreditRiskRAG.git
+cd CreditRiskRAG
+python3.11 -m venv .venv
+source .venv/bin/activate
+python -m pip install --upgrade pip
+python -m pip install -r requirements.lock.txt
+```
 
 ### venv
 
 ```bash
-cd Final/CreditRiskRAG
 python3.11 -m venv .venv
 source .venv/bin/activate
 python -m pip install --upgrade pip
@@ -859,7 +869,7 @@ Interpretation: RAG improved statutory accuracy while preserving SHAP-selected p
 | Regulatory corpus and retrieval | Yes | README lists regulatory sources, chunk count, embedding model, hybrid retrieval method, and supporting scripts. |
 | Letter generation | Yes | README summarizes RAG vs no-RAG generation, output artifacts, GitHub Pages demo links, and demo screenshots showing overview, letters, and evaluation. |
 | Letter-generation evaluation | Yes | README explains blind shuffled judging, the five binary rubric items, judge artifacts, and aggregate scores. |
-| Reproducibility and execution order | Yes | README includes data controls, environment setup, notebook order, and pipeline commands. |
+| Installation, reproducibility, and execution order | Yes | README includes installation commands, data controls, environment setup, notebook order, and pipeline commands. |
 | Documentation | Yes | README links business docs, SHAP docs, corpus docs, generation results, reproducibility, and research notes. |
 | `Others/` supplemental materials | Yes | Supplemental proposal, risk, repo workflow, and video artifacts are summarized without moving them into the project package. |
 | Remaining project gaps | Yes | README states remaining work: larger-sample evaluation, deterministic legal validators, fair-lending review, reason-code governance, and compliance approval. |
