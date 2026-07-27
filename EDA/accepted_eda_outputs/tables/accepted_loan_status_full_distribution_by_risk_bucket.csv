@@ -1,0 +1,7 @@
+target_definition,repayment_risk_bucket,n,pct_full_dataset
+good_terminal,low_observed_repayment_risk,1078739,47.717
+censored_unresolved,unresolved_censored_not_ranked,878317,38.8515
+bad_terminal_or_delinquent,high_observed_repayment_risk,290827,12.8645
+censored_unresolved,medium_current_or_early_delinquency_review,8436,0.3732
+bad_terminal_or_delinquent,medium_current_or_early_delinquency_review,4349,0.1924
+missing_status,missing_status,33,0.0015

@@ -1,0 +1,44 @@
+column,exclusion_reason
+funded_amnt,Funding/allocation field; may reflect platform or investor funding mechanics rather than borrower application risk. Review timing before modeling.
+funded_amnt_inv,Funding/allocation field; may reflect platform or investor funding mechanics rather than borrower application risk. Review timing before modeling.
+emp_title,"Free-text or employer/title field; excluded from first-pass EDA because it needs NLP, privacy, and fair-lending proxy review."
+pymnt_plan,Post-origination servicing/payment-plan field; excluded to avoid leakage in an at-application repayment-risk workflow.
+desc,"Free-text or employer/title field; excluded from first-pass EDA because it needs NLP, privacy, and fair-lending proxy review."
+title,"Free-text or employer/title field; excluded from first-pass EDA because it needs NLP, privacy, and fair-lending proxy review."
+out_prncp_inv,Post-origination servicing/payment-plan field; excluded to avoid leakage in an at-application repayment-risk workflow.
+total_pymnt_inv,Post-origination servicing/payment-plan field; excluded to avoid leakage in an at-application repayment-risk workflow.
+total_rec_late_fee,Post-origination servicing/payment-plan field; excluded to avoid leakage in an at-application repayment-risk workflow.
+next_pymnt_d,Post-origination servicing/payment-plan field; excluded to avoid leakage in an at-application repayment-risk workflow.
+revol_bal_joint,Secondary/joint-applicant field; excluded from first-pass working sample because it is sparse and conditional on application_type. Consider later with structural-missingness handling.
+sec_app_fico_range_low,Secondary/joint-applicant field; excluded from first-pass working sample because it is sparse and conditional on application_type. Consider later with structural-missingness handling.
+sec_app_fico_range_high,Secondary/joint-applicant field; excluded from first-pass working sample because it is sparse and conditional on application_type. Consider later with structural-missingness handling.
+sec_app_earliest_cr_line,Secondary/joint-applicant field; excluded from first-pass working sample because it is sparse and conditional on application_type. Consider later with structural-missingness handling.
+sec_app_inq_last_6mths,Secondary/joint-applicant field; excluded from first-pass working sample because it is sparse and conditional on application_type. Consider later with structural-missingness handling.
+sec_app_mort_acc,Secondary/joint-applicant field; excluded from first-pass working sample because it is sparse and conditional on application_type. Consider later with structural-missingness handling.
+sec_app_open_acc,Secondary/joint-applicant field; excluded from first-pass working sample because it is sparse and conditional on application_type. Consider later with structural-missingness handling.
+sec_app_revol_util,Secondary/joint-applicant field; excluded from first-pass working sample because it is sparse and conditional on application_type. Consider later with structural-missingness handling.
+sec_app_open_act_il,Secondary/joint-applicant field; excluded from first-pass working sample because it is sparse and conditional on application_type. Consider later with structural-missingness handling.
+sec_app_num_rev_accts,Secondary/joint-applicant field; excluded from first-pass working sample because it is sparse and conditional on application_type. Consider later with structural-missingness handling.
+sec_app_chargeoff_within_12_mths,Secondary/joint-applicant field; excluded from first-pass working sample because it is sparse and conditional on application_type. Consider later with structural-missingness handling.
+sec_app_collections_12_mths_ex_med,Secondary/joint-applicant field; excluded from first-pass working sample because it is sparse and conditional on application_type. Consider later with structural-missingness handling.
+sec_app_mths_since_last_major_derog,Secondary/joint-applicant field; excluded from first-pass working sample because it is sparse and conditional on application_type. Consider later with structural-missingness handling.
+hardship_type,Hardship or settlement field created after origination; clear leakage for an at-application default-risk model.
+hardship_reason,Hardship or settlement field created after origination; clear leakage for an at-application default-risk model.
+hardship_status,Hardship or settlement field created after origination; clear leakage for an at-application default-risk model.
+deferral_term,Hardship or settlement field created after origination; clear leakage for an at-application default-risk model.
+hardship_amount,Hardship or settlement field created after origination; clear leakage for an at-application default-risk model.
+hardship_start_date,Hardship or settlement field created after origination; clear leakage for an at-application default-risk model.
+hardship_end_date,Hardship or settlement field created after origination; clear leakage for an at-application default-risk model.
+payment_plan_start_date,Hardship or settlement field created after origination; clear leakage for an at-application default-risk model.
+hardship_length,Hardship or settlement field created after origination; clear leakage for an at-application default-risk model.
+hardship_dpd,Hardship or settlement field created after origination; clear leakage for an at-application default-risk model.
+hardship_loan_status,Hardship or settlement field created after origination; clear leakage for an at-application default-risk model.
+orig_projected_additional_accrued_interest,Hardship or settlement field created after origination; clear leakage for an at-application default-risk model.
+hardship_payoff_balance_amount,Hardship or settlement field created after origination; clear leakage for an at-application default-risk model.
+hardship_last_payment_amount,Hardship or settlement field created after origination; clear leakage for an at-application default-risk model.
+debt_settlement_flag_date,Hardship or settlement field created after origination; clear leakage for an at-application default-risk model.
+settlement_status,Hardship or settlement field created after origination; clear leakage for an at-application default-risk model.
+settlement_date,Hardship or settlement field created after origination; clear leakage for an at-application default-risk model.
+settlement_amount,Hardship or settlement field created after origination; clear leakage for an at-application default-risk model.
+settlement_percentage,Hardship or settlement field created after origination; clear leakage for an at-application default-risk model.
+settlement_term,Hardship or settlement field created after origination; clear leakage for an at-application default-risk model.

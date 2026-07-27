@@ -1,0 +1,11 @@
+loan_status,target_definition,repayment_risk_bucket,n,pct_full_dataset
+Fully Paid,good_terminal,low_observed_repayment_risk,1076751,47.6291
+Current,censored_unresolved,unresolved_censored_not_ranked,878317,38.8515
+Charged Off,bad_terminal_or_delinquent,high_observed_repayment_risk,268559,11.8795
+Late (31-120 days),bad_terminal_or_delinquent,high_observed_repayment_risk,21467,0.9496
+In Grace Period,censored_unresolved,medium_current_or_early_delinquency_review,8436,0.3732
+Late (16-30 days),bad_terminal_or_delinquent,medium_current_or_early_delinquency_review,4349,0.1924
+Does not meet the credit policy. Status:Fully Paid,good_terminal,low_observed_repayment_risk,1988,0.0879
+Does not meet the credit policy. Status:Charged Off,bad_terminal_or_delinquent,high_observed_repayment_risk,761,0.0337
+Default,bad_terminal_or_delinquent,high_observed_repayment_risk,40,0.0018
+,missing_status,missing_status,33,0.0015
